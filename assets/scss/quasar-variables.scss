@@ -1,0 +1,103 @@
+$generic-border-radius: 10px !default;
+$background-dark-page: #121212;
+$background-light-page: #eaf4f4;
+$background-primary: #1c1c1c;
+$background-secondary: rgba(255, 255, 255, 0.03);
+
+.body--light {
+  background-color: $background-light-page;
+}
+
+.body--dark {
+  background: $background-dark-page;
+}
+
+$colors-light: (
+  text-primary: #fff,
+  text-secondary: #000,
+  primary: yellow,
+  secondary: #26a69a,
+  btn-gradient: linear-gradient(to right, #74ace7, #bbe888),
+  accent: #db162f,
+  dark: #1d1d1d,
+  positive: #21ba45,
+  negative: #c10015,
+  info: #31ccec,
+  warning: #f2c037,
+  background-light: #eaf4f4,
+  background-dark-page: #121212,
+  background-primary: #fff,
+  overlay: hsla(0, 0%, 87%, 35%),
+  border-primary: #262626,
+  background-secondary: rgba(255, 255, 255, 0.03),
+  border-secondary: #007aff4d,
+  text-price: #05cd99
+);
+$colors-dark: (
+  text-primary: #fff,
+  text-secondary: #ffffffb9,
+  primary: #007aff,
+  primary-light: #007aff1a,
+  secondary: #26a69a,
+  btn-gradient: linear-gradient(to right, #007aff, #034da4),
+  accent: #db162f,
+  dark: #1d1d1d,
+  positive: #21ba45,
+  negative: #c10015,
+  info: #31ccec,
+  warning: #f2c037,
+  background-light: #eaf4f4,
+  background-dark-page: #121212,
+  background-primary: #1c1c1c,
+  background-secondary: rgba(255, 255, 255, 0.03),
+  overlay: #3737375c,
+  border-primary: #262626,
+  border-secondary: #007aff4d,
+  text-price: #05cd99
+);
+
+@each $name, $color in $colors-light {
+  :root {
+    --q-#{$name}: #{$color};
+  }
+  .body--light {
+    .bg-#{$name} {
+      background: $color;
+    }
+    .text-#{$name} {
+      color: $color;
+    }
+    .fill-#{$name} {
+      fill: $color;
+    }
+    .stroke-#{$name} {
+      stroke: $color;
+    }
+    .border-#{$name} {
+      border-color: $color;
+    }
+  }
+}
+
+@each $name, $color in $colors-dark {
+  :root {
+    --q-#{$name}: #{$color};
+  }
+  .body--dark {
+    .bg-#{$name} {
+      background: $color;
+    }
+    .text-#{$name} {
+      color: $color;
+    }
+    .fill-#{$name} {
+      fill: $color;
+    }
+    .stroke-#{$name} {
+      stroke: $color;
+    }
+    .border-#{$name} {
+      border-color: $color;
+    }
+  }
+}

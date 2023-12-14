@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'IranYekan';
+  src: url('/fonts/Qs_Iranyekan.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IranYekan';
+  src: url('/fonts/Qs_Iranyekan\bold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IranYekan';
+  src: url('/fonts/Qs_Iranyekan\light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IranYekan';
+  src: url('/fonts/Qs_Iranyekan\extrabold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+.IranYekan {
+  font-family: IranYekan !important;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'IranYekan' !important;
+  font-size: smaller;
+  letter-spacing: -0.3px;
+  direction: rtl !important;
+}
+
+#nprogress {
+  pointer-events: none;
+}
