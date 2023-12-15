@@ -1,4 +1,5 @@
 import * as components from 'quasar'
+import { Quasar } from 'quasar'
 // @ts-ignore
 import langFa from 'quasar/lang/fa-IR'
 
@@ -31,16 +32,19 @@ import '@quasar/extras/bootstrap-icons/bootstrap-icons.css'
 import 'quasar/src/css/index.sass'
 
 export default defineNuxtPlugin(nuxtApp => {
-  nuxtApp.vueApp.use(components.Quasar, {
+  nuxtApp.vueApp.use(Quasar, {
+    lang: langFa,
     plugins: {
       // Dialog,
       // Notify,
       // Loading
     }, // import Quasar plugins and add here
-    lang: langFa,
+    // lang: langFa,
     components,
     config: {
-      dark: true
+      lang: langFa,
+      dark: true,
+      langFa
     }
   })
 })

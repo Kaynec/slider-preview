@@ -2,13 +2,28 @@ import { quasar } from '@quasar/vite-plugin'
 import Unocss from 'unocss/vite'
 
 export default defineNuxtConfig({
+  devtools: {
+    // Enable devtools (default: true)
+    enabled: true,
+    // VS Code Server options
+    vscode: {}
+    // ...other options
+  },
   alias: {
     '@': '',
     '~': ''
   },
-  modules: ['@pinia/nuxt'],
+  modules: ['@pinia/nuxt', '@nuxt/image', '@unocss/nuxt'],
+  // @ts-ignore
+  image: {
+    quality: 80
+  },
+  // @ts-ignore
+  pinia: {
+    storesDirs: ['store/**']
+  },
   imports: {
-    dirs: ['src/composables', 'src/store'],
+    dirs: ['composables', 'store'],
     imports: [
       {
         from: '@vueuse/core'
@@ -24,31 +39,32 @@ export default defineNuxtConfig({
       }
     ]
   },
+  components: [
+    {
+      path: 'components',
+      pathPrefix: false
+    }
+  ],
 
   build: {
-    transpile: ['quasar']
+    transpile: ['quasar', '@happy-dom/global-registrator']
   },
   css: [
     '@quasar/extras/roboto-font/roboto-font.css',
     '@quasar/extras/material-icons/material-icons.css',
     '@quasar/extras/fontawesome-v6/fontawesome-v6.css',
-    // '@/styles/quasar.scss',
-    // '~/assets/scss/main.scss'
-    // 'styles/quasar-variables.scss',
     '@/assets/scss/main.scss',
-    // '@/assets/scss/quasar-variables.scss',
-    '@/assets/scss/quasar.scss',
-    'uno.css'
+    '@/assets/scss/quasar.scss'
   ],
   vite: {
-    vue: {
-      script: {
-        defineModel: true,
-        propsDestructure: true
-      }
-    },
     define: {
       // "process.env.DEBUG": false,
+    },
+    build: {
+      cssCodeSplit: true
+    },
+    ssr: {
+      external: ['happy-dom']
     },
     plugins: [
       quasar({

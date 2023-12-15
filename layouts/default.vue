@@ -7,7 +7,7 @@
 </script>
 
 <template>
-  <q-layout view="hHh LpR fff">
+  <q-layout view="hHh LpR fff" dir="rtl" class="min-h-screen">
     <Header v-if="$q.screen.width > 1024" />
 
     <q-page-container>

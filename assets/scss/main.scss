@@ -36,13 +36,13 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  // direction: rtl !important;
 }
 
 body {
-  font-family: 'IranYekan' !important;
+  font-family: IranYekan !important;
   font-size: smaller;
   letter-spacing: -0.3px;
-  direction: rtl !important;
 }
 
 #nprogress {

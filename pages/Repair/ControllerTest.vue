@@ -23,7 +23,3 @@
     </section>
   </main>
 </template>
-<route lang="yaml">
-meta:
-  currentPageName: خدمات تعمیر - تست خرابی دسته
-</route>

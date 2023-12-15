@@ -124,10 +124,10 @@ const details = ref({
         فراموشی رمز عبور؟
       </NuxtLink>
       <div class="flex flex-col w-full items-center gap-3">
-        <QBtn class="rounded-xl max-w-120 w-full bg-blue-7">
+        <QBtn class="!rounded-xl !max-w-120 !w-full bg-blue-7">
           ورود به حساب کاربری
         </QBtn>
-        <QBtn class="rounded-xl max-w-120 w-full" color="grey-9">
+        <QBtn class="!rounded-xl !max-w-120 !w-full" color="grey-9">
           ثبت نام
         </QBtn>
       </div>

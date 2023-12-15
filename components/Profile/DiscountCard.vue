@@ -16,7 +16,7 @@ Certainly! Here's the TypeScript version of the code:
           </h5>
           <h6 class="text-text-secondary relative f-text-10-13">
             <Bullet
-              class="absolute -start-3 fill-primary shadow-2xl top-1/2 rounded-full bg-primary w-1.25 h-1.25"
+              class="absolute -start-3 fill-primary shadow-2xl top-1/2 !rounded-full bg-primary w-1.25 h-1.25"
             />
             قیمت محصول :
             <span class="text-text-primary"> {{ price }} تومان </span>

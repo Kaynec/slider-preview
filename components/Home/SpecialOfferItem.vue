@@ -34,7 +34,7 @@
     <!-- TODO Make THis Dynamic TOO -->
     <QBtn
       @click="$router.push('/Products')"
-      class="rounded-full bg-btn-gradient q-py-sm full-width"
+      class="!rounded-full bg-btn-gradient q-py-sm full-width"
     >
       {{ finalPrice }}
     </QBtn>

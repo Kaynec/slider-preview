@@ -50,7 +50,3 @@ const icons = [
 import { ref } from 'vue'
 const tab = ref('Favourite')
 </script>
-<route lang="yaml">
-meta:
-  requiresNotAuth: false
-</route>

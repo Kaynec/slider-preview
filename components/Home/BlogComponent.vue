@@ -1,9 +1,9 @@
 <template>
   <QCard
-    class="custom-card-class pb-3.5rem flex justify-center items-center min-h-75 mb-3rem gap-6 card-with-border q-pa-md"
+    class="custom-card-class !pb-[2.5rem] flex justify-center items-center min-h-75 mb-3rem gap-6 card-with-border q-pa-md"
   >
     <!--  -->
-    <QImg src="@/assets/home_imgs/cards/warzone.png" class="flex q-pa-lg">
+    <QImg src="images/home_imgs/cards/warzone.png" class="flex q-pa-lg">
       <div
         class="bg-overlay rounded-2xl relative bottom-2 space-y-sm w-97.5% left-50% translate-x-50% backdrop-blur"
       >

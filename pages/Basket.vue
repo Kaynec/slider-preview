@@ -44,7 +44,7 @@ const cardItems = ref([
             <h5>
               سبد خرید شما
               <span
-                class="rounded-full inline-flex items-center justify-center w-4 h-4 bg-primary aspect-1 text-text-primary"
+                class="!rounded-full inline-flex items-center justify-center w-4 h-4 bg-primary aspect-1 text-text-primary"
               >
                 2
               </span>
@@ -115,9 +115,6 @@ const cardItems = ref([
     <SpecialOffer />
   </main>
 </template>
-<route lang="yaml">
-meta:
-</route>
 
 <style scoped>
 .custom-bg {

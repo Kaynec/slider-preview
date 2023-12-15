@@ -13,7 +13,3 @@
     <QCard class="mt-lg mb-4xl !rounded-xl"> <ProductTabs /> </QCard>
   </main>
 </template>
-<route lang="yaml">
-meta:
-  currentPageName: محصولات - دسته پلی استیشن ۵
-</route>

@@ -7,10 +7,10 @@ import Test from '@/assets/home_imgs/cards/test.png'
 <template>
   <div class="grid md:grid-cols-5 gap-4 my-4xl">
     <div class="max-h-18rem md:col-span-3">
-      <img
+      <NuxtImg
         class="rounded-2xl w-full h-full"
         alt="game dynamic banner"
-        :src="Spiderman"
+        src="/images/home_imgs/cards/spiderman.png"
       />
     </div>
 

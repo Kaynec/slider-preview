@@ -219,7 +219,3 @@ const setElementToActive = (index: number) => {
     </QCard>
   </main>
 </template>
-<route lang="yaml">
-meta:
-  currentPageName: خدمات تعمیر - صفحه خرابی کنسول
-</route>

@@ -53,7 +53,3 @@ const icons = [
 import { ref } from 'vue'
 const tab = ref('Ongoing')
 </script>
-<route lang="yaml">
-meta:
-  requiresNotAuth: false
-</route>

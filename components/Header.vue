@@ -110,7 +110,7 @@ const toggleDarkMode = (val: boolean) => {
           <!-- TODO Make This Dynamic -->
           <button
             @click="$router.push('/Profile')"
-            class="bg-opacity-40 px-2 py-1 bg-#007AFF1A text-primary rounded-full border-1px border-solid border-#007AFF"
+            class="bg-opacity-40 px-2 py-1 bg-#007AFF1A text-primary !rounded-full border-1px border-solid border-#007AFF"
           >
             <QIcon name="portrait" size="24px" />
             <!-- TODO Make This Dynamic -->
@@ -122,14 +122,14 @@ const toggleDarkMode = (val: boolean) => {
       </div>
       <!-- before:bg-#121212 -->
       <div
-        class="w-62% mx-auto absolute top-4.5rem xl:top-5.25rem 2xl:top-7.2rem left-1/2 translate-x-1/2"
+        class="w-62% mx-auto absolute top-4.5rem xl:top-5.25rem 2xl:top-7.2rem left-1/2 -translate-x-1/2"
       >
         <QInput
           rounded
           standout="bg-transparent"
           v-model="search"
           label="جست و جو کنید"
-          class="z-3 rounded-full"
+          class="z-3 !rounded-full"
           bgColor="grey-10"
           :dark="true"
         >

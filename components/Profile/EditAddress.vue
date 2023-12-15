@@ -22,7 +22,7 @@
             label="کد پستی"
             bgColor="background-secondary"
             standout="bg-transparent"
-            class="rounded-full"
+            class="!rounded-full"
             :input-style="{ fontSize: '12px' }"
             input-class="text-white"
             v-model="model.postal_code"
@@ -32,7 +32,7 @@
             label="نشانی پستی"
             bgColor="background-secondary"
             standout="bg-transparent"
-            class="rounded-full"
+            class="!rounded-full"
             :input-style="{ fontSize: '12px' }"
             input-class="text-white"
             v-model="model.name"
@@ -46,14 +46,18 @@
 </template>
 
 <script setup lang="ts">
-const showEditAddress = defineModel<boolean>()
-
+import { useVModel } from '@vueuse/core'
 const props = defineProps<{
   address: {
     postal_code: string
     name: string
   }
+  modelValue: boolean
 }>()
+
+const emit = defineEmits(['update:modelValue'])
+
+const showEditAddress = useVModel(props, 'modelValue', emit)
 
 const model = ref({ ...props.address })
 

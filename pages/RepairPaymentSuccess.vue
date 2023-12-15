@@ -65,10 +65,7 @@ const details = ref([
     </QCard>
   </QPage>
 </template>
-<route lang="yaml">
-meta:
-  currentPageName: سبد خرید - انتخاب آدرس - رسید خرید
-</route>
+
 <style lang="scss">
 .authentication {
   margin: auto;

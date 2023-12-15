@@ -146,9 +146,6 @@ const cardItems = ref([
     <SpecialOffer />
   </main>
 </template>
-<route lang="yaml">
-meta:
-</route>
 
 <style scoped>
 .custom-bg {

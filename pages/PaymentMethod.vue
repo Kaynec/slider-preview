@@ -195,9 +195,6 @@ const paymentMethod = ref<'Online' | 'InPerson'>('Online')
     </NuxtLink>
   </main>
 </template>
-<route lang="yaml">
-meta:
-</route>
 
 <style scoped>
 .custom-bg {

@@ -4,7 +4,9 @@
 
     <div class="flex flex-col md:flex-row gap-3">
       <div class="flex-1 space-y-xl">
-        <h4 class="text-h4 heading text-center md:text-start">درباره ما</h4>
+        <h4 class="text-h4 heading text-center !md-text-start w-full">
+          درباره ما
+        </h4>
         <p class="text-text-secondary max-w-65ch">
           لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
           استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
@@ -16,8 +18,8 @@
       <div class="flex flex-1 justify-between">
         <div
           v-for="(i, n) in 3"
-          class="flex max-h-35 basis-full md:basis-33% justify-center items-center py-3 gap-3 flex-col md:border-b-none pb-lg border-b-3 border-b-dashed border-b-#262626 px-lg last:md:border-r-none last:border-b-none"
-          md="md:border-r-3 md:border-r-dashed md:border-r-#262626"
+          class="flex max-h-35 basis-full md:basis-33% justify-center items-center py-3 gap-3 flex-col md:border-b-none pb-lg border-b-2 border-b-dashed border-b-#262626 px-lg last:md:border-r-none last:border-b-none"
+          md="md:border-e-2 md:border-e-dashed md:border-e-#262626"
         >
           <span class="font-bold text-2xl text-primary"> + 2000 </span>
           <p class="text-text-secondary">خرید از سایت توسط کاربران</p>
@@ -26,9 +28,9 @@
     </div>
     <!--  -->
     <div class="row q-col-gutter-lg q-py-lg">
-      <img
-        src="@/assets/home_imgs/Abstract_Design.png"
-        class="absolute right-0"
+      <NuxtImg
+        src="images/home_imgs/Abstract_Design.png"
+        class="absolute end-0"
         alt="left side img"
       />
       <div class="col-12 col-md-6 col-lg-3">

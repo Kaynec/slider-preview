@@ -33,7 +33,7 @@ const isPwd = ref(false)
     <div class="flex items-center justify-between w-full pa-sm">
       <div class="flex gap-2 items-center">
         <div
-          class="rounded-full bg-black grid place-content-center w-25 h-25 aspect-1"
+          class="!rounded-full bg-black grid place-content-center w-25 h-25 aspect-1"
         >
           <!-- TODO when there is actually user -->
           <!-- <img src="" alt=""> -->
@@ -57,7 +57,7 @@ const isPwd = ref(false)
           bgColor="background-secondary"
           rounded
           standout="bg-transparent"
-          class="rounded-full"
+          class="!rounded-full"
           :input-style="{ fontSize: '12px' }"
           input-class="text-white"
         />
@@ -170,7 +170,7 @@ const isPwd = ref(false)
           input-class="text-white"
         >
           <template v-slot:append v-if="model.email_verified">
-            <q-icon class="bg-positive rounded-full" name="check" /> </template
+            <q-icon class="bg-positive !rounded-full" name="check" /> </template
         ></QInput>
       </div>
       <div

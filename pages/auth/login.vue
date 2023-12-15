@@ -44,22 +44,24 @@ const details = ref({
       </span>
       <div class="flex flex-col w-full max-w-240 gap-3">
         <QInput
-          standout="bg-transparent"
+          standout="!bg-transparent"
           :bg-color="$q.dark.isActive ? 'grey-10' : 'grey-4'"
           label="شماره موبایل خود را وارد کنید"
           type="tel"
           v-model="details.phone_number"
           :input-style="{ fontSize: '12px' }"
           input-class="text-white"
+          autocomplete="off"
         />
         <QInput
-          standout="bg-transparent"
+          standout="!bg-transparent"
           :bg-color="$q.dark.isActive ? 'grey-10' : 'grey-4'"
           label="رمز ورود خود را وارد کنید"
           :type="isPwd ? 'password' : 'text'"
           v-model="details.password"
           :input-style="{ fontSize: '12px' }"
           input-class="text-white"
+          autocomplete="off"
         >
           <template v-slot:append>
             <q-icon
@@ -74,10 +76,10 @@ const details = ref({
         فراموشی رمز عبور؟
       </NuxtLink>
       <div class="flex flex-col w-full items-center gap-3">
-        <QBtn class="rounded-xl max-w-120 w-full bg-blue-7">
+        <QBtn class="!rounded-xl !max-w-120 !w-full bg-blue-7">
           ورود به حساب کاربری
         </QBtn>
-        <QBtn class="rounded-xl max-w-120 w-full" color="grey-9">
+        <QBtn class="!rounded-xl !max-w-120 !w-full" color="grey-9">
           ثبت نام
         </QBtn>
       </div>

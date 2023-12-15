@@ -55,8 +55,8 @@ const details = ref({
         />
       </div>
       <div class="flex flex-col w-full items-center gap-3">
-        <QBtn class="rounded-xl max-w-120 w-full bg-blue-7"> تایید کد </QBtn>
-        <QBtn class="rounded-xl max-w-120 w-full" color="grey-9">
+        <QBtn class="!rounded-xl !max-w-120 !w-full bg-blue-7"> تایید کد </QBtn>
+        <QBtn class="!rounded-xl !max-w-120 !w-full" color="grey-9">
           ارسال مجدد کد
         </QBtn>
       </div>

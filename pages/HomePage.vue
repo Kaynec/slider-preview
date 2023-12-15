@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import OurServices from '@/components/Home/OurServices.vue'
+
 const slide = ref(1)
 </script>
 
@@ -63,7 +65,7 @@ const slide = ref(1)
       animated
       control-color="white"
       navigation
-      class="text-white !border-none !shadow-none h-max bg-transparent"
+      class="text-white !border-none !shadow-none !h-max bg-transparent"
     >
       <template v-slot:navigation-icon="{ active, btnProps, onClick }">
         <div class="translate-y-5">
@@ -94,7 +96,7 @@ const slide = ref(1)
         </div>
       </template>
       <q-carousel-slide
-        img-src="@/assets/home_imgs/hero.png"
+        img-src="/images/home_imgs/hero.png"
         v-for="i in 4"
         :name="i"
         class="carousel-image"

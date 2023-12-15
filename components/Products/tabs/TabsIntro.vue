@@ -36,7 +36,7 @@
     <ul class="p-lg space-y-3rem">
       <li class="relative" v-for="i in 3">
         <div
-          class="absolute -left-5 top-3 w-2 h-2 rounded-full bg-primary"
+          class="absolute -left-5 top-3 w-2 h-2 !rounded-full bg-primary"
         ></div>
         <h5 class="pb-xs">پاسخ‌دهی هپتیک</h5>
         <p class="text-text-secondary">
@@ -61,7 +61,7 @@
     <ul class="p-lg space-y-3rem">
       <li class="relative" v-for="i in 2">
         <div
-          class="absolute -left-5 top-3 w-2 h-2 rounded-full bg-primary"
+          class="absolute -left-5 top-3 w-2 h-2 !rounded-full bg-primary"
         ></div>
         <h5 class="pb-xs">پاسخ‌دهی هپتیک</h5>
         <p class="text-text-secondary">

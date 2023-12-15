@@ -71,7 +71,7 @@
           <div class="flex-1">
             <QBtn
               icon="bookmark"
-              class="full-width border-2 !h-10 text-primary border-primary border-solid rounded-full q-py-sm"
+              class="full-width border-2 !h-10 text-primary border-primary border-solid !rounded-full q-py-sm"
             >
               ذخیره مشکلات برای تعمیر در آینده
             </QBtn>
@@ -120,7 +120,3 @@
     </section>
   </main>
 </template>
-<route lang="yaml">
-meta:
-  currentPageName: خدمات تعمیر - صفحه خرابی کنسول - ثبت خرابی کنسول
-</route>

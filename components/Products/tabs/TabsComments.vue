@@ -9,7 +9,7 @@
         <img
           src="@/assets/avatar.png"
           alt="avatar picture"
-          class="max-w-13 rounded-full object-cover"
+          class="max-w-13 !rounded-full object-cover"
         />
         <div class="flex flex-col">
           <span class="text-text-primary"> عدنان عبدالله پور </span>

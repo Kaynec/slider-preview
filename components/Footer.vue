@@ -2,7 +2,7 @@
 const phone_number = ref('')
 </script>
 <template>
-  <q-footer class="bg-transparent text-xs">
+  <q-footer class="bg-transparent text-xs sticky bottom-0 !mt-auto">
     <QCard class="relative rounded-t-4rem px-8xl bg-dark">
       <UpwardAngle />
       <div class="content flex flex-col">
@@ -53,7 +53,7 @@ const phone_number = ref('')
               standout="bg-transparent"
               v-model="phone_number"
               label="شماره موبایل"
-              class="rounded-full b-1 b-#FFFFFF26 b-solid"
+              class="!rounded-full b-1 b-#FFFFFF26 b-solid"
               color="text-primary"
               dense
             >
@@ -62,7 +62,9 @@ const phone_number = ref('')
               </template>
             </QInput>
           </div>
-          <h4>تمامی حقوق مادی و معنوی برای ...... محفوظ است</h4>
+          <span class="text-xs"
+            >تمامی حقوق مادی و معنوی برای ...... محفوظ است</span
+          >
         </div>
       </div>
     </QCard>
@@ -70,10 +72,10 @@ const phone_number = ref('')
 </template>
 <style scoped>
 .span-border {
-  padding-right: 24px;
-  border-right: 2px solid #ffffff4d;
+  padding-inline-end: 24px;
+  border-inline-end: 2px solid #ffffff4d;
 }
 .span-border:last-child {
-  border-right: none;
+  border-inline-end: none;
 }
 </style>

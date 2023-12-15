@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import ControllerBig from '@/assets/home_imgs/cards/Controller-Big.png'
-import Ps5Big from '@/assets/home_imgs/cards/ps5-big.svg'
+import ControllerBig from 'public/images/home_imgs/cards/Controller-Big.png'
+import Ps5Big from 'public/images/home_imgs/cards/ps5-big.svg'
 
-import HeadsetBig from '@/assets/home_imgs/cards/Headset-Big.png'
+import HeadsetBig from 'public/images/home_imgs/cards/Headset-Big.png'
 
 const availableToggle = ref(false)
 const discountedToggle = ref(false)
@@ -43,7 +43,7 @@ const CurrentFilterCondition = ref(filterConditions.All)
             <span>فیلترها</span>
             <TrashCan class="stroke-red" />
           </div>
-          <q-separator class="my-sm" />
+          <q-separator class="!my-sm" />
 
           <q-expansion-item expand-separator label="بر اساس برند">
             <q-card class="bg-dark">
@@ -68,12 +68,12 @@ const CurrentFilterCondition = ref(filterConditions.All)
 
           <!-- <q-separator class="my-sm" /> -->
 
-          <div class="flex flex-col my-lg">
+          <div class="flex flex-col !my-lg">
             <SwitchComponent
               label="فقط کالاهای موجود"
               v-model="availableToggle"
             />
-            <q-separator class="my-lg" />
+            <q-separator class="!my-lg" />
             <div class="flex justify-between">
               <SwitchComponent
                 v-model="discountedToggle"
@@ -163,7 +163,3 @@ const CurrentFilterCondition = ref(filterConditions.All)
     </section>
   </main>
 </template>
-<route lang="yaml">
-meta:
-  currentPageName: محصولات
-</route>

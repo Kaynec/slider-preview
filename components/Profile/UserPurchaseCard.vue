@@ -33,7 +33,7 @@
               :style="`background:${getCssVar(
                 getCurrentState.backgroundColor
               )}`"
-              class="rounded-full w-5 h-5 flex items-center justify-center"
+              class="!rounded-full w-5 h-5 flex items-center justify-center"
               v-if="getCurrentState.iconClass"
             >
               <div :class="getCurrentState.iconClass" />

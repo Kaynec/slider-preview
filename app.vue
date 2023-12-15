@@ -1,10 +1,14 @@
 <script setup lang="ts">
 import { useGlobalStore } from './store/global'
 import { useQuasar } from 'quasar'
+import '@unocss/reset/tailwind.css'
 // import './styles/main.scss'
 
 onMounted(() => {
   const $q = useQuasar()
+
+  console.log($q.lang)
+
   const globalStore = useGlobalStore()
 
   const isDark = computed(() => globalStore.dark)
@@ -16,8 +20,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <NuxtLayout class="bg-red">
+  <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
 </template>
-<style lang="scss"></style>

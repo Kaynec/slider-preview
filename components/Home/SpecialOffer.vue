@@ -1,9 +1,9 @@
 <script setup>
-import ControllerBig from '@/assets/home_imgs/cards/Controller-Big.png'
-import Ps5Big from '@/assets/home_imgs/cards/ps5-big.svg'
+import ControllerBig from '/images/home_imgs/cards/Controller-Big.png'
+import Ps5Big from '/images/home_imgs/cards/ps5-big.svg'
 
-import HeadsetBig from '@/assets/home_imgs/cards/Headset-Big.png'
-import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
+import HeadsetBig from '/images/home_imgs/cards/Headset-Big.png'
+import VrBig from '/images/home_imgs/cards/Vr-Big.png'
 </script>
 <template>
   <QCard
@@ -11,11 +11,11 @@ import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
     class="custom-spiderman-bg pa-sm md-pa-lg !m-y-sm full-width mx-auto !rounded-20px"
   >
     <div class="col-2 flex flex-col items-center justify-start gap-6">
-      <h3 class="text-primary text-h5 text-bold md:max-w-20">
+      <span class="text-primary f-text-24-36 font-bold md:max-w-20">
         پیشنهاد شگفت انگیز
-      </h3>
+      </span>
       <q-img
-        src="@/assets/home_imgs/cards/tall-ps5.png"
+        src="images/home_imgs/cards/tall-ps5.png"
         width="120"
         height="160"
         class="max-w-30 object-contain"
