@@ -46,16 +46,17 @@ const changeCurrentAddress = (address: typeof model.value[0]) => {
     >
       <div
         v-for="address in model"
-        class="flex justify-between px-4 items-center"
+        class="flex justify-between px-1 gap-1 items-center"
         :class="{ 'text-primary': address.id === currentActiveAddressId }"
       >
         <QRadio
           v-model="currentActiveAddressId"
           :val="address.id"
           :label="address.name"
+          class="basis-65% text-xs"
         />
         <button
-          class="inline-flex gap-2"
+          class="inline-flex gap-2 text_sm items-center"
           @click="changeCurrentAddress(address)"
         >
           <span>ویرایش آدرس</span>

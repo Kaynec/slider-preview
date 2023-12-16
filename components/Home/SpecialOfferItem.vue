@@ -1,11 +1,11 @@
 <template>
   <QCard
-    class="flex flex-col items-center justify-center gap-5 py-1 px-2 custom-opacity"
+    class="flex flex-col items-center justify-center gap-5 py-2 px-3 custom-opacity"
   >
     <section
       class="h-12rem md:h-14rem lg:h-14rem xl:h-18rem full-width rounded-lg bg-background-secondary border-1px border-solid border-#303030 q-pa-sm"
     >
-      <QImg :src="img" fit="scale-down" class="full-width full-height" />
+      <img :src="img" class="full-width full-height object-contain" />
     </section>
 
     <div class="flex justify-between full-width items-center">

@@ -3,7 +3,7 @@
     class="custom-bg min-h-55 rounded-xl border-2 border-primary flex flex-col justify-between gap-2 text-text-primary pa-sm"
   >
     <img
-      src="@/assets/shop/fortnite.svg"
+      src="@/assets/shop/fortnite.svg?inline"
       class="absolute bottom-0 min-w-65 right-0"
       aria-details="just a bg image actually"
     />

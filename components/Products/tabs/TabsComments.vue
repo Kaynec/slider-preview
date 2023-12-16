@@ -82,7 +82,7 @@
       />
     </div>
     <div class="col-12">
-      <PrimaryButton class="max-w-56"> ثبت نظر</PrimaryButton>
+      <PrimaryButton class="max-w-56 !rounded-full"> ثبت نظر</PrimaryButton>
     </div>
   </div>
 </template>

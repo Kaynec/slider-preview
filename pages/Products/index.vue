@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import ControllerBig from 'public/images/home_imgs/cards/Controller-Big.png'
-import Ps5Big from 'public/images/home_imgs/cards/ps5-big.svg'
+import ControllerBig from '@/assets/home_imgs/cards/Controller-Big.png'
+import Ps5Big from '@/assets/home_imgs/cards/ps5-big.png'
 
-import HeadsetBig from 'public/images/home_imgs/cards/Headset-Big.png'
+import HeadsetBig from '@/assets/home_imgs/cards/Headset-Big.png'
 
 const availableToggle = ref(false)
 const discountedToggle = ref(false)
@@ -15,7 +15,7 @@ const filterConditions = {
   Newset: 'جدید ترین',
   Cheapest: 'ارزان ترین',
   MostExpensive: 'گران ترین',
-  MostPopular: 'پر فروش ترین'
+  MostPopular: 'پرفروش ترین'
 }
 const CurrentFilterCondition = ref(filterConditions.All)
 </script>
@@ -86,7 +86,7 @@ const CurrentFilterCondition = ref(filterConditions.All)
       <!--  -->
       <div class="col-span-4 lg:col-span-3">
         <div
-          class="flex items-center justify-between mb-6 mt-3 text-text-secondary px-lg text-1rem"
+          class="flex items-center justify-between mb-6 gap-y-6 mt-3 text-text-secondary px-lg text-1rem"
         >
           <div class="flex gap-2">
             <svg
@@ -124,7 +124,7 @@ const CurrentFilterCondition = ref(filterConditions.All)
 
         <div class="q-col-gutter-lg row">
           <template v-for="i in 9">
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-sm-6 col-lg-4">
               <PopularProductItem
                 :img="ControllerBig"
                 title="دسته PS5 - سفید"
@@ -135,7 +135,7 @@ const CurrentFilterCondition = ref(filterConditions.All)
                 final-price="2.750.000 تومان"
               />
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-sm-6 col-lg-4">
               <PopularProductItem
                 :img="Ps5Big"
                 title="دسته PS5 - سفید"
@@ -146,7 +146,7 @@ const CurrentFilterCondition = ref(filterConditions.All)
                 final-price="2.750.000 تومان"
               />
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-sm-6 col-lg-4">
               <PopularProductItem
                 :img="HeadsetBig"
                 title="دسته PS5 - سفید"

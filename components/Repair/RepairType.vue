@@ -15,12 +15,11 @@ const currentActiveProductType = ref<'Controller' | 'Console'>('Controller')
             'border-1 border-primary border-solid  !shadow-md  shadow-blue-6 ':
               currentActiveProductType === 'Controller'
           }"
-          class="rounded-xl flex-1 flex !flex-row text-primary items-center gap-1 text-xs p-4px"
+          class="rounded-xl flex-1 flex !flex-row text-primary items-center gap-1 text-xs p-8px"
           @click="currentActiveProductType = 'Controller'"
         >
-          <QImg
-            class="w-8 h-8"
-            fit="contain"
+          <img
+            class="w-8 h-8 object-contain"
             alt="image of card"
             src="@/assets/home_imgs/cards/Controller-Big.png"
           />
@@ -31,12 +30,11 @@ const currentActiveProductType = ref<'Controller' | 'Console'>('Controller')
             'border-1 border-primary border-solid  !shadow-md  shadow-blue-6 ':
               currentActiveProductType === 'Console'
           }"
-          class="rounded-xl flex-1 flex !flex-row text-primary items-center gap-1 text-xs p-4px"
+          class="rounded-xl flex-1 flex !flex-row text-primary items-center gap-1 text-xs p-8px"
           @click="currentActiveProductType = 'Console'"
         >
-          <QImg
-            class="w-8 h-8"
-            fit="contain"
+          <img
+            class="w-8 h-8 object-contain"
             alt="image of card"
             src="@/assets/home_imgs/cards/ps5-Big.png"
           />

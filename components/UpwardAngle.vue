@@ -1,9 +1,9 @@
 <template>
-  <div
-    class="flex items-center justify-center custom-shadow bg-dark !rounded-full bg-inherit shadow-2xl -top-2rem w-3rem h-3rem left-1/2 absolute"
+  <button
+    class="flex items-center justify-center custom-shadow bg-dark transition-500 !hover:bg-gray-7 !rounded-full bg-inherit shadow-2xl -top-2rem w-3rem h-3rem left-1/2 absolute"
   >
     <div class="i-carbon-chevron-up text-lg" />
-  </div>
+  </button>
 </template>
 <style scoped>
 .custom-shadow {

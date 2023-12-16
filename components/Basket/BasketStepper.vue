@@ -1,8 +1,8 @@
 <template>
   <QCard
-    class="bg-background-primary text-primary flex flex-col gap-4 items-center justify-center min-h-65"
+    class="bg-background-primary text-primary flex flex-col gap-4 items-center justify-center min-h-55"
   >
-    <div class="text-6xl mb-2rem">LOGO</div>
+    <div class="f-text-32-48 mb-2rem">LOGO</div>
     <div class="flex w-82% max-w-175 relative">
       <div
         class="background absolute inset-0 h-1px bg-primary full-width"
@@ -14,7 +14,7 @@
         }`"
       >
         <ShoppingCard class="stroke-primary w-5 h-5" />
-        <span class="whitespace-nowrap -ml-3 mt-2 inline-block">سبد خرید</span>
+        <span class="whitespace-nowrap -me-3 mt-2 inline-block">سبد خرید</span>
       </div>
 
       <div
@@ -42,7 +42,7 @@
         }`"
       >
         <Payment class="w-5 h-5" />
-        <span class="whitespace-nowrap -ml-3 mt-2 inline-block">پرداخت</span>
+        <span class="whitespace-nowrap -ms-4 mt-2 inline-block">پرداخت</span>
       </div>
     </div>
   </QCard>

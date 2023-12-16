@@ -19,10 +19,12 @@
         <div
           v-for="(i, n) in 3"
           class="flex max-h-35 basis-full md:basis-33% justify-center items-center py-3 gap-3 flex-col md:border-b-none pb-lg border-b-2 border-b-dashed border-b-#262626 px-lg last:md:border-r-none last:border-b-none"
-          md="md:border-e-2 md:border-e-dashed md:border-e-#262626"
+          md="border-e-2 border-e-dashed border-e-#262626"
         >
           <span class="font-bold text-2xl text-primary"> + 2000 </span>
-          <p class="text-text-secondary">خرید از سایت توسط کاربران</p>
+          <p class="text-text-secondary text_xs text-center">
+            خرید از سایت توسط کاربران
+          </p>
         </div>
       </div>
     </div>

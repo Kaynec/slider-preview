@@ -20,6 +20,20 @@ export default defineConfig({
     }
   },
   shortcuts: [
+    ['text_xs', 'f-text-8-12'],
+    ['text_sm', 'f-text-12-16'],
+    ['text_md', 'f-text-12-16'],
+    ['text_lg', 'f-text-14-18'],
+    ['text_xl', 'f-text-16-20'],
+    ['text_2xl', 'f-text-18-22'],
+    ['text_3xl', 'f-text-20-24'],
+    ['text_4xl', 'f-text-22-26'],
+    ['text_5xl', 'f-text-24-28'],
+    ['text_6xl', 'f-text-26-30'],
+    ['text_7xl', 'f-text-28-32'],
+    ['text_8xl', 'f-text-30-34'],
+    ['text_9xl', 'f-text-32-36'],
+    ['text_10xl', 'f-text-34-38'],
     [
       'center-absolute',
       'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'

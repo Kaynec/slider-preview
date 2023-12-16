@@ -13,7 +13,7 @@
     </div>
 
     <div class="row q-col-gutter-lg q-py-lg">
-      <div class="col-12 col-md-4" v-for="i in 6">
+      <div class="col-12 col-md-6 col-xl-4" v-for="i in 6">
         <BlogComponent
           label="شماره موبایل یا ایمیل"
           desc=" لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با

@@ -15,9 +15,8 @@ import Test from '@/assets/home_imgs/cards/test.png'
     </div>
 
     <div class="max-h-18rem md:col-span-2">
-      <QImg
-        class="rounded-2xl h-full"
-        fit="scale-down"
+      <img
+        class="rounded-2xl h-full object-cover"
         alt="game dynamic banner"
         :src="Mario"
       />

@@ -16,6 +16,8 @@
 </template>
 
 <script setup lang="ts">
+import { vAutoAnimate } from '@formkit/auto-animate'
+
 const notifications = ref([
   {
     name: 'همین الان اقدام به خرید کن !',

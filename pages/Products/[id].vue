@@ -1,4 +1,3 @@
-<script setup lang="ts"></script>
 <template>
   <main>
     <section class="row q-col-gutter-lg">

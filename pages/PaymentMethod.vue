@@ -64,7 +64,7 @@ const paymentMethod = ref<'Online' | 'InPerson'>('Online')
                 <span> پرداخت آنلاین با تمامی کارت‌های بانکی </span>
               </div>
             </div>
-            <q-seperator />
+            <q-separator color="border-primary" />
             <div class="gap-2 flex items-center text-primary">
               <QRadio v-model="paymentMethod" val="InPerson" />
               <InPerson

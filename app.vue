@@ -7,7 +7,7 @@ import '@unocss/reset/tailwind.css'
 onMounted(() => {
   const $q = useQuasar()
 
-  console.log($q.lang)
+  console.log($q.lang.rtl)
 
   const globalStore = useGlobalStore()
 

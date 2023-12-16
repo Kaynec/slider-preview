@@ -79,7 +79,7 @@ const slide = ref(1)
             @click="onClick"
           >
             <img
-              src="@/assets/home_imgs/selected_navigation.svg"
+              src="@/assets/home_imgs/selected_navigation.svg?inline"
               alt="selected banner icon"
             />
           </q-btn>

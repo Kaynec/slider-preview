@@ -1,27 +1,32 @@
 <script setup>
-import ControllerBig from '/images/home_imgs/cards/Controller-Big.png'
-import Ps5Big from '/images/home_imgs/cards/ps5-big.svg'
+import ControllerBig from '@/assets/home_imgs/cards/Controller-Big.png'
+import Ps5Big from '@/assets/home_imgs/cards/ps5-big.svg?inline'
 
-import HeadsetBig from '/images/home_imgs/cards/Headset-Big.png'
-import VrBig from '/images/home_imgs/cards/Vr-Big.png'
+import HeadsetBig from '@/assets/home_imgs/cards/Headset-Big.png'
+import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
 </script>
 <template>
   <QCard
     :class="{ row: $q.screen.width > 1024 }"
-    class="custom-spiderman-bg pa-sm md-pa-lg !m-y-sm full-width mx-auto !rounded-20px"
+    class="custom-spiderman-bg full-width mx-auto !rounded-20px row px-lg"
   >
-    <div class="col-2 flex flex-col items-center justify-start gap-6">
-      <span class="text-primary f-text-24-36 font-bold md:max-w-20">
-        پیشنهاد شگفت انگیز
-      </span>
-      <q-img
-        src="images/home_imgs/cards/tall-ps5.png"
+    <div
+      class="col-12 col-lg-2 flex flex-col items-center justify-between mt-4 gap-6"
+    >
+      <img
+        src="../../assets/offer-text.svg?inline"
+        class="f-w-120-144"
+        alt="this is the special offer text"
+      />
+
+      <NuxtImg
+        src="/images/home_imgs/cards/tall-ps5.png"
         width="120"
-        height="160"
-        class="max-w-30 object-contain"
+        height="260"
+        class="max-w-30 object-contain mb-lg lg:mb-0"
       />
     </div>
-    <div class="col-10 row q-col-gutter-sm">
+    <div class="col-12 col-lg-10 row q-col-gutter-sm">
       <div class="col-12 col-md-3">
         <SpecialOfferItem
           :img="ControllerBig"
@@ -31,6 +36,7 @@ import VrBig from '/images/home_imgs/cards/Vr-Big.png'
           price="3,450,000 تومان"
           :time="['22', '14', '35']"
           final-price="2.750.000 تومان"
+          class="my-lg"
         />
       </div>
       <div class="col-12 col-md-3">
@@ -42,6 +48,7 @@ import VrBig from '/images/home_imgs/cards/Vr-Big.png'
           price="3,450,000 تومان"
           :time="['22', '14', '35']"
           final-price="2.750.000 تومان"
+          class="my-lg"
         />
       </div>
       <div class="col-12 col-md-3">
@@ -53,6 +60,7 @@ import VrBig from '/images/home_imgs/cards/Vr-Big.png'
           price="3,450,000 تومان"
           :time="['22', '14', '35']"
           final-price="2.750.000 تومان"
+          class="my-lg"
         />
       </div>
       <div class="col-12 col-md-3">
@@ -64,6 +72,7 @@ import VrBig from '/images/home_imgs/cards/Vr-Big.png'
           price="3,450,000 تومان"
           :time="['22', '14', '35']"
           final-price="2.750.000 تومان"
+          class="my-lg"
         />
       </div>
     </div>
@@ -71,9 +80,10 @@ import VrBig from '/images/home_imgs/cards/Vr-Big.png'
 </template>
 <style lang="scss">
 .custom-spiderman-bg {
+  background: $background-primary;
   background-image: url('@/assets/login-bg.png');
   background-size: cover;
-  background-position: 0 -5rem;
+  background-position: -12.5rem;
   background-repeat: no-repeat;
 }
 </style>

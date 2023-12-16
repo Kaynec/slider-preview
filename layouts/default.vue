@@ -1,14 +1,9 @@
-<script setup lang="ts">
-// import { useQuasar } from 'quasar'
-// import { links } from './links'
-// const q = useQuasar()
-
-// const search = ref('')
-</script>
-
 <template>
   <q-layout view="hHh LpR fff" dir="rtl" class="min-h-screen">
-    <Header v-if="$q.screen.width > 1024" />
+    <ClientOnly>
+      <Header v-if="$q.screen.width > 1024" />
+      <MobileHeader v-else />
+    </ClientOnly>
 
     <q-page-container>
       <div
@@ -36,21 +31,19 @@
       </div>
       <router-view
         v-slot="{ Component, route }"
-        class="container mx-auto md:px-sm lg:px-lg"
+        class="container mx-auto pa-sm md:px-sm lg:px-lg"
       >
         <transition name="slide-fade" mode="out-in">
           <component :is="Component" :key="route" />
         </transition>
       </router-view>
+      <ClientOnly>
+        <Footer />
+      </ClientOnly>
     </q-page-container>
-    <Footer v-if="$q.screen.width > 1024" />
   </q-layout>
 </template>
-<!-- <style>
-.input-container > .q-field__label {
-  color: purple !important;
-}
-</style> -->
+
 <style lang="scss" scoped>
 .slide-fade-enter {
   transform: translateX(10px);

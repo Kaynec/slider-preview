@@ -7,17 +7,22 @@
       <span class="pb-lg">
         {{ desc }}
       </span>
-      <q-separator v-if="addSeperator" class="mt-sm" color="border-primary" />
+      <q-separator v-if="addSeperator" class="q-mt-sm" color="border-primary" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-const { addSeperator = true } = defineProps<{
-  label: string
-  desc: string
-  addSeperator?: boolean
-}>()
+withDefaults(
+  defineProps<{
+    label: string
+    desc: string
+    addSeperator?: boolean
+  }>(),
+  {
+    addSeperator: true
+  }
+)
 </script>
 
 <style scoped></style>

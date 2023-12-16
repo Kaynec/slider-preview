@@ -29,7 +29,7 @@
           <strong> 1.500.000 الی 2.500.000 تومان </strong>
         </h4>
         <div class="text-primary flex flex-row gap-2 items-start">
-          <div class="basis-1/12">
+          <div>
             <svg
               width="24"
               height="24"
@@ -71,7 +71,10 @@
           <div class="flex-1">
             <QBtn
               icon="bookmark"
-              class="full-width border-2 !h-10 text-primary border-primary border-solid !rounded-full q-py-sm"
+              outline
+              color="primary"
+              rounded
+              class="full-width !h-10 q-py-sm"
             >
               ذخیره مشکلات برای تعمیر در آینده
             </QBtn>

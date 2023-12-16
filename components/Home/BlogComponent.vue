@@ -1,6 +1,7 @@
 <template>
   <QCard
-    class="custom-card-class !pb-[2.5rem] flex justify-center items-center min-h-75 mb-3rem gap-6 card-with-border q-pa-md"
+    class="custom-card-class cursor-pointer transition-300 hover:scale-[1.03] !pb-[3.5rem] !lg-pb-[2.75rem] flex justify-center items-center min-h-75 mb-3rem gap-6 card-with-border q-pa-md"
+    @click.self=""
   >
     <!--  -->
     <QImg src="images/home_imgs/cards/warzone.png" class="flex q-pa-lg">
@@ -16,7 +17,7 @@
     <!--  -->
     <div class="flex justify-start w-full gap-3">
       <div
-        class="flex gap-2 items-center text-#ddd border-r-2 border-r border-r-#ddd p-r-lg"
+        class="flex gap-2 items-center text-#ddd border-e-2 border-e-#ddd p-e-lg"
       >
         <Calendar class="fill-#ddd w-7 h-7" />
         {{ time }}
@@ -33,7 +34,7 @@
 defineProps<{
   label: string
   desc: string
-  commentAmount: number
+  commentAmount: number | string
   time: string
 }>()
 </script>

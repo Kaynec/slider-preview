@@ -31,13 +31,13 @@
           <span class="text-sm text-text-secondary">تومان</span>
         </span>
       </div>
-      <q-separator class="mt-lg" color="border-primary" v-if="addSeperator" />
+      <q-separator class="q-mt-lg" color="border-primary" v-if="addSeperator" />
     </QCardSection>
   </div>
 </template>
 
 <script setup lang="ts">
-const { Item } = defineProps<{
+defineProps<{
   item: {
     image: string
     alt: string

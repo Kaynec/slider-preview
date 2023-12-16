@@ -91,7 +91,7 @@
       />
     </div>
     <div class="col-12">
-      <PrimaryButton class="max-w-56"> ارسال سوال</PrimaryButton>
+      <PrimaryButton class="max-w-56 !rounded-full"> ارسال سوال</PrimaryButton>
     </div>
   </div>
 </template>

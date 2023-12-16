@@ -2,7 +2,7 @@
 const phone_number = ref('')
 </script>
 <template>
-  <q-footer class="bg-transparent text-xs sticky bottom-0 !mt-auto">
+  <q-footer class="bg-transparent text-xs !mt-auto">
     <QCard class="relative rounded-t-4rem px-8xl bg-dark">
       <UpwardAngle />
       <div class="content flex flex-col">
@@ -44,7 +44,7 @@ const phone_number = ref('')
               تهران , تهران
             </div>
           </div>
-          <div class="flex flex-col flex-basis-50% gap-2">
+          <div class="flex flex-col flex-basis-50% mx-auto gap-2">
             <h4 class="text-center text-primary text-lg">
               ما را معرفی کن تخفیف بگیر
             </h4>
@@ -62,7 +62,7 @@ const phone_number = ref('')
               </template>
             </QInput>
           </div>
-          <span class="text-xs"
+          <span class="text_xs"
             >تمامی حقوق مادی و معنوی برای ...... محفوظ است</span
           >
         </div>

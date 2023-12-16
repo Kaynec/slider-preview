@@ -36,6 +36,6 @@
       <span class="line-through"> قیمت: </span>
       <span> ۲۸.۵۰۰.۰۰۰ تومان </span>
     </div>
-    <PrimaryButton> افزودن به سبد خرید </PrimaryButton>
+    <PrimaryButton class="!rounded-full"> افزودن به سبد خرید </PrimaryButton>
   </QCard>
 </template>

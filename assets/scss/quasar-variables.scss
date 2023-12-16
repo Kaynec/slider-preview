@@ -35,9 +35,9 @@ $colors-light: (
 );
 $colors-dark: (
   text-primary: #fff,
-  text-secondary: #ffffffb9,
+  text-secondary: hsla(0, 0%, 100%, 0.725),
   primary: #007aff,
-  primary-light: #007aff1a,
+  primary-light: hsla(211, 100%, 50%, 0.15),
   secondary: #26a69a,
   btn-gradient: linear-gradient(to right, #007aff, #034da4),
   accent: #db162f,
@@ -50,9 +50,9 @@ $colors-dark: (
   background-dark-page: #121212,
   background-primary: #1c1c1c,
   background-secondary: rgba(255, 255, 255, 0.03),
-  overlay: #3737375c,
-  border-primary: #262626,
-  border-secondary: #007aff4d,
+  overlay: hsla(0, 0%, 22%, 0.361),
+  border-primary: hsl(0, 0%, 15%),
+  border-secondary: hsla(211, 100%, 50%, 0.302),
   text-price: #05cd99
 );
 

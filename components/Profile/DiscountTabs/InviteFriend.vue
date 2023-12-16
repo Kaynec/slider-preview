@@ -22,7 +22,7 @@
       input-class="text-white"
       dense
     />
-    <PrimaryButton class="max-w-125 rounded-xl mb-4">
+    <PrimaryButton class="max-w-125 !rounded-xl mb-4">
       ارسال دعوت نامه
     </PrimaryButton>
   </div>

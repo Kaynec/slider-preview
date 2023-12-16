@@ -1,13 +1,13 @@
 <script setup>
 import ControllerBig from '@/assets/home_imgs/cards/Controller-Big.png'
-import Ps5Big from '@/assets/home_imgs/cards/ps5-big.svg'
+import Ps5Big from '@/assets/home_imgs/cards/ps5-big.svg?inline'
 
 import HeadsetBig from '@/assets/home_imgs/cards/Headset-Big.png'
 import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
 </script>
 <template>
   <div class="flex flex-col gap-4 my-6xl">
-    <span class="text-h4 heading">محصولات پر فروش</span>
+    <span class="text_5xl heading">محصولات پر فروش</span>
     <p class="text-text-secondary">
       لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
       طراحان گرافیک است،

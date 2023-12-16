@@ -34,12 +34,12 @@ const details = ref({
 </script>
 
 <template>
-  <QPage class="px-6xl column pb-3xl">
+  <QPage class="lg:px-6xl column">
     <QCard
-      class="pa-xs !min-h-160 !m-y-sm flex m-lg flex-col col w-full gap-3 items-center mx-auto justify-center !rounded-3rem full-height"
+      class="pa-xs px-xl !m-y-sm flex m-lg flex-col min-h-160 w-full gap-3 items-center mx-auto justify-center !rounded-2rem"
     >
-      <h3 class="text-primary text-h5">ورود به حساب کاربری</h3>
-      <span class="text-sm text-text-secondary">
+      <h3 class="text-primary text_5xl">ورود به حساب کاربری</h3>
+      <span class="text_sm text-text-secondary">
         خوش برگشتی! لطفا برای دسترسی به حساب کاربری خود وارد شوید.
       </span>
       <div class="flex flex-col w-full max-w-240 gap-3">

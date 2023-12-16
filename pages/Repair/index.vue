@@ -41,15 +41,14 @@
       <!--  -->
 
       <div class="col-12 col-lg-7">
-        <q-list class="rounded-borders !bg-transparent space-y-lg">
+        <q-list class="!rounded-2xl !bg-transparent space-y-lg">
           <h3 class="text-2xl py-lg">سوالات متداول</h3>
           <q-expansion-item
-            expand-separator
             class="bg-background-secondary !rounded-2xl border-1 border-border-primary"
             label="چگونه میتوانیم در دروره های اموزشی شرکت کنیم؟"
             v-for="item in 4"
           >
-            <q-card>
+            <q-card class="!rounded-2xl">
               <q-card-section>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Quidem, eius reprehenderit eos corrupti commodi magni quaerat ex
@@ -61,7 +60,7 @@
         </q-list>
       </div>
       <div class="col-12 col-lg-5 flex justify-center">
-        <img src="@/assets/FAQs.svg" alt="FAQs image" />
+        <img src="@/assets/FAQs.svg?inline" alt="FAQs image" />
       </div>
       <!--  -->
       <div class="col-12 flex flex-col pa-lg gap-5 my-xl">

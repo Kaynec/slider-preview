@@ -70,7 +70,7 @@ const setElementToActive = (index: number) => {
 </script>
 <template>
   <main>
-    <QCard class="mt-lg mb-3rem !rounded-xl pa-lg">
+    <QCard class="mt-lg mb-3rem !rounded-xl q-pb-lg">
       <q-tabs
         v-model="tab"
         content-class="text-text-primary !border-1 !border-solid !border-dark"
@@ -100,7 +100,7 @@ const setElementToActive = (index: number) => {
               @click="setElementToActive(index)"
             >
               <div
-                class="relative border-3 h-60 after:rounded-b-xl rounded-xl after:z-1 after:absolute after:content-[''] after:w-full after:h-8 after:bg-black after-bottom-0 after-end-0"
+                class="relative border-1 min-h-50 after:rounded-b-xl rounded-xl after:z-1 after:absolute after:content-[''] after:w-full after:h-8 after:bg-black after-bottom-0 after-end-0"
                 :class="{
                   ' border-primary': error.active,
                   'border-border-primary': !error.active
@@ -131,7 +131,7 @@ const setElementToActive = (index: number) => {
               @click="setElementToActive(index)"
             >
               <div
-                class="relative border-3 min-h-50 after:rounded-b-xl rounded-xl after:z-1 after:absolute after:content-[''] after:w-full after:h-8 after:bg-black after-bottom-0 after-end-0"
+                class="relative border-1 min-h-50 after:rounded-b-xl rounded-xl after:z-1 after:absolute after:content-[''] after:w-full after:h-8 after:bg-black after-bottom-0 after-end-0"
                 :class="{
                   ' border-primary': error.active,
                   'border-border-primary': !error.active
@@ -162,7 +162,7 @@ const setElementToActive = (index: number) => {
               @click="setElementToActive(index)"
             >
               <div
-                class="relative border-3 min-h-50 after:rounded-b-xl rounded-xl after:z-1 after:absolute after:content-[''] after:w-full after:h-8 after:bg-black after-bottom-0 after-end-0"
+                class="relative border-1 min-h-50 after:rounded-b-xl rounded-xl after:z-1 after:absolute after:content-[''] after:w-full after:h-8 after:bg-black after-bottom-0 after-end-0"
                 :class="{
                   ' border-primary': error.active,
                   'border-border-primary': !error.active
@@ -193,7 +193,7 @@ const setElementToActive = (index: number) => {
               @click="setElementToActive(index)"
             >
               <div
-                class="relative border-3 min-h-50 after:rounded-b-xl rounded-xl after:z-1 after:absolute after:content-[''] after:w-full after:h-8 after:bg-black after-bottom-0 after-end-0"
+                class="relative border-1 min-h-50 after:rounded-b-xl rounded-xl after:z-1 after:absolute after:content-[''] after:w-full after:h-8 after:bg-black after-bottom-0 after-end-0"
                 :class="{
                   ' border-primary': error.active,
                   'border-border-primary': !error.active
@@ -215,7 +215,9 @@ const setElementToActive = (index: number) => {
         </q-tab-panel>
       </q-tab-panels>
 
-      <PrimaryButton class="max-w-130"> ثبت خرابی کنسول </PrimaryButton>
+      <div class="ps-4 w-full">
+        <PrimaryButton class="max-w-130"> ثبت خرابی کنسول </PrimaryButton>
+      </div>
     </QCard>
   </main>
 </template>

@@ -11,7 +11,7 @@ const model = ref({
   repassword: '',
   email_verified: false,
   email_verification: '',
-  birth_date: ''
+  birth_date: '1397/08/12'
 })
 
 const $q = useQuasar()
@@ -30,10 +30,10 @@ const isPwd = ref(false)
 </script>
 <template>
   <QCard class="px-sm pb-xs bg-background-primary shadow-none">
-    <div class="flex items-center justify-between w-full pa-sm">
+    <div class="flex items-center justify-between w-full py-lg">
       <div class="flex gap-2 items-center">
         <div
-          class="!rounded-full bg-black grid place-content-center w-25 h-25 aspect-1"
+          class="!rounded-full bg-black grid place-content-center w-18 h-18 aspect-1"
         >
           <!-- TODO when there is actually user -->
           <!-- <img src="" alt=""> -->
@@ -89,8 +89,6 @@ const isPwd = ref(false)
       <div class="col-12 col-lg-6">
         <q-input
           v-model="model.birth_date"
-          mask="date"
-          :rules="['date']"
           label="تاریخ تولد:"
           type="text"
           standout="bg-transparent"
@@ -191,8 +189,10 @@ const isPwd = ref(false)
           input-class="text-white"
         />
       </div>
-      <div class="col-9 md-col-6 lg-col-3">
-        <PrimaryButton type="submit"> ذخیره تغییرات </PrimaryButton>
+      <div class="col-9 col-md-6 col-lg-3">
+        <PrimaryButton type="submit" class="!rounded-3xl">
+          ذخیره تغییرات
+        </PrimaryButton>
       </div>
     </QForm>
   </QCard>

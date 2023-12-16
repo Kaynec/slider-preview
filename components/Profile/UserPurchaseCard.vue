@@ -43,7 +43,7 @@
         </div>
         <!--  -->
 
-        <button class="inline-flex gap-2 text-primary">
+        <button class="inline-flex gap-2 text-primary my-auto">
           <span>مشاهده فاکتور</span>
           <CurvedLeftArrow class="stroke-primary" />
         </button>
