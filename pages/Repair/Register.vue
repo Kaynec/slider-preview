@@ -1,4 +1,15 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+useSeoMeta({
+  title: 'cspro - repair page register',
+  ogTitle: 'cspro - repair page register',
+  description: 'خدمات تعمیر - ثبت ت',
+  ogDescription: 'خدمات تعمیر - ثبت ت'
+})
+
+definePageMeta({
+  currentPageName: 'خدمات تعمیر - ثبت تعمیر'
+})
+</script>
 <template>
   <main>
     <section class="row q-col-gutter-lg pb-lg">

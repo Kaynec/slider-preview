@@ -9,7 +9,7 @@ export const links = [
   },
   {
     name: 'تست خرابی دسته',
-    route: ''
+    route: '/Repair/ControllerTest'
   },
   {
     name: 'درباره ما',

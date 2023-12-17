@@ -1,4 +1,15 @@
 <script setup lang="ts">
+useSeoMeta({
+  title: 'cspro - console repair page',
+  ogTitle: 'cspro - console repair page',
+  description: 'خدمات تعمیر - کنسول',
+  ogDescription: 'خدمات تعمیر - کنسول'
+})
+
+definePageMeta({
+  currentPageName: 'خدمات تعمیر - تست کنسول'
+})
+
 const tabConditions = {
   DifferentErrorTypes: 'انواع ارور ها',
   BodyDamage: 'شکستگی بدنه',

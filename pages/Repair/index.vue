@@ -1,3 +1,16 @@
+<script setup>
+useSeoMeta({
+  title: 'cspro - repair page',
+  ogTitle: 'cspro - repair page',
+  description: 'خدمات تعمیر ',
+  ogDescription: 'خدمات تعمیر '
+})
+
+definePageMeta({
+  currentPageName: 'خدمات تعمیر '
+})
+</script>
+
 <template>
   <main>
     <section class="row q-col-gutter-lg pb-lg">

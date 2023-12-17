@@ -3,6 +3,18 @@ import circle from '@/assets/circle.svg'
 import rectangle from '@/assets/rectangle.svg'
 import cross from '@/assets/cross.svg'
 import triangle from '@/assets/triangle.svg'
+
+useSeoMeta({
+  title: 'cspro - payment success',
+  ogTitle: 'cspro - payment success',
+  description: 'خرید موفقیت آمیز',
+  ogDescription: 'خرید موفقیت آمیز'
+})
+
+definePageMeta({
+  currentPageName: 'خرید موفقیت آمیز'
+})
+
 const details = ref([
   {
     label: 'شماره پیگیری:',

@@ -1,6 +1,13 @@
 <script setup lang="ts">
 import { QForm, QSpinnerGears, useQuasar } from 'quasar'
 
+useSeoMeta({
+  title: 'cspro - login page',
+  ogTitle: 'cspro - login page',
+  description: 'صفحه ورود',
+  ogDescription: 'صفحه ورود'
+})
+
 const emailAuthenticationForm = ref<QForm | null>(null)
 const isPwd = ref(true)
 const email = ref('')

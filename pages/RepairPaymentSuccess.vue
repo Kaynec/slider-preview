@@ -1,4 +1,15 @@
 <script setup lang="ts">
+useSeoMeta({
+  title: 'cspro - repair success',
+  ogTitle: 'cspro - repair success',
+  description: 'درخواست تعمیر موفقیت آمیز',
+  ogDescription: 'درخواست تعمیر موفقیت آمیز'
+})
+
+definePageMeta({
+  currentPageName: 'درخواست تعمیر موفقیت آمیز'
+})
+
 const details = ref([
   {
     label: 'شماره پیگیری:',

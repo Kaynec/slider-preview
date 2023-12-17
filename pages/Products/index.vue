@@ -1,4 +1,15 @@
 <script setup lang="ts">
+useSeoMeta({
+  title: 'cspro - products',
+  ogTitle: 'cspro - products',
+  description: 'نحصولات',
+  ogDescription: 'نحصولات'
+})
+
+definePageMeta({
+  currentPageName: 'نحصولات'
+})
+
 import ControllerBig from '@/assets/home_imgs/cards/Controller-Big.png'
 import Ps5Big from '@/assets/home_imgs/cards/ps5-big.png'
 

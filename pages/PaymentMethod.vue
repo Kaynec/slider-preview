@@ -1,6 +1,18 @@
 <script setup lang="ts">
 import ControllerBig from '@/assets/home_imgs/cards/Controller-Big.png'
 import Gameimage from '@/assets/shop/game.png'
+
+useSeoMeta({
+  title: 'cspro - payment method',
+  ogTitle: 'cspro - payment method',
+  description: 'انتخاب روش خرید',
+  ogDescription: 'انتخاب روش خرید'
+})
+
+definePageMeta({
+  currentPageName: 'انتخاب روش خرید'
+})
+
 const cardItems = ref([
   {
     image: ControllerBig,

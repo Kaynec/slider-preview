@@ -1,6 +1,18 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+useSeoMeta({
+  title: 'cspro - controller test',
+  ogTitle: 'cspro - controller test',
+  description: 'خدمات تعمیر - تست دسته',
+  ogDescription: 'خدمات تعمیر - تست دسته'
+})
+
+definePageMeta({
+  currentPageName: 'خدمات تعمیر - تست دسته'
+})
+</script>
 <template>
   <main>
+    <GamePadTester />
     <section class="row q-col-gutter-lg pb-lg">
       <div class="col-12 mt-2rem mb-3rem">
         <h3 class="text-2xl py-lg">

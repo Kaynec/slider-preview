@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="hHh LpR fff" dir="rtl" class="min-h-screen">
+  <q-layout view="hHh LpR fff" dir="rtl" class="min-h-screen !flex !flex-col">
     <ClientOnly>
       <Header v-if="$q.screen.width > 1024" />
       <MobileHeader v-else />
@@ -29,18 +29,19 @@
           </template>
         </div>
       </div>
+
       <router-view
         v-slot="{ Component, route }"
-        class="container mx-auto pa-sm md:px-sm lg:px-lg"
+        class="container mx-auto pa-sm md:px-sm lg:px-lg col"
       >
         <transition name="slide-fade" mode="out-in">
           <component :is="Component" :key="route" />
         </transition>
       </router-view>
-      <ClientOnly>
-        <Footer />
-      </ClientOnly>
     </q-page-container>
+    <ClientOnly>
+      <Footer />
+    </ClientOnly>
   </q-layout>
 </template>
 

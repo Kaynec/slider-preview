@@ -1,6 +1,13 @@
 <script setup lang="ts">
 import { QForm, QSpinnerGears, useQuasar } from 'quasar'
 
+useSeoMeta({
+  title: 'cspro - register page',
+  ogTitle: 'cspro - register page',
+  description: 'صفحه ثبت نام',
+  ogDescription: 'صفحه ثبت نام'
+})
+
 const emailAuthenticationForm = ref<QForm | null>(null)
 const q = useQuasar()
 const onSubmit = () => {

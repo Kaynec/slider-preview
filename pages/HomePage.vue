@@ -1,6 +1,17 @@
 <script setup lang="ts">
 import OurServices from '@/components/Home/OurServices.vue'
 
+useSeoMeta({
+  title: 'cspro - repair page register',
+  ogTitle: 'cspro - repair page register',
+  description: 'صفحه اصلی',
+  ogDescription: 'صفحه اصلی'
+})
+
+definePageMeta({
+  currentPageName: 'صفحه اصلی'
+})
+
 const slide = ref(1)
 </script>
 

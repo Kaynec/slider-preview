@@ -1,4 +1,11 @@
 <script setup lang="ts">
+useSeoMeta({
+  title: 'cspro - forgot password',
+  ogTitle: 'cspro - forgot password',
+  description: 'فراموشی رمزعبور',
+  ogDescription: 'فراموشی رمزعبور'
+})
+
 import { QForm, QSpinnerGears, useQuasar } from 'quasar'
 
 const emailAuthenticationForm = ref<QForm | null>(null)

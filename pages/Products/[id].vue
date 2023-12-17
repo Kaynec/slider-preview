@@ -1,3 +1,16 @@
+<script setup>
+useSeoMeta({
+  title: 'cspro - products page',
+  ogTitle: 'cspro - products page',
+  description: 'صفحه محصول',
+  ogDescription: 'صفحه محصول'
+})
+
+definePageMeta({
+  currentPageName: 'محصولات - پلی استیشن'
+})
+</script>
+
 <template>
   <main>
     <section class="row q-col-gutter-lg">
