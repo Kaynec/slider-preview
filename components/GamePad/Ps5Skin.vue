@@ -2,8 +2,9 @@
   <div class="relative">
     <svg
       v-if="connected"
-      width="500"
-      height="500"
+      width="350"
+      height="350"
+      class="!lg:w-450px !lg-h-450px"
       viewBox="0 0 800 800"
       xmlns="http://www.w3.org/2000/svg"
     >

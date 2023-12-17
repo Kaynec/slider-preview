@@ -1,63 +1,26 @@
 <template>
   <QCard
-    class="h-70vh min-h-140 max-h-240 shadow-0 custom flex w-full justify-center items-center relative"
+    class="min-h-140 py-lg shadow-0 custom flex flex-col w-full justify-center items-center relative w-90vw max-w-350 mx-auto"
   >
+    <span class="text-center text-primary"> {{ gamepad?.id }} </span>
     <template v-if="connected">
       <!-- Detail About Current Controller -->
-      <div class="w-20% h-full absolute start-0">
-        <div class="grid grid-cols-2 content-start h-full gap-y-xl">
+      <div class="w-full !md:w-20% h-max lg:h-full static start-0 !lg:absolute">
+        <div
+          class="grid grid-cols-2 content-start items-center h-fit !lg:h-full gap-y-xl"
+        >
           <div
             class="col-span-2 flex flex-col items-center gap-3 justify-center"
           >
-            <div
-              class="mx-auto flex items-center !min-h-50 justify-center py-xl !overflow-visible"
-            >
-              <svg class="!overflow-visible">
-                <g
-                  overflow-visible
-                  transform="translate(150 75) scale(0.95, 0.95)"
-                >
-                  <circle
-                    cx="0"
-                    cy="0"
-                    r="78.5"
-                    fill="none"
-                    stroke="gray"
-                    stroke-width="1"
-                  ></circle>
-                  <line
-                    x1="0"
-                    y1="-78.5"
-                    x2="0"
-                    y2="78.5"
-                    stroke="gray"
-                    stroke-width="1"
-                  ></line>
-                  <line
-                    x1="-78.5"
-                    y1="0"
-                    x2="78.5"
-                    y2="0"
-                    stroke="gray"
-                    stroke-width="1"
-                  ></line>
-                  <line
-                    x1="0"
-                    y1="0"
-                    :x2="axesMapping.rightAxesX * (100 - 22)"
-                    :y2="axesMapping.rightAxesY * (100 - 22)"
-                    :stroke="getCssVar('primary')!"
-                    stroke-width="2"
-                  ></line>
-                  <circle
-                    :cx="axesMapping.rightAxesX * (100 - 22)"
-                    :cy="axesMapping.rightAxesY * (100 - 22)"
-                    r="4"
-                    :fill="getCssVar('primary')!"
-                  ></circle>
-                </g>
-              </svg>
-            </div>
+            <!-- Right Analog Stick Desktop -->
+
+            <Circle
+              :X="axesMapping.rightAxesX"
+              :Y="axesMapping.rightAxesY"
+              class="translate-y-21 translate-x-67% lg:translate-x-65% xl:translate-x-55%"
+              v-if="$q.screen.width > 1024"
+              :transform="'scale(0.95, 0.95)'"
+            />
           </div>
 
           <p class="flex flex-col text-text-secondary text-center">
@@ -78,68 +41,15 @@
           </p>
         </div>
       </div>
-      <!-- LEft Side Details -->
-      <div class="w-20% h-full absolute end-0">
-        <div class="grid grid-cols-2 content-start h-full gap-y-xl">
-          <div
-            class="col-span-2 flex flex-col items-center gap-3 justify-center"
-          >
-            <div
-              class="mx-auto flex items-center !min-h-50 justify-center py-xl !overflow-visible"
-            >
-              <svg class="!overflow-visible">
-                <g
-                  overflow-visible
-                  transform="translate(150 75) scale(0.95, 0.95)"
-                >
-                  <circle
-                    cx="0"
-                    cy="0"
-                    r="78.5"
-                    fill="none"
-                    stroke="gray"
-                    stroke-width="1"
-                  ></circle>
-                  <line
-                    x1="0"
-                    y1="-78.5"
-                    x2="0"
-                    y2="78.5"
-                    stroke="gray"
-                    stroke-width="1"
-                  ></line>
-                  <line
-                    x1="-78.5"
-                    y1="0"
-                    x2="78.5"
-                    y2="0"
-                    stroke="gray"
-                    stroke-width="1"
-                  ></line>
-                  <line
-                    x1="0"
-                    y1="0"
-                    :x2="axesMapping.leftAxesX * (100 - 22)"
-                    :y2="axesMapping.leftAxesY * (100 - 22)"
-                    :stroke="getCssVar('primary')!"
-                    stroke-width="2"
-                  ></line>
-                  <circle
-                    :cx="axesMapping.leftAxesX * (100 - 22)"
-                    :cy="axesMapping.leftAxesY * (100 - 22)"
-                    r="4"
-                    :fill="getCssVar('primary')!"
-                  ></circle>
-                </g>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--  -->
+      <!-- Left Analog Stick Desktop -->
+      <Circle
+        :X="axesMapping.leftAxesX"
+        :Y="axesMapping.leftAxesY"
+        v-if="$q.screen.width > 1024"
+        class="absolute end-0 top-0 translate-y-21 translate-x-35"
+        :transform="'scale(0.95, 0.95)'"
+      />
       <div class="flex flex-col justify-center items-center">
-        <span class="text-center"> {{ gamepad.id }} </span>
-
         <Ps5Skin
           :connected="connected"
           :buttonMapping="buttonMapping"
@@ -148,14 +58,41 @@
           :fillColor="fillColor"
           :isActive="isActive"
         />
-        <div class="mx-auto">
+        <!--  -->
+        <div class="flex !flex-nowrap">
+          <div class="flex-1">
+            <Circle
+              :X="axesMapping.rightAxesX"
+              :Y="axesMapping.rightAxesY"
+              v-if="$q.screen.width < 1024"
+              class="translate-x-50% translate-y-20% !max-w-full"
+              :transform="'scale(0.95, 0.95)'"
+            />
+          </div>
+          <div class="flex-1">
+            <Circle
+              :X="axesMapping.leftAxesX"
+              :Y="axesMapping.leftAxesY"
+              v-if="$q.screen.width < 1024"
+              class="translate-x-50% translate-y-20% !max-w-full"
+              :transform="'scale(0.95, 0.95)'"
+            />
+          </div>
+        </div>
+        <!--  -->
+        <div
+          class="mx-auto w-full flex-col md:flex-row flex justify-center items-center gap-3"
+        >
           <PrimaryButton
-            class="btn !rounded-xl max-w-45 w-full"
+            class="!rounded-lg !max-w-75 flex-1"
             :disabled="!supportsVibration"
             @click="vibrate"
           >
             تست ویبره
           </PrimaryButton>
+          <OutlinedButton class="!rounded-lg flex-1 !max-w-75 w-full">
+            تکمیل تست
+          </OutlinedButton>
         </div>
       </div>
     </template>
