@@ -21,6 +21,7 @@ import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
 
       <NuxtImg
         src="/images/home_imgs/cards/tall-ps5.png"
+        alt="tall ps5 image"
         width="120"
         height="260"
         class="max-w-30 object-contain mb-lg lg:mb-0"

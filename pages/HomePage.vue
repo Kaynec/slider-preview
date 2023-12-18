@@ -2,8 +2,8 @@
 import OurServices from '@/components/Home/OurServices.vue'
 
 useSeoMeta({
-  title: 'cspro - repair page register',
-  ogTitle: 'cspro - repair page register',
+  title: 'cspro - Home page',
+  ogTitle: 'cspro - Home page',
   description: 'صفحه اصلی',
   ogDescription: 'صفحه اصلی'
 })

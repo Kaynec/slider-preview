@@ -42,7 +42,7 @@ const details = ref({
 </script>
 
 <template>
-  <QPage class="lg:px-6xl column">
+  <QPage class="lg:px-6xl column mb-lg">
     <QCard
       class="pa-xs px-xl !m-y-sm flex m-lg flex-col min-h-160 w-full gap-3 items-center mx-auto justify-center !rounded-2rem"
     >

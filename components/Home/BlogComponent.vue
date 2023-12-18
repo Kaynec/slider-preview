@@ -4,7 +4,7 @@
     @click.self=""
   >
     <!--  -->
-    <QImg src="images/home_imgs/cards/warzone.png" class="flex q-pa-lg">
+    <QImg :src="codImage" alt="warzone image" class="flex q-pa-lg">
       <div
         class="bg-overlay rounded-2xl relative bottom-2 space-y-sm w-97.5% left-50% translate-x-50% backdrop-blur"
       >
@@ -31,6 +31,8 @@
   </QCard>
 </template>
 <script setup lang="ts">
+import codImage from '@/assets/home_imgs/cards/warzone.png'
+
 defineProps<{
   label: string
   desc: string

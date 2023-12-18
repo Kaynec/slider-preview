@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="hHh LpR fff" dir="rtl" class="min-h-screen !flex !flex-col">
+  <q-layout view="hHh LpR fff" dir="rtl" class="h-screen !flex !flex-col">
     <ClientOnly>
       <Header v-if="$q.screen.width > 1024" />
       <MobileHeader v-else />

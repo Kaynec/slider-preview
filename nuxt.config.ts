@@ -1,6 +1,17 @@
 import { quasar } from '@quasar/vite-plugin'
 
+// @ts-ignore
+// import vsharp from 'vite-plugin-vsharp'
+
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
+
 export default defineNuxtConfig({
+  nitro: {
+    compressPublicAssets: true,
+    prerender: {
+      routes: ['/homepage', '/login']
+    }
+  },
   postcss: {
     plugins: {
       'postcss-rtlcss': {}
@@ -14,6 +25,11 @@ export default defineNuxtConfig({
   //   vscode: {}
   //   // ...other options
   // },
+  // @ts-ignore
+  compression: {
+    algorithm: 'brotliCompress'
+  },
+
   alias: {
     '@': '',
     '~': ''
@@ -23,8 +39,10 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@unocss/nuxt',
     'nuxt-svgo',
-    'nuxt-typed-router'
-    // 'nuxt-purgecss'
+    'nuxt-typed-router',
+    ,
+    // 'nuxt-purgecss',
+    ['@nuxtjs/robots', {}]
   ],
   image: {
     quality: 80
@@ -79,6 +97,10 @@ export default defineNuxtConfig({
     plugins: [
       quasar({
         sassVariables: '@/assets/scss/quasar-variables.scss'
+      }),
+      // vsharp(),
+      ViteImageOptimizer({
+        /* pass your config */
       })
     ]
   }

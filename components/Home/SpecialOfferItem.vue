@@ -5,7 +5,11 @@
     <section
       class="h-12rem md:h-14rem lg:h-14rem xl:h-18rem full-width rounded-lg bg-background-secondary border-1px border-solid border-#303030 q-pa-sm"
     >
-      <img :src="img" class="full-width full-height object-contain" />
+      <img
+        :src="img"
+        :alt="img"
+        class="full-width full-height object-contain"
+      />
     </section>
 
     <div class="flex justify-between full-width items-center">
