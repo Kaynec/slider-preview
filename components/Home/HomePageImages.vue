@@ -24,7 +24,7 @@ import Test from '@/assets/home_imgs/cards/test.png'
 
     <div class="max-h-18rem md:col-span-2">
       <img
-        class="rounded-2xl w-full h-full"
+        class="rounded-2xl max-w-full"
         alt="game dynamic banner"
         :src="Nintendo"
       />

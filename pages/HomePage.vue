@@ -70,16 +70,17 @@ const slide = ref(1)
     <!-- Carousel -->
     <q-carousel
       v-model="slide"
-      transition-prev="scale"
-      transition-next="scale"
       swipeable
       animated
-      control-color="white"
+      transition="true"
       navigation
-      class="text-white !border-none !shadow-none !h-max bg-transparent"
+      transition-prev="slide-right"
+      transition-next="slide-left"
+      control-color="amber"
+      class="carousel-image text-white !border-none !w-full !shadow-none bg-transparent"
     >
       <template v-slot:navigation-icon="{ active, btnProps, onClick }">
-        <div class="translate-y-5">
+        <div class="-translate-y-5">
           <q-btn
             v-if="active"
             size="lg"
@@ -106,12 +107,14 @@ const slide = ref(1)
           />
         </div>
       </template>
-      <q-carousel-slide
-        img-src="/images/home_imgs/hero.png"
-        v-for="i in 4"
-        :name="i"
-        class="carousel-image"
-      >
+      <q-carousel-slide v-for="i in 4" :name="i" class="!w-full !h-full">
+        <NuxtImg
+          key="/images/home_imgs/hero.webp"
+          alt="carousel image"
+          class="pointer-events-none overflow-hidden"
+          src="/images/home_imgs/hero.webp"
+          preload
+        />
       </q-carousel-slide>
     </q-carousel>
     <!--  -->
@@ -126,19 +129,19 @@ const slide = ref(1)
 
 <style lang="scss">
 .carousel-image {
-  min-height: 165px !important;
+  min-height: 190px !important;
 }
 
 @media screen and (min-width: 680px) {
   .carousel-image {
-    min-height: 17.8rem !important;
+    min-height: 19.8rem !important;
     margin: 0 auto;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .carousel-image {
-    min-height: 28rem !important;
+    min-height: 30rem !important;
     margin: 0 auto;
   }
 
@@ -149,7 +152,7 @@ const slide = ref(1)
 
 @media screen and (min-width: 1440px) {
   .carousel-image {
-    min-height: 34rem !important;
+    min-height: 36rem !important;
     margin: 0 auto;
   }
 

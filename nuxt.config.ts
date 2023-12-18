@@ -3,14 +3,18 @@ import { quasar } from '@quasar/vite-plugin'
 // @ts-ignore
 // import vsharp from 'vite-plugin-vsharp'
 
-import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
+import viteImagemin from 'vite-plugin-imagemin'
 
 export default defineNuxtConfig({
   nitro: {
-    compressPublicAssets: true,
+    compressPublicAssets: {
+      brotli: true,
+      gzip: true
+    },
     prerender: {
       routes: ['/homepage', '/login']
-    }
+    },
+    minify: true
   },
   postcss: {
     plugins: {
@@ -60,9 +64,6 @@ export default defineNuxtConfig({
         from: 'vue/macros'
       },
       {
-        from: 'vue-router'
-      },
-      {
         from: 'vue'
       }
     ]
@@ -77,13 +78,7 @@ export default defineNuxtConfig({
   build: {
     transpile: ['quasar', '@happy-dom/global-registrator']
   },
-  css: [
-    '@quasar/extras/roboto-font/roboto-font.css',
-    '@quasar/extras/material-icons/material-icons.css',
-    '@quasar/extras/fontawesome-v6/fontawesome-v6.css',
-    '@/assets/scss/main.scss',
-    '@unocss/reset/tailwind.css'
-  ],
+  css: ['@/assets/scss/main.scss', '@unocss/reset/tailwind.css'],
   vite: {
     define: {
       // "process.env.DEBUG": false,
@@ -99,8 +94,32 @@ export default defineNuxtConfig({
         sassVariables: '@/assets/scss/quasar-variables.scss'
       }),
       // vsharp(),
-      ViteImageOptimizer({
-        /* pass your config */
+      viteImagemin({
+        gifsicle: {
+          optimizationLevel: 10,
+          interlaced: false
+        },
+        optipng: {
+          optimizationLevel: 10
+        },
+        mozjpeg: {
+          quality: 20
+        },
+        pngquant: {
+          quality: [0.65, 0.65],
+          speed: 3
+        },
+        svgo: {
+          plugins: [
+            {
+              name: 'removeViewBox'
+            },
+            {
+              name: 'removeEmptyAttrs',
+              active: false
+            }
+          ]
+        }
       })
     ]
   }

@@ -21,7 +21,7 @@ import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
 
       <NuxtImg
         src="/images/home_imgs/cards/tall-ps5.png"
-        alt="tall ps5 image"
+        alt="tall ps5"
         width="120"
         height="260"
         class="max-w-30 object-contain mb-lg lg:mb-0"
@@ -84,7 +84,12 @@ import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
   background: $background-primary;
   background-image: url('@/assets/login-bg.png');
   background-size: cover;
-  background-position: -12.5rem;
   background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+  .custom-spiderman-bg {
+    background-position: -1rem -14.5rem;
+  }
 }
 </style>
