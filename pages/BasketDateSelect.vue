@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ControllerBig from '@/assets/home_imgs/cards/Controller-Big.png'
+import ControllerBig from '@/assets/home_imgs/cards/controller-big.png'
 import Gameimage from '@/assets/shop/game.png'
 
 useSeoMeta({
@@ -16,7 +16,7 @@ definePageMeta({
 const cardItems = ref([
   {
     image: ControllerBig,
-    alt: 'Controller-Big.png',
+    alt: 'controller-big.png',
     title: 'خرید دسته PS5 - سفید',
     options: [
       { label: 'مدل', value: 'دوال سنس سفید' },
@@ -31,7 +31,7 @@ const cardItems = ref([
   },
   {
     image: Gameimage,
-    alt: 'Controller-Big.png',
+    alt: 'controller-big.png',
     title: 'خرید بازی Murder on the Orient Express نسخه دلوکس برای PS5',
     options: [{ label: 'مدل', value: 'بازی PS5' }],
     quantity: 1,
@@ -80,8 +80,8 @@ const cardItems = ref([
               class="bg-background-secondary flex flex-col gap-3 pa-sm items-center"
             >
               <img
-                src="@/assets/home_imgs/cards/Controller-Big.png"
-                alt="Controller-Big.png"
+                src="@/assets/home_imgs/cards/controller-big.png"
+                alt="controller-big.png"
               />
               <span class="text-text-primary">دسته PS5 - سفید</span>
               <span class="text-text-secondary">مدل: دوال سنس سفید</span>

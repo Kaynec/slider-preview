@@ -1,8 +1,8 @@
 <script setup>
-import ControllerBig from '@/assets/home_imgs/cards/Controller-Big.png'
+import ControllerBig from '@/assets/home_imgs/cards/controller-big.png'
 import Ps5Big from '@/assets/home_imgs/cards/ps5-big.svg?inline'
 
-import HeadsetBig from '@/assets/home_imgs/cards/Headset-Big.png'
+import HeadsetBig from '@/assets/home_imgs/cards/headset-big.png'
 import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
 </script>
 <template>

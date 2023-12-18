@@ -57,7 +57,7 @@
 </template>
 
 <script setup lang="ts">
-import defaultImage from '@/assets/home_imgs/cards/Controller-Big.png'
+import defaultImage from '@/assets/home_imgs/cards/controller-big.png'
 
 const props = defineProps<{
   name: string

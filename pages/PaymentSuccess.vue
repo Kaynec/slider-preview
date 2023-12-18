@@ -90,8 +90,8 @@ const card = ref()
           class="bg-background-secondary flex flex-col gap-3 pa-sm items-center w-full"
         >
           <img
-            src="@/assets/home_imgs/cards/Controller-Big.png"
-            alt="Controller-Big.png"
+            src="@/assets/home_imgs/cards/controller-big.png"
+            alt="controller-big.png"
           />
           <span class="text-text-primary">دسته PS5 - سفید</span>
           <span class="text-text-secondary">مدل: دوال سنس سفید</span>

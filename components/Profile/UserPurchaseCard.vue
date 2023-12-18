@@ -53,8 +53,8 @@
 </template>
 
 <script setup lang="ts">
-import defaultControllerImage from '@/assets/home_imgs/cards/Controller-Big.png'
-import defaultHeadsetImage from '@/assets/home_imgs/cards/Headset-Big.png'
+import defaultControllerImage from '@/assets/home_imgs/cards/controller-big.png'
+import defaultHeadsetImage from '@/assets/home_imgs/cards/headset-big.png'
 import { getCssVar } from 'quasar'
 
 type PurchaseStatus = 'Returned' | 'Cancelled' | 'Delivered' | 'Ongoing'

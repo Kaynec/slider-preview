@@ -21,7 +21,7 @@ const currentActiveProductType = ref<'Controller' | 'Console'>('Controller')
           <img
             class="w-8 h-8 object-contain"
             alt="image of card"
-            src="@/assets/home_imgs/cards/Controller-Big.png"
+            src="@/assets/home_imgs/cards/controller-big.png"
           />
           <span> انواع دسته بازی </span>
         </button>
@@ -36,7 +36,7 @@ const currentActiveProductType = ref<'Controller' | 'Console'>('Controller')
           <img
             class="w-8 h-8 object-contain"
             alt="image of card"
-            src="@/assets/home_imgs/cards/ps5-Big.png"
+            src="@/assets/home_imgs/cards/ps5-big.png"
           />
           <span> انواع کنسول بازی </span>
         </button>

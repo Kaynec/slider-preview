@@ -74,7 +74,7 @@
 </template>
 
 <script setup lang="ts">
-import defaultControllerImage from '@/assets/home_imgs/cards/Controller-Big.png'
+import defaultControllerImage from '@/assets/home_imgs/cards/controller-big.png'
 
 type RepairType = 'Saved' | 'Cancelled' | 'Repaired' | 'Ongoing'
 

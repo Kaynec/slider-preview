@@ -53,7 +53,7 @@
       <div v-for="i in 4" class="w-full flex items-center justify-center">
         <img
           class="w-full max-w-50"
-          src="@/assets/home_imgs/cards/Controller-Big.png"
+          src="@/assets/home_imgs/cards/controller-big.png"
           alt="controller image"
         />
       </div>

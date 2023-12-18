@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ControllerBig from '@/assets/home_imgs/cards/Controller-Big.png'
+import ControllerBig from '@/assets/home_imgs/cards/controller-big.png'
 
 const time = ['22', '14', '35']
 </script>
@@ -36,8 +36,8 @@ const time = ['22', '14', '35']
         <div class="flex flex-col items-center gap-4">
           <img
             class="max-w-58"
-            src="@/assets/home_imgs/cards/Controller-Big.png"
-            alt="Controller-Big.png"
+            src="@/assets/home_imgs/cards/controller-big.png"
+            alt="controller-big.png"
           />
           <div class="flex gap-2">
             <img
@@ -45,7 +45,7 @@ const time = ['22', '14', '35']
               :key="i"
               class="max-w-18 border-1 border-solid border-#303030 p-1px rounded-xl p-xs"
               :src="ControllerBig"
-              alt="Controller-Big.png"
+              alt="controller-big.png"
             />
           </div>
         </div>

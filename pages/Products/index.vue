@@ -10,10 +10,10 @@ definePageMeta({
   currentPageName: 'نحصولات'
 })
 
-import ControllerBig from '@/assets/home_imgs/cards/Controller-Big.png'
+import ControllerBig from '@/assets/home_imgs/cards/controller-big.png'
 import Ps5Big from '@/assets/home_imgs/cards/ps5-big.png'
 
-import HeadsetBig from '@/assets/home_imgs/cards/Headset-Big.png'
+import HeadsetBig from '@/assets/home_imgs/cards/headset-big.png'
 
 const availableToggle = ref(false)
 const discountedToggle = ref(false)
