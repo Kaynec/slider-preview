@@ -10,9 +10,6 @@
     "test": "echo 'test'",
     "lint": "echo 'lint'"
   },
-  "engines": {
-    "node": "16"
-  },
   "dependencies": {
     "@happy-dom/global-registrator": "^9.20.3",
     "@nuxt/image": "^1.1.0",
