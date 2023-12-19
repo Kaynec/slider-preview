@@ -39,6 +39,7 @@ const CurrentFilterCondition = ref(filterConditions.All)
         <QInput
           standout="bg-transparent"
           v-model="search"
+          input-class="text-white"
           label="جست جو محصول"
           class="z-3"
           rounded

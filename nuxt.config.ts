@@ -11,9 +11,10 @@ export default defineNuxtConfig({
       brotli: true,
       gzip: true
     },
-    prerender: {
-      routes: ['/homepage', '/login']
-    },
+
+    // prerender: {
+    //   routes: ['/homepage', '/auth/login']
+    // },
     minify: true
   },
   postcss: {
@@ -29,11 +30,6 @@ export default defineNuxtConfig({
   //   vscode: {}
   //   // ...other options
   // },
-  // @ts-ignore
-  compression: {
-    algorithm: 'brotliCompress'
-  },
-
   alias: {
     '@': '',
     '~': ''

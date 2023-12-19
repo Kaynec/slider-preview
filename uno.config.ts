@@ -19,6 +19,7 @@ export default defineConfig({
       secondary: '#979797'
     }
   },
+
   shortcuts: [
     ['text_xs', 'f-text-8-12'],
     ['text_sm', 'f-text-12-16'],

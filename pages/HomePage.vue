@@ -70,20 +70,19 @@ const slide = ref(1)
     <!-- Carousel -->
     <q-carousel
       v-model="slide"
-      swipeable
-      animated
-      transition="true"
-      navigation
       transition-prev="slide-right"
       transition-next="slide-left"
-      control-color="amber"
-      class="carousel-image text-white !border-none !w-full !shadow-none bg-transparent"
+      animated
+      swipeable
+      control-color="white"
+      navigation
+      class="text-white !border-none !shadow-none bg-transparent !h-max"
     >
       <template v-slot:navigation-icon="{ active, btnProps, onClick }">
-        <div class="-translate-y-5">
+        <div class="translate-y-3">
           <q-btn
             v-if="active"
-            size="lg"
+            size="sm"
             color="yellow"
             flat
             round
@@ -91,13 +90,13 @@ const slide = ref(1)
             @click="onClick"
           >
             <img
-              src="@/assets/home_imgs/selected_navigation.svg?inline"
+              src="../assets/home_imgs/selected_navigation.svg"
               alt="selected banner icon"
             />
           </q-btn>
           <q-btn
             v-else
-            size="sm"
+            size="xs"
             :icon="btnProps.icon"
             color="white"
             flat
@@ -107,13 +106,13 @@ const slide = ref(1)
           />
         </div>
       </template>
-      <q-carousel-slide v-for="i in 4" :name="i" class="!w-full !h-full">
+      <q-carousel-slide class="!overflow-hidden" v-for="i in 4" :name="i">
         <NuxtImg
-          key="/images/home_imgs/hero.webp"
-          alt="carousel image"
-          class="pointer-events-none overflow-hidden"
+          width="100%"
+          height="600"
+          class="w-full h-auto pointer-events-none"
           src="/images/home_imgs/hero.webp"
-          preload
+          alt="carousel"
         />
       </q-carousel-slide>
     </q-carousel>
@@ -129,20 +128,38 @@ const slide = ref(1)
 
 <style lang="scss">
 .carousel-image {
-  min-height: 190px !important;
+  height: 150px !important;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 350px) {
+  .carousel-image {
+    min-height: 10rem !important;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .carousel-image {
+    min-height: 11rem !important;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .carousel-image {
+    min-height: 13rem !important;
+  }
 }
 
 @media screen and (min-width: 680px) {
   .carousel-image {
-    min-height: 19.8rem !important;
-    margin: 0 auto;
+    min-height: 16rem !important;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .carousel-image {
-    min-height: 30rem !important;
-    margin: 0 auto;
+    min-height: 25rem !important;
   }
 
   .show-mydata {
@@ -150,10 +167,9 @@ const slide = ref(1)
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1400px) {
   .carousel-image {
-    min-height: 36rem !important;
-    margin: 0 auto;
+    min-height: 35rem !important;
   }
 
   .show-mydata {

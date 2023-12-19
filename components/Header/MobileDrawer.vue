@@ -8,7 +8,7 @@
       ref="aside"
     >
       <!-- Close Icon -->
-      <button class="absolute -end-5 top-8 z-999" @click="$emit('close')">
+      <button class="absolute -end-5 top-8 z-999" @click="toggleDrawer">
         <svg
           width="55"
           height="55"
@@ -78,16 +78,21 @@
       <!--  -->
 
       <q-scroll-area class="fit">
-        <div class="flex flex-col items-center gap-lg px-2xl">
-          <img src="@/assets/logo.png" class="relative" alt="website logo" />
+        <div class="flex flex-col items-center px-2xl">
+          <img
+            src="@/assets/logo.png"
+            class="relative aspect-1"
+            alt="website logo"
+          />
           <NuxtLink
             v-for="link in links"
+            @click="toggleDrawer"
             :to="link.route"
-            class="self-start w-full py-xs"
+            class="self-start w-full py-2"
             exact-active-class="text-primary"
           >
             {{ link.name }}
-            <q-separator class="!my-sm" />
+            <q-separator class="!my-xs" />
           </NuxtLink>
           <div class="flex justify-between w-full items-center">
             <span>تم سایت:</span>
@@ -121,13 +126,15 @@
 import { links } from '@/layouts/links'
 import { onClickOutside } from '@vueuse/core'
 
-const drawer = ref(true)
+const drawer = ref(false)
 
 const aside = ref()
 
 const emit = defineEmits(['close'])
-
-onClickOutside(aside, () => {
+const toggleDrawer = () => {
   emit('close')
+}
+onClickOutside(aside, () => {
+  toggleDrawer
 })
 </script>
