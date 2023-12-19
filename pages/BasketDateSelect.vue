@@ -155,7 +155,7 @@ const cardItems = ref([
       </div>
     </div>
     <!--  -->
-    <SpecialOffer />
+    <SpecialOffer class="!my-lg" />
   </main>
 </template>
 

@@ -123,8 +123,9 @@ const cardItems = ref([
         </QCard>
       </div>
     </div>
+
     <!--  -->
-    <SpecialOffer />
+    <SpecialOffer class="!my-lg" />
   </main>
 </template>
 

@@ -40,7 +40,9 @@ const toggleDarkMode = (val: boolean) => {
         <!-- Toggle And content Below Toggle -->
         <div class="flex flex-col gap-2">
           <div class="flex items-center gap-4">
-            <HeaderShopIcon />
+            <button @click="navigateTo('/basket')">
+              <HeaderShopIcon class="!cursor-pointer" />
+            </button>
             <div class="bg-#24272C rounded-xl px-2 py-1">
               <!-- @click="toggleDarkMode(true)" -->
               <!-- TODO Rechange This  -->
