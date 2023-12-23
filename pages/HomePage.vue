@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import OurServices from '@/components/Home/OurServices.vue'
 
+import ps4Image from '@/assets/home_imgs/ps4.png'
+import ps5Image from '@/assets/home_imgs/ps5.png'
+
 useSeoMeta({
-  title: 'cspro - Home page',
-  ogTitle: 'cspro - Home page',
+  title: 'Cheats  - Home page',
+  ogTitle: 'Cheats  - Home page',
   description: 'صفحه اصلی',
   ogDescription: 'صفحه اصلی'
 })
@@ -16,113 +19,135 @@ const slide = ref(1)
 </script>
 
 <template>
-  <QPage class="px-sm md:px-8xl pt-8xl pb-4xl column">
-    <div class="grid grid-cols-3 md:grid-cols-6 pb-3xl justify-center gap-lg">
-      <div class="col flex flex-col items-center gap-2 justify-center">
-        <img
-          src="@/assets/home_imgs/headphone.png"
-          class="max-h-45"
-          alt="headphone img"
-        />
-        <span class="!text-inherit">هدفون گیمینگ</span>
-      </div>
-      <div class="col flex flex-col items-center gap-2 justify-center">
-        <img
-          src="@/assets/home_imgs/ps4.png"
-          class="max-h-45"
-          alt="headphone img"
-        />
-        <span>دسته PS4</span>
-      </div>
-      <div class="col flex flex-col items-center gap-2 justify-center">
-        <img
-          src="@/assets/home_imgs/ps5.png"
-          class="max-h-45"
-          alt="headphone img"
-        />
-        <span>پلی استیشن ۵</span>
-      </div>
-      <div class="col flex flex-col items-center gap-2 justify-center">
-        <img
-          src="@/assets/home_imgs/headphone.png"
-          class="max-h-45"
-          alt="headphone img"
-        />
-        <span>هدفون گیمینگ</span>
-      </div>
-      <div class="col flex flex-col items-center gap-2 justify-center">
-        <img
-          src="@/assets/home_imgs/ps4.png"
-          class="max-h-45"
-          alt="headphone img"
-        />
-        <span>دسته PS4</span>
-      </div>
-      <div class="col flex flex-col items-center gap-2 justify-center">
-        <img
-          src="@/assets/home_imgs/ps5.png"
-          class="max-h-45"
-          alt="headphone img"
-        />
-        <span>پلی استیشن ۵</span>
-      </div>
-    </div>
-    <!-- Carousel -->
-    <q-carousel
-      v-model="slide"
-      transition-prev="slide-right"
-      transition-next="slide-left"
-      animated
-      swipeable
-      control-color="white"
-      navigation
-      class="text-white !border-none !shadow-none bg-transparent !h-max"
+  <QPage class="px-sm row col">
+    <Slider
+      class="mb-lg"
+      :slides-per-view="3.5"
+      :pagination="{
+        clickable: true
+      }"
+      :breakpoints="{
+        640: {
+          slidesPerView: 4.5,
+          spaceBetween: 20
+        },
+        860: {
+          slidesPerView: 6.5,
+          spaceBetween: 20
+        },
+        1240: {
+          slidesPerView: 7,
+          spaceBetween: 20
+        }
+      }"
     >
-      <template v-slot:navigation-icon="{ active, btnProps, onClick }">
-        <div class="translate-y-3">
-          <q-btn
-            v-if="active"
-            size="sm"
-            color="yellow"
-            flat
-            round
-            dense
-            @click="onClick"
-          >
-            <img
-              src="../assets/home_imgs/selected_navigation.svg"
-              alt="selected banner icon"
-            />
-          </q-btn>
-          <q-btn
-            v-else
-            size="xs"
-            :icon="btnProps.icon"
-            color="white"
-            flat
-            round
-            dense
-            @click="onClick"
-          />
-        </div>
+      <!-- Padding Bottom For Pagination to Show -->
+      <template v-for="i in 3">
+        <SwiperSlide class="pb-2xl">
+          <Story title="پلی استیشن ۵" :img="ps5Image" />
+        </SwiperSlide>
+        <SwiperSlide class="pb-2xl">
+          <Story title="هدفون گیمینگ" />
+        </SwiperSlide>
+        <SwiperSlide class="pb-2xl">
+          <Story title="دسته PS4" :img="ps4Image" />
+        </SwiperSlide>
       </template>
-      <q-carousel-slide class="!overflow-hidden" v-for="i in 4" :name="i">
-        <NuxtImg
-          width="100%"
-          height="600"
-          class="w-full h-auto pointer-events-none"
-          src="/images/home_imgs/hero.webp"
-          alt="carousel"
-        />
-      </q-carousel-slide>
-    </q-carousel>
-    <!--  -->
-    <OurServices />
+    </Slider>
+
+    <Transition
+      enter-active-class="duration-500 ease-out"
+      enter-from-class="transform opacity-0"
+      enter-to-class="opacity-100"
+      leave-active-class="duration-200 ease-in"
+      leave-from-class="opacity-100"
+      leave-to-class="transform opacity-0"
+    >
+      <ClientOnly>
+        <q-carousel
+          v-model="slide"
+          transition-prev="slide-right"
+          transition-next="slide-left"
+          animated
+          swipeable
+          control-color="white"
+          navigation
+          class="text-white !border-none !shadow-none bg-transparent !h-max w-full !p-0 mt-lg"
+        >
+          <template v-slot:navigation-icon="{ active, btnProps, onClick }">
+            <div class="translate-y-3">
+              <q-btn
+                v-if="active"
+                size="sm"
+                color="yellow"
+                flat
+                round
+                dense
+                @click="onClick"
+              >
+                <img
+                  src="@/assets/home_imgs/selected_navigation.svg?inline"
+                  alt="selected banner icon"
+                />
+              </q-btn>
+              <q-btn
+                v-else
+                size="xs"
+                :icon="btnProps.icon"
+                color="white"
+                flat
+                round
+                dense
+                @click="onClick"
+              />
+            </div>
+          </template>
+
+          <q-carousel-slide
+            class="!overflow-hidden w-full !p-0"
+            v-for="i in 4"
+            :name="i"
+          >
+            <ClientOnly>
+              <NuxtImg
+                v-if="$q.screen.width > 800"
+                width="1500"
+                height="600"
+                class="w-full h-auto pointer-events-none"
+                src="/images/home_imgs/hero.webp"
+                alt="carousel"
+                preload
+              />
+              <NuxtImg
+                v-if="$q.screen.width < 800"
+                width="375"
+                height="270"
+                class="w-full h-auto pointer-events-none"
+                src="/images/home_imgs/hero-mobile_1x.webp"
+                :quality="60"
+                alt="carousel"
+                preload
+              />
+            </ClientOnly>
+          </q-carousel-slide>
+        </q-carousel>
+      </ClientOnly>
+    </Transition>
+    <div>
+      <OurServices />
+    </div>
     <SpecialOffer />
     <HomePageImages />
-    <PopularProducts />
-    <AboutUs />
-    <Blog />
+    <div class="w-full">
+      <PopularProducts />
+    </div>
+    <div class="w-full">
+      <AboutUs />
+    </div>
+
+    <div class="w-full">
+      <Blog />
+    </div>
   </QPage>
 </template>
 

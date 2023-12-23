@@ -1,5 +1,5 @@
 <template>
-  <QBtn class="rounded-full bg-btn-gradient q-py-sm full-width">
+  <QBtn class="rounded-full q-py-sm w-full" color="btn-gradient">
     <slot></slot>
   </QBtn>
 </template>

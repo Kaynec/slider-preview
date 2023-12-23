@@ -13,13 +13,6 @@ import {
 import { presetFluid } from 'unocss-preset-fluid'
 
 export default defineConfig({
-  theme: {
-    colors: {
-      primary: '#121212',
-      secondary: '#979797'
-    }
-  },
-
   shortcuts: [
     ['text_xs', 'f-text-8-12'],
     ['text_sm', 'f-text-12-16'],
@@ -62,14 +55,7 @@ export default defineConfig({
       scale: 1.2,
       warn: true
     }),
-    presetTypography(),
-    presetWebFonts({
-      fonts: {
-        sans: 'DM Sans',
-        serif: 'DM Serif Display',
-        mono: 'DM Mono'
-      }
-    })
+    presetTypography()
   ],
   transformers: [transformerDirectives(), transformerVariantGroup()],
   safelist: 'prose prose-sm m-auto text-left'.split(' ')

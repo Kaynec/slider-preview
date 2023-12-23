@@ -3,8 +3,8 @@ import ControllerBig from '@/assets/home_imgs/cards/controller-big.png'
 import Gameimage from '@/assets/shop/game.png'
 
 useSeoMeta({
-  title: 'cspro - basket page',
-  ogTitle: 'cspro - basket page',
+  title: 'Cheats  - basket page',
+  ogTitle: 'Cheats  - basket page',
   description: 'سبد خرید',
   ogDescription: 'سبد خرید'
 })

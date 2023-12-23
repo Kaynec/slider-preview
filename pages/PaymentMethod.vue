@@ -3,8 +3,8 @@ import ControllerBig from '@/assets/home_imgs/cards/controller-big.png'
 import Gameimage from '@/assets/shop/game.png'
 
 useSeoMeta({
-  title: 'cspro - payment method',
-  ogTitle: 'cspro - payment method',
+  title: 'Cheats  - payment method',
+  ogTitle: 'Cheats  - payment method',
   description: 'انتخاب روش خرید',
   ogDescription: 'انتخاب روش خرید'
 })

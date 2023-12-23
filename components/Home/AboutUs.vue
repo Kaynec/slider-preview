@@ -15,11 +15,10 @@
         </p>
       </div>
       <!--  -->
-      <div class="flex flex-1 justify-between">
+      <div class="flex flex-1 justify-between mt-lg">
         <div
           v-for="(i, n) in 3"
-          class="flex max-h-35 basis-full md:basis-33% justify-center items-center py-3 gap-3 flex-col md:border-b-none pb-lg border-b-2 border-b-dashed border-b-#262626 px-lg last:md:border-r-none last:border-b-none"
-          md="border-e-2 border-e-dashed border-e-#262626"
+          class="border-e-2 border-e-dashed border-e-#262626 flex max-h-35 flex-1 md:basis-33% justify-center items-center py-3 gap-3 flex-col pb-lg px-lg last:border-r-none"
         >
           <span class="font-bold text-2xl text-primary"> + 2000 </span>
           <p class="text-text-secondary text_xs text-center">
@@ -194,6 +193,7 @@
 .card-with-border {
   position: relative;
   z-index: 999;
+  border-radius: 1rem;
 }
 
 .card-with-border::before {
@@ -217,7 +217,7 @@
 .card-with-border::after {
   content: '';
   position: absolute;
-  border-bottom-left-radius: 1rem;
+  border-bottom-left-radius: 1.2rem;
   left: 1px;
   bottom: 1px;
   width: 40%;
@@ -245,7 +245,7 @@
 .left-border-overlay {
   content: '';
   position: absolute;
-  border-top-right-radius: 1rem;
+  border-top-right-radius: 1.2rem;
   width: 40%;
   height: 75%;
   background: inherit;

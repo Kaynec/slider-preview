@@ -111,8 +111,8 @@ const initialTab = 'UserInformation'
 const userTab = ref(initialTab)
 
 useSeoMeta({
-  title: 'cspro - profile page',
-  ogTitle: 'cspro - profile page',
+  title: 'Cheats  - profile page',
+  ogTitle: 'Cheats  - profile page',
   description: 'پروفایل کاربری',
   ogDescription: 'پروفایل کاربری'
 })

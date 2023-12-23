@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'cspro - repair success',
-  ogTitle: 'cspro - repair success',
+  title: 'Cheats  - repair success',
+  ogTitle: 'Cheats  - repair success',
   description: 'درخواست تعمیر موفقیت آمیز',
   ogDescription: 'درخواست تعمیر موفقیت آمیز'
 })

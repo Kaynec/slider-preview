@@ -2,7 +2,7 @@
 const phone_number = ref('')
 </script>
 <template>
-  <q-footer class="bg-transparent text-xs !mt-auto">
+  <div class="bg-transparent text-xs">
     <QCard class="relative rounded-t-4rem px-8xl bg-dark">
       <UpwardAngle />
       <div class="content flex flex-col">
@@ -68,7 +68,7 @@ const phone_number = ref('')
         </div>
       </div>
     </QCard>
-  </q-footer>
+  </div>
 </template>
 <style scoped>
 .span-border {

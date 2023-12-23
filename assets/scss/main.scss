@@ -53,3 +53,55 @@ body {
 .v-card {
   box-shadow: none;
 }
+
+// Change This in Dark Mode
+
+.swiper-pagination-bullet {
+  background: dark !important;
+}
+
+html.dark {
+  .swiper-pagination-bullet {
+    background: white !important;
+  }
+}
+.page-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .page-container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .page-container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .page-container {
+    max-width: 1100px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .page-container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .page-container {
+    max-width: 1536px;
+  }
+}

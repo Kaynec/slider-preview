@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'cspro - console repair page',
-  ogTitle: 'cspro - console repair page',
+  title: 'Cheats  - console repair page',
+  ogTitle: 'Cheats  - console repair page',
   description: 'خدمات تعمیر - کنسول',
   ogDescription: 'خدمات تعمیر - کنسول'
 })

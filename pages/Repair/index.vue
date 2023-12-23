@@ -1,7 +1,7 @@
 <script setup>
 useSeoMeta({
-  title: 'cspro - repair page',
-  ogTitle: 'cspro - repair page',
+  title: 'Cheats  - repair page',
+  ogTitle: 'Cheats  - repair page',
   description: 'خدمات تعمیر ',
   ogDescription: 'خدمات تعمیر '
 })

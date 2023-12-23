@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'cspro - controller test',
-  ogTitle: 'cspro - controller test',
+  title: 'Cheats  - controller test',
+  ogTitle: 'Cheats  - controller test',
   description: 'خدمات تعمیر - تست دسته',
   ogDescription: 'خدمات تعمیر - تست دسته'
 })

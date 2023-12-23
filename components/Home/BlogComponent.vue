@@ -1,21 +1,28 @@
 <template>
   <QCard
-    class="custom-card-class cursor-pointer transition-300 hover:scale-[1.03] !pb-[3.5rem] !lg-pb-[2.75rem] flex justify-center items-center min-h-75 mb-3rem gap-6 card-with-border q-pa-md"
-    @click.self=""
+    class="custom-card-class cursor-pointer transition-300 hover:scale-[1.03] flex justify-center items-center min-h-75 gap-1 card-with-border relative"
   >
+    <!-- Css hack For Svg  -->
+    <div
+      class="absolute top-5 w-full h-30 bg-background-primary !rounded-2xl"
+    ></div>
     <!--  -->
-    <QImg :src="codImage" alt="warzone image" class="flex q-pa-lg">
+    <QImg
+      :src="codImage"
+      alt="warzone image"
+      class="flex q-pa-lg !rounded-t-2xl"
+    >
       <div
-        class="bg-overlay rounded-2xl relative bottom-2 space-y-sm w-97.5% left-50% translate-x-50% backdrop-blur"
+        class="bg-overlay rounded-2xl relative bottom-0 space-y-xs w-97.5% left-50% translate-x-50% backdrop-blur"
       >
-        <span class="text-lg">{{ label }}</span>
-        <p class="text-text-secondary text-xs">
-          {{ desc }}
+        <span class="text_md">{{ label }}</span>
+        <p class="text-text-secondary text_xs">
+          {{ desc.substring(0, 150) }}...
         </p>
       </div>
     </QImg>
     <!--  -->
-    <div class="flex justify-start w-full gap-3">
+    <div class="flex justify-start w-full gap-3 mb-auto px-xs">
       <div
         class="flex gap-2 items-center text-#ddd border-e-2 border-e-#ddd p-e-lg"
       >
@@ -43,10 +50,11 @@ defineProps<{
 <style lang="scss">
 .custom-card-class {
   background: url('@/assets/home_imgs/cards/Subtract.svg');
-  background-size: cover;
+  background-color: red;
+  background-size: contain;
   background-repeat: no-repeat;
   background-color: transparent !important;
-  background-position: center;
+  background-position: bottom;
   box-shadow: none;
 }
 </style>

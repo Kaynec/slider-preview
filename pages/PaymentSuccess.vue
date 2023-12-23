@@ -5,8 +5,8 @@ import cross from '@/assets/cross.svg'
 import triangle from '@/assets/triangle.svg'
 
 useSeoMeta({
-  title: 'cspro - payment success',
-  ogTitle: 'cspro - payment success',
+  title: 'Cheats  - payment success',
+  ogTitle: 'Cheats  - payment success',
   description: 'خرید موفقیت آمیز',
   ogDescription: 'خرید موفقیت آمیز'
 })

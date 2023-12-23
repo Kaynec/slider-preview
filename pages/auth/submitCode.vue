@@ -2,8 +2,8 @@
 import { QForm, QSpinnerGears, useQuasar } from 'quasar'
 
 useSeoMeta({
-  title: 'cspro - submit code page',
-  ogTitle: 'cspro - submit code page',
+  title: 'Cheats  - submit code page',
+  ogTitle: 'Cheats  - submit code page',
   description: 'صفحه تایید کد',
   ogDescription: 'صفحه تایید کد'
 })

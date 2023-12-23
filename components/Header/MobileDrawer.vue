@@ -1,10 +1,10 @@
 <template>
-  <div class="fixed inset-0 bg-[rgba(0,0,0,0.3)] z-9999">
+  <div class="fixed inset-0 bg-[rgba(0,0,0,0.5)] backdrop-blur z-9999">
     <aside
       show-if-above
       :width="200"
       :breakpoint="500"
-      class="absolute inset-0 w-95% bg-background-primary z-99"
+      class="absolute inset-0 w-95% max-w-180 bg-background-primary z-99"
       ref="aside"
     >
       <!-- Close Icon -->
@@ -135,6 +135,6 @@ const toggleDrawer = () => {
   emit('close')
 }
 onClickOutside(aside, () => {
-  toggleDrawer
+  toggleDrawer()
 })
 </script>

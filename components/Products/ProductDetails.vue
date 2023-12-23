@@ -6,7 +6,7 @@ const time = ['22', '14', '35']
 <template>
   <QCard class="min-h-full !rounded-2xl pa-xs">
     <div class="flex justify-between my-lg gap-y-lg">
-      <h4 class="text_10xl text-accent">پیشنهاد شگفت انگیز</h4>
+      <h4 class="text_10xl text-negative">پیشنهاد شگفت انگیز</h4>
       <div
         class="flex items-center !md:items-end md:self-start !md:flex-col gap-3"
       >
@@ -14,7 +14,7 @@ const time = ['22', '14', '35']
         <div class="flex">
           <div v-for="t in time" :key="t" class="flex gap-1 justify-center">
             <div
-              class="text-accent w-6 h-6 place-content-center grid border-1 border-solid rounded aspect-1"
+              class="text-negative w-9 h-9 place-content-center grid border-1 border-solid rounded-lg aspect-1"
               style="border-color: var(--primary)"
             >
               {{ t }}
@@ -23,7 +23,7 @@ const time = ['22', '14', '35']
           </div>
         </div>
         <div
-          class="border-1 text-primary border-primary h-6 px-1 text-xs px-2 items-center gap-1 rounded-lg flex"
+          class="border-1 text-primary border-primary h-8 px-1 text-xs px-3 items-center gap-1 rounded-lg flex"
         >
           <Star class="stroke-primary !w-4 !h-4 mb-1" />
           4.6
@@ -32,7 +32,9 @@ const time = ['22', '14', '35']
     </div>
     <div class="items-center justify-center flex gap-10">
       <!-- imgs -->
-      <div class="flex items-center justify-center !sm:flex-nowrap gap-xl">
+      <div
+        class="flex items-center justify-center !sm:flex-nowrap gap-xl -translate-y-10"
+      >
         <div class="flex flex-col items-center gap-4">
           <img
             class="max-w-58"

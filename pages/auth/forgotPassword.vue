@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'cspro - forgot password',
-  ogTitle: 'cspro - forgot password',
+  title: 'Cheats  - forgot password',
+  ogTitle: 'Cheats  - forgot password',
   description: 'فراموشی رمزعبور',
   ogDescription: 'فراموشی رمزعبور'
 })

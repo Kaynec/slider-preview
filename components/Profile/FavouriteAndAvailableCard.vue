@@ -23,10 +23,10 @@
         </div>
       </div>
     </div>
-    <div class="btns flex lg:flex-row pt-3xl gap-3 items-center">
+    <div class="flex lg:flex-row pt-3xl gap-3 items-center">
       <div class="flex-1">
         <OutlinedButton
-          class="border-accent text-accent flex items-center !rounded-2xl w-full h-13 justify-center !p-0 max-w-45"
+          class="border-negative text-negative flex items-center !rounded-2xl w-full h-13 justify-center !p-0 max-w-45"
         >
           <TrashCan class="stroke-negative me-3" />
           حذف
@@ -46,7 +46,7 @@
       </div>
       <div class="flex-1" v-else>
         <PrimaryButton
-          class="!h-12 justify-center !p-0 !rounded-2xl !text_sm tracking-tighter"
+          class="!h-12 !w-full justify-center !p-0 !rounded-2xl !text_sm tracking-tighter"
         >
           <Bag class="fill-text-primary me-1" />
           افزودن به سبد خرید

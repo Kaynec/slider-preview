@@ -1,6 +1,8 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
 
 export const useGlobalStore = defineStore('global', () => {
+  const scrollRef = ref()
+
   const dark = ref(false)
 
   const toggleDark = () => {
@@ -9,7 +11,9 @@ export const useGlobalStore = defineStore('global', () => {
 
   return {
     dark,
-    toggleDark
+    toggleDark,
+    scrollRef,
+    setScrollRef: (el: Ref<any>) => (scrollRef.value = el)
   }
 })
 

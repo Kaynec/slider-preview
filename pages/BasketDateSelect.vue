@@ -3,8 +3,8 @@ import ControllerBig from '@/assets/home_imgs/cards/controller-big.png'
 import Gameimage from '@/assets/shop/game.png'
 
 useSeoMeta({
-  title: 'cspro - repair page register',
-  ogTitle: 'cspro - repair page register',
+  title: 'Cheats  - repair page register',
+  ogTitle: 'Cheats  - repair page register',
   description: 'سبد خرید - انتخاب تاریخ',
   ogDescription: 'سبد خرید - انتخاب تاریخ'
 })

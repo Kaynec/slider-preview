@@ -1,10 +1,12 @@
 <template>
-  <div class="flex flex-col my-xl">
-    <p class="mb-4rem">
+  <div class="flex flex-col">
+    <p class="mb-2rem">
       با کنترلر DualSense تجربه‌ای جدید و بی‌نظیر را از بازی‌های ویدیویی خواهید
       داشت.
     </p>
-    <h4 class="text-primary text-xl pb-sm">حس‌های خود را تقویت کنید</h4>
+    <h4 class="text-primary font-700 text-xl pb-sm">
+      حس‌های خود را تقویت کنید
+    </h4>
     <p class="text-text-secondary">
       کنترلر دوال سنس مخصوص پلی استیشن 5، دارای قابلیت پاسخ‌دهی هپتیک، تریگرهای
       تطبیق‌پذیر پویا و یک میکروفون داخلی در قالب یک کنترلر زیبا و خوش‌دست است.
@@ -35,9 +37,8 @@
 
     <ul class="p-lg space-y-3rem">
       <li class="relative" v-for="i in 3">
-        <div
-          class="absolute -left-5 top-3 w-2 h-2 !rounded-full bg-primary"
-        ></div>
+        <Bullet class="fill-primary w-2 h-2 absolute -left-5 top-3" />
+
         <h5 class="pb-xs">پاسخ‌دهی هپتیک</h5>
         <p class="text-text-secondary">
           با قابلیت پاسخ‌دهی هپتیک و دو عملگر مکانیکی که جایگزین موتورهای

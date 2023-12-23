@@ -19,16 +19,16 @@
     "@quasar/extras": "^1.16.9",
     "@vueuse/core": "^9.5.0",
     "@vueuse/router": "^10.7.0",
-    "jsdom": "^20.0.2",
+    "nuxt-swiper": "^1.2.2",
     "pinia": "^2.1.7",
     "quasar": "^2.7.1",
+    "swiper": "^11.0.5",
     "unocss-preset-fluid": "^0.1.6"
   },
   "devDependencies": {
     "@formkit/auto-animate": "^0.8.1",
     "@iconify-json/carbon": "^1.1.26",
     "@quasar/vite-plugin": "^1.2.3",
-    "@types/jsdom": "^20.0.1",
     "@unocss/nuxt": "^0.58.0",
     "nuxt": "^3.8.2",
     "nuxt-purgecss": "^2.0.0",

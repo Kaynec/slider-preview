@@ -40,12 +40,21 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     'nuxt-svgo',
     'nuxt-typed-router',
+    'nuxt-swiper',
     ,
     // 'nuxt-purgecss',
     ['@nuxtjs/robots', {}]
   ],
   image: {
     quality: 80
+  },
+  swiper: {
+    // Swiper options
+    //----------------------
+    // prefix: 'Swiper',
+    // styleLang: 'css',
+    // modules: ['navigation', 'pagination'], // all modules are imported by default
+    // styleLang: 'scss'
   },
   pinia: {
     storesDirs: ['store/**']
@@ -74,8 +83,20 @@ export default defineNuxtConfig({
   build: {
     transpile: ['quasar', '@happy-dom/global-registrator']
   },
-  css: ['@/assets/scss/main.scss', '@unocss/reset/tailwind.css'],
+  css: [
+    '@/assets/scss/main.scss',
+    '@/assets/scss/generated.css',
+    '@unocss/reset/tailwind.css',
+    'tiny-slider/dist/tiny-slider.css'
+    // 'swiper/swiper-bundle.min.css'
+  ],
   vite: {
+    vue: {
+      script: {
+        defineModel: true,
+        propsDestructure: true
+      }
+    },
     define: {
       // "process.env.DEBUG": false,
     },

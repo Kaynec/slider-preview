@@ -24,7 +24,7 @@ Certainly! Here's the TypeScript version of the code:
         </div>
         <!--  -->
         <span
-          class="border-2 ms-auto px-sm py-2 border-accent text-accent rounded-2xl"
+          class="border-2 ms-auto px-sm py-2 border-negative text-negative rounded-2xl"
         >
           {{ discount }}%
         </span>

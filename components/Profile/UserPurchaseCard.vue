@@ -103,7 +103,7 @@ const states = [
   {
     name: `<span class='text-secondary ms-1'>در جریان ...</span>`,
     iconClass: '',
-    backgroundColor: 'accent',
+    backgroundColor: 'negative',
     type: 'Ongoing'
   }
 ]
