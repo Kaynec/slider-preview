@@ -108,27 +108,25 @@ const slide = ref(1)
             v-for="i in 4"
             :name="i"
           >
-            <ClientOnly>
-              <NuxtImg
-                v-if="$q.screen.width > 800"
-                width="1500"
-                height="600"
-                class="w-full h-auto pointer-events-none"
-                src="/images/home_imgs/hero.webp"
-                alt="carousel"
-                preload
-              />
-              <NuxtImg
-                v-if="$q.screen.width < 800"
-                width="375"
-                height="270"
-                class="w-full h-auto pointer-events-none"
-                src="/images/home_imgs/hero-mobile_1x.webp"
-                :quality="60"
-                alt="carousel"
-                preload
-              />
-            </ClientOnly>
+            <NuxtImg
+              v-if="$q.screen.width > 800"
+              width="1500"
+              height="600"
+              class="w-full h-auto pointer-events-none"
+              src="/images/home_imgs/hero.webp"
+              alt="carousel"
+              preload
+            />
+            <NuxtImg
+              v-if="$q.screen.width < 800"
+              width="375"
+              height="270"
+              class="w-full h-auto pointer-events-none"
+              src="/images/home_imgs/hero-mobile_1x.webp"
+              :quality="60"
+              alt="carousel"
+              preload
+            />
           </q-carousel-slide>
         </q-carousel>
       </ClientOnly>

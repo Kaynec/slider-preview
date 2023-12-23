@@ -85,7 +85,6 @@ export default defineNuxtConfig({
     '@/assets/scss/main.scss',
     '@/assets/scss/generated.css',
     '@unocss/reset/tailwind.css'
-    // 'swiper/swiper-bundle.min.css'
   ],
   vite: {
     vue: {
