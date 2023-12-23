@@ -1,8 +1,6 @@
 import { quasar } from '@quasar/vite-plugin'
 
 // @ts-ignore
-// import vsharp from 'vite-plugin-vsharp'
-
 import viteImagemin from 'vite-plugin-imagemin'
 
 export default defineNuxtConfig({
@@ -86,8 +84,7 @@ export default defineNuxtConfig({
   css: [
     '@/assets/scss/main.scss',
     '@/assets/scss/generated.css',
-    '@unocss/reset/tailwind.css',
-    'tiny-slider/dist/tiny-slider.css'
+    '@unocss/reset/tailwind.css'
     // 'swiper/swiper-bundle.min.css'
   ],
   vite: {

@@ -19,6 +19,7 @@
     "@quasar/extras": "^1.16.9",
     "@vueuse/core": "^9.5.0",
     "@vueuse/router": "^10.7.0",
+    "ipx": "^2.0.2",
     "nuxt-swiper": "^1.2.2",
     "pinia": "^2.1.7",
     "quasar": "^2.7.1",
@@ -37,12 +38,8 @@
     "postcss-rtlcss": "^4.0.9",
     "prettier": "^3.1.1",
     "sass": "^1.69.5",
-    "sharp": "^0.33.1",
-    "svgo": "^3.1.0",
     "unocss": "^0.58.0",
-    "vite-plugin-image-optimizer": "^1.1.7",
-    "vite-plugin-imagemin": "^0.6.1",
-    "vite-plugin-vsharp": "^1.6.0"
+    "vite-plugin-imagemin": "^0.6.1"
   },
   "overrides": {
     "vue": "latest"
