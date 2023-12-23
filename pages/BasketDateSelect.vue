@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import ControllerBig from '@/assets/home_imgs/cards/controller-big.png'
 import Gameimage from '@/assets/shop/game.png'
+import ControllerBig from '@/assets/home_imgs/cards/controller-big.png'
 
 useSeoMeta({
   title: 'Cheats  - repair page register',
@@ -79,10 +79,7 @@ const cardItems = ref([
               v-for="i in 3"
               class="bg-background-secondary flex flex-col gap-3 pa-sm items-center"
             >
-              <img
-                src="@/assets/home_imgs/cards/controller-big.png"
-                alt="controller-big.png"
-              />
+              <img :src="ControllerBig" alt="controller-big.png" />
               <span class="text-text-primary">دسته PS5 - سفید</span>
               <span class="text-text-secondary">مدل: دوال سنس سفید</span>
             </QCard>

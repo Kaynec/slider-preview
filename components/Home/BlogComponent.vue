@@ -1,17 +1,13 @@
 <template>
   <QCard
-    class="custom-card-class cursor-pointer transition-300 hover:scale-[1.03] flex justify-center items-center min-h-75 gap-1 card-with-border relative"
+    class="custom-card-class cursor-pointer transition-300 hover:scale-[1.03] flex justify-center items-center min-h-75 card-with-border relative"
   >
     <!-- Css hack For Svg  -->
     <div
       class="absolute top-5 w-full h-30 bg-background-primary !rounded-2xl"
     ></div>
     <!--  -->
-    <QImg
-      :src="codImage"
-      alt="warzone image"
-      class="flex q-pa-lg !rounded-t-2xl"
-    >
+    <QImg :src="codImage" alt="warzone image" class="flex pa-lg !rounded-t-2xl">
       <div
         class="bg-overlay rounded-2xl relative bottom-0 space-y-xs w-97.5% left-50% translate-x-50% backdrop-blur"
       >

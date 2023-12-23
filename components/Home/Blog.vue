@@ -29,8 +29,8 @@
           1200: {
             slidesPerView: 3
           },
-          2100: {
-            slidesPerView: 3
+          1536: {
+            slidesPerView: 3.5
           }
         }"
       >
