@@ -1,8 +1,4 @@
 <script setup lang="ts">
-import Spiderman from '@/assets/home_imgs/cards/spiderman.png'
-import Mario from '@/assets/home_imgs/cards/mario.png'
-import Nintendo from '@/assets/home_imgs/cards/nintendo.png'
-import Test from '@/assets/home_imgs/cards/test.png'
 import { useIntersectionObserver } from '@vueuse/core'
 
 const imageContainer = ref()
@@ -31,7 +27,8 @@ onBeforeUnmount(stop)
       <img
         class="rounded-2xl w-full h-full"
         alt="game dynamic banner"
-        :src="Spiderman"
+        src="@/assets/home_imgs/cards/spiderman.webp"
+        loading="lazy"
       />
     </div>
 
@@ -39,7 +36,8 @@ onBeforeUnmount(stop)
       <img
         class="rounded-2xl h-full object-cover"
         alt="game dynamic banner"
-        :src="Mario"
+        src="@/assets/home_imgs/cards/mario.webp"
+        loading="lazy"
       />
     </div>
 
@@ -47,7 +45,8 @@ onBeforeUnmount(stop)
       <img
         class="rounded-2xl max-w-full"
         alt="game dynamic banner"
-        :src="Nintendo"
+        src="@/assets/home_imgs/cards/nintendo.webp"
+        loading="lazy"
       />
     </div>
 
@@ -55,7 +54,8 @@ onBeforeUnmount(stop)
       <img
         class="rounded-2xl w-full h-full"
         alt="game dynamic banner"
-        :src="Test"
+        src="@/assets/home_imgs/cards/test.png"
+        loading="lazy"
       />
     </div>
   </div>

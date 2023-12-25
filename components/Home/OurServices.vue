@@ -8,7 +8,7 @@
     <div class="row q-col-gutter-md">
       <div class="col-12 col-sm-6 col-md-4">
         <QCard
-          class="pa-sm flex flex-col noisy border-1 border-border-primary gap-3"
+          class="pa-sm flex flex-col noisy border-1 border-border-primary gap-1 lg:gap-3"
         >
           <div class="flex items-center justify-start gap-1">
             <img
@@ -35,11 +35,11 @@
       </div>
       <div class="col-12 col-sm-6 col-md-4">
         <QCard
-          class="pa-sm flex flex-col h-full noisy border-1 border-border-primary gap-3"
+          class="pa-sm flex flex-col h-full noisy border-1 border-border-primary gap-1 lg:gap-3"
         >
           <div class="flex items-center justify-start gap-1">
             <img
-              src="@/assets/home_imgs/cards/controller.svg?inline"
+              src="@/assets/home_imgs/cards/controller.png"
               width="50"
               height="50"
               alt="ps5 card image"
@@ -66,7 +66,7 @@
         >
           <div class="flex items-center justify-start gap-1">
             <img
-              src="@/assets/home_imgs/cards/fortnite.svg?inline"
+              src="@/assets/home_imgs/cards/fortnite.png"
               width="50"
               height="50"
               alt="ps5 card image"

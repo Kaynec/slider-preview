@@ -11,6 +11,7 @@
           :src="img"
           :alt="img"
           class="max-w-full max-h-full object-contain"
+          loading="lazy"
         />
       </section>
     </div>

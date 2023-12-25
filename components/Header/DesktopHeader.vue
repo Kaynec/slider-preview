@@ -28,7 +28,7 @@ const toggleDarkMode = (val: boolean) => {
         'mx-auto max-w-full ': scrollAmount <= 0
       }"
       key="header"
-      class="bg-transparent mx-auto transition-600 absolute top-0"
+      class="bg-transparent mx-auto transition-600 absolute top-0 header"
     >
       <Transition
         enter-active-class="duration-500 ease-out"
@@ -125,3 +125,14 @@ const toggleDarkMode = (val: boolean) => {
     </q-header>
   </TransitionGroup>
 </template>
+<style scoped>
+.header {
+  display: none !important;
+}
+
+@media screen and (min-width: 900px) {
+  .header {
+    display: block !important;
+  }
+}
+</style>

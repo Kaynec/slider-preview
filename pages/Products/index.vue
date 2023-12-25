@@ -39,15 +39,15 @@ const model = ref({
     <!--  -->
     <section class="grid grid-cols-4 gap-lg">
       <!-- Right Side Search Section => Desktop -->
-      <SearchParams :model-value="model" v-if="$q.screen.width > 900" />
+      <LazySearchParams :model-value="model" v-if="$q.screen.width > 900" />
 
       <!-- Show THis Only On Mobile -->
       <!--  -->
       <div class="col-span-4 lg:col-span-3">
         <QDialog v-model="showDialog" class="w-full">
-          <SearchParams :model-value="model" />
+          <LazySearchParams :model-value="model" />
         </QDialog>
-        <FilterComponent
+        <LazyFilterComponent
           :filterConditions="filterConditions"
           :current-filter-condition="((CurrentFilterCondition as string))"
           @update="newCondition => (CurrentFilterCondition = newCondition)"

@@ -8,13 +8,17 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "test": "echo 'test'",
-    "lint": "echo 'lint'"
+    "lint": "echo 'lint'",
+    "codegen": "orval --config ./orval.config.ts"
+
   },
   "dependencies": {
     "@happy-dom/global-registrator": "^9.20.3",
     "@nuxt-modules/compression": "^0.1.0",
     "@nuxt/image": "^1.1.0",
+    "@nuxtjs/critters": "^0.5.2",
     "@nuxtjs/robots": "^3.0.0",
+    "@pinia-plugin-persistedstate/nuxt": "^1.2.0",
     "@pinia/nuxt": "^0.5.1",
     "@quasar/extras": "^1.16.9",
     "@vueuse/core": "^9.5.0",
@@ -28,6 +32,8 @@
   "devDependencies": {
     "@formkit/auto-animate": "^0.8.1",
     "@iconify-json/carbon": "^1.1.26",
+    "@nuxtjs/fontaine": "^0.4.1",
+    "@nuxtjs/web-vitals": "^0.2.6",
     "@quasar/vite-plugin": "^1.2.3",
     "@sidebase/nuxt-auth": "^0.6.3",
     "@unocss/nuxt": "^0.58.0",
@@ -35,6 +41,7 @@
     "nuxt-purgecss": "^2.0.0",
     "nuxt-svgo": "^3.7.0",
     "nuxt-typed-router": "^3.5.0",
+    "orval": "^6.23.0",
     "postcss-rtlcss": "^4.0.9",
     "prettier": "^3.1.1",
     "sass": "^1.69.5",

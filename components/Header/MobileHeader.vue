@@ -21,7 +21,7 @@ const toggleDarkMode = (val: boolean) => {
 const drawer = ref(false)
 </script>
 <template>
-  <q-header class="absolute top-0 bg-transparent p-2" v-auto-animate>
+  <q-header class="absolute top-0 bg-transparent p-2 header" v-auto-animate>
     <MobileDrawer v-if="drawer" @close="drawer = !drawer" />
     <div class="!min-h-35 flex items-center justify-between relative">
       <!-- Top Css hack For Background cause it's not full -->
@@ -79,3 +79,15 @@ const drawer = ref(false)
     <!--  -->
   </q-header>
 </template>
+
+<style scoped>
+.header {
+  display: block;
+}
+
+@media screen and (width > 900px) {
+  .header {
+    display: none;
+  }
+}
+</style>

@@ -20,40 +20,46 @@ const slide = ref(1)
 
 <template>
   <QPage class="row col">
-    <Slider
-      class="mb-lg"
-      :slides-per-view="3.5"
-      :pagination="{
-        clickable: true
-      }"
-      :breakpoints="{
-        640: {
-          slidesPerView: 4.5,
-          spaceBetween: 20
-        },
-        860: {
-          slidesPerView: 6.5,
-          spaceBetween: 20
-        },
-        1240: {
-          slidesPerView: 7,
-          spaceBetween: 20
-        }
-      }"
-    >
-      <!-- Padding Bottom For Pagination to Show -->
-      <template v-for="i in 3">
-        <SwiperSlide class="pb-2xl">
-          <Story title="پلی استیشن ۵" :img="ps5Image" />
-        </SwiperSlide>
-        <SwiperSlide class="pb-2xl">
-          <Story title="هدفون گیمینگ" />
-        </SwiperSlide>
-        <SwiperSlide class="pb-2xl">
-          <Story title="دسته PS4" :img="ps4Image" />
-        </SwiperSlide>
-      </template>
-    </Slider>
+    <div class="h-40 w-full">
+      <ClientOnly>
+        <div class="animation">
+          <Slider
+            class="mb-lg"
+            :slides-per-view="3.5"
+            :pagination="{
+              clickable: true
+            }"
+            :breakpoints="{
+              640: {
+                slidesPerView: 4.5,
+                spaceBetween: 20
+              },
+              860: {
+                slidesPerView: 6.5,
+                spaceBetween: 20
+              },
+              1240: {
+                slidesPerView: 7,
+                spaceBetween: 20
+              }
+            }"
+          >
+            <!-- Padding Bottom For Pagination to Show -->
+            <template v-for="i in 3">
+              <SwiperSlide class="pb-2xl">
+                <Story title="پلی استیشن ۵" :img="ps5Image" />
+              </SwiperSlide>
+              <SwiperSlide class="pb-2xl">
+                <Story title="هدفون گیمینگ" />
+              </SwiperSlide>
+              <SwiperSlide class="pb-2xl">
+                <Story title="دسته PS4" :img="ps4Image" />
+              </SwiperSlide>
+            </template>
+          </Slider>
+        </div>
+      </ClientOnly>
+    </div>
 
     <Transition
       enter-active-class="duration-500 ease-out"
@@ -63,73 +69,75 @@ const slide = ref(1)
       leave-from-class="opacity-100"
       leave-to-class="transform opacity-0"
     >
-      <ClientOnly>
-        <q-carousel
-          v-model="slide"
-          transition-prev="slide-right"
-          transition-next="slide-left"
-          animated
-          swipeable
-          control-color="white"
-          navigation
-          class="text-white !border-none !shadow-none bg-transparent !h-max w-full !p-0 mt-lg"
-        >
-          <template v-slot:navigation-icon="{ active, btnProps, onClick }">
-            <div class="translate-y-3">
-              <q-btn
-                v-if="active"
-                size="sm"
-                color="yellow"
-                flat
-                round
-                dense
-                @click="onClick"
-              >
-                <img
-                  src="@/assets/home_imgs/selected_navigation.svg?inline"
-                  alt="selected banner icon"
-                />
-              </q-btn>
-              <q-btn
-                v-else
-                size="xs"
-                :icon="btnProps.icon"
-                color="white"
-                flat
-                round
-                dense
-                @click="onClick"
+      <q-carousel
+        v-model="slide"
+        transition-prev="slide-right"
+        transition-next="slide-left"
+        animated
+        swipeable
+        control-color="white"
+        navigation
+        class="text-white !border-none !shadow-none bg-transparent !h-max w-full !p-0 mt-lg"
+      >
+        <template v-slot:navigation-icon="{ active, btnProps, onClick }">
+          <div class="translate-y-3">
+            <q-btn
+              v-if="active"
+              size="sm"
+              color="yellow"
+              flat
+              round
+              dense
+              @click="onClick"
+            >
+              <img
+                src="@/assets/home_imgs/selected_navigation.svg?inline"
+                alt="selected banner icon"
               />
-            </div>
-          </template>
+            </q-btn>
+            <q-btn
+              v-else
+              size="xs"
+              :icon="btnProps.icon"
+              color="white"
+              flat
+              round
+              dense
+              @click="onClick"
+            />
+          </div>
+        </template>
 
-          <q-carousel-slide
-            class="!overflow-hidden w-full !p-0"
-            v-for="i in 4"
-            :name="i"
-          >
-            <NuxtImg
-              v-if="$q.screen.width > 800"
+        <q-carousel-slide
+          class="!overflow-hidden w-full !p-0"
+          v-for="i in 4"
+          :name="i"
+        >
+          <picture class="pointer-events-none max-w-full w-full">
+            <source
+              media="(min-width: 900px)"
+              srcset="/images/home_imgs/hero.webp"
               width="1500"
               height="600"
-              class="w-full h-auto pointer-events-none"
-              src="/images/home_imgs/hero.webp"
-              alt="carousel"
-              preload
+              class="w-full max-h-full"
             />
-            <NuxtImg
-              v-if="$q.screen.width < 800"
+            <source
+              media="(min-width: 320px)"
+              srcset="/images/home_imgs/hero-mobile_1x.webp"
               width="375"
               height="270"
-              class="w-full h-auto pointer-events-none"
-              src="/images/home_imgs/hero-mobile_1x.webp"
-              :quality="60"
-              alt="carousel"
-              preload
+              class="w-full max-h-full"
             />
-          </q-carousel-slide>
-        </q-carousel>
-      </ClientOnly>
+            <img
+              src="/images/home_imgs/hero-mobile_1x.webp"
+              alt="IfItDoesntMatchAnyMedia"
+              width="375"
+              height="270"
+              class="w-full max-h-full"
+            />
+          </picture>
+        </q-carousel-slide>
+      </q-carousel>
     </Transition>
     <div>
       <OurServices />
@@ -197,6 +205,19 @@ const slide = ref(1)
 
   .show-mydata {
     flex-direction: row;
+  }
+}
+
+.animation {
+  animation: scale-down 0.8s ease-in-out forwards;
+}
+
+@keyframes scale-down {
+  from {
+    transform: translateY(-300px);
+  }
+  to {
+    transform: translateY(0);
   }
 }
 </style>

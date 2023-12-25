@@ -1,6 +1,6 @@
 <script setup>
 import ControllerBig from '@/assets/home_imgs/cards/controller-big.png'
-import Ps5Big from '@/assets/home_imgs/cards/ps5-big.svg?inline'
+import Ps5Big from '@/assets/home_imgs/cards/ps5-big.png'
 
 import HeadsetBig from '@/assets/home_imgs/cards/headset-big.png'
 import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
@@ -28,8 +28,11 @@ import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
         1024: {
           slidesPerView: 4
         },
-        1700: {
+        1440: {
           slidesPerView: 5
+        },
+        1700: {
+          slidesPerView: 6
         }
       }"
     >

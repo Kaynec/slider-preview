@@ -28,6 +28,11 @@ export default defineNuxtConfig({
   //   vscode: {}
   //   // ...other options
   // },
+  webVitals: {
+    provider: 'log',
+    debug: true, // debug enable metrics reporting on dev environments
+    disabled: false
+  },
   alias: {
     '@': '',
     '~': ''
@@ -39,7 +44,10 @@ export default defineNuxtConfig({
     'nuxt-svgo',
     'nuxt-typed-router',
     'nuxt-swiper',
-    ,
+    '@nuxtjs/critters',
+    '@nuxtjs/web-vitals',
+    // '@pinia-plugin-persistedstate/nuxt',
+    // '@nuxtjs/fontaine',
     // 'nuxt-purgecss',
     ['@nuxtjs/robots', {}]
   ],

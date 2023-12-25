@@ -2,7 +2,7 @@
 const phone_number = ref('')
 </script>
 <template>
-  <div class="bg-transparent text-xs">
+  <div class="bg-transparent text-xs footer">
     <QCard class="relative rounded-t-4rem px-8xl bg-dark">
       <UpwardAngle />
       <div class="content flex flex-col">
@@ -77,5 +77,15 @@ const phone_number = ref('')
 }
 .span-border:last-child {
   border-inline-end: none;
+}
+
+.footer {
+  display: none;
+}
+
+@media screen and (width > 900px) {
+  .footer {
+    display: block;
+  }
 }
 </style>

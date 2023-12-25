@@ -7,7 +7,12 @@
       class="absolute top-5 w-full h-30 bg-background-primary !rounded-2xl"
     ></div>
     <!--  -->
-    <QImg :src="codImage" alt="warzone image" class="flex pa-lg !rounded-t-2xl">
+    <QImg
+      :src="codImage"
+      alt="warzone image"
+      class="flex pa-lg !rounded-t-2xl"
+      loading="lazy"
+    >
       <div
         class="bg-overlay rounded-2xl relative bottom-0 space-y-xs w-97.5% left-50% translate-x-50% backdrop-blur"
       >
@@ -22,25 +27,26 @@
       <div
         class="flex gap-2 items-center text-#ddd border-e-2 border-e-#ddd p-e-lg"
       >
-        <Calendar class="fill-#ddd w-7 h-7" />
+        <Calendar class="fill-#ddd w-5 h-5" />
         {{ time }}
       </div>
 
       <div class="flex gap-2 items-center text-#ddd">
-        <Chat class="w-7 h-7 stroke-#ddd" />
+        <Chat class="w-5 h-5 stroke-#ddd" />
         {{ commentAmount }} نظر
       </div>
     </div>
   </QCard>
 </template>
 <script setup lang="ts">
-import codImage from '@/assets/home_imgs/cards/warzone.png'
+import codImage from 'assets/home_imgs/cards/warzone.webp'
 
 defineProps<{
   label: string
   desc: string
   commentAmount: number | string
   time: string
+  img?: string
 }>()
 </script>
 <style lang="scss">

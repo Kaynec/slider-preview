@@ -1,5 +1,5 @@
 <template>
-  <div class="col my-6rem relative space-y-xl">
+  <div class="col my-3rem relative space-y-xl">
     <!-- Background -->
 
     <div class="flex flex-col md:flex-row gap-3">
@@ -34,9 +34,9 @@
         class="absolute end-0"
         alt="left side img"
       />
-      <div class="col-12 col-sm-6 col-md-3">
+      <div class="col-6 col-md-3">
         <QCard
-          class="min-h-32 h-full flex justify-center items-center gap-6 card-with-border"
+          class="min-h-20 h-full flex justify-center items-center gap-1 card-with-border"
         >
           <div class="left-border"></div>
           <div class="left-border-overlay"></div>
@@ -68,12 +68,12 @@
               fill="#007AFF"
             />
           </svg>
-          <span>ارسال سریع</span>
+          <span class="f-text-9-12">ارسال سریع</span>
         </QCard>
       </div>
-      <div class="col-12 col-sm-6 col-md-3">
+      <div class="col-6 col-md-3">
         <QCard
-          class="min-h-32 h-full flex justify-center items-center gap-6 card-with-border"
+          class="min-h-20 h-full flex justify-center items-center gap-1 card-with-border"
         >
           <div class="left-border"></div>
           <div class="left-border-overlay"></div>
@@ -105,12 +105,12 @@
               </clipPath>
             </defs>
           </svg>
-          <span> پرداخت امن و مطمئن </span>
+          <span class="f-text-9-12"> پرداخت امن و مطمئن </span>
         </QCard>
       </div>
-      <div class="col-12 col-sm-6 col-md-3">
+      <div class="col-6 col-md-3">
         <QCard
-          class="min-h-32 h-full flex justify-center items-center gap-6 card-with-border"
+          class="min-h-20 h-full flex justify-center items-center gap-1 card-with-border"
         >
           <div class="left-border"></div>
           <div class="left-border-overlay"></div>
@@ -143,12 +143,12 @@
             />
           </svg>
 
-          <span>ضمانت بازگشت 100% پول</span>
+          <span class="f-text-9-12">ضمانت بازگشت 100% پول</span>
         </QCard>
       </div>
-      <div class="col-12 col-sm-6 col-md-3">
+      <div class="col-6 col-md-3">
         <QCard
-          class="min-h-32 h-full flex justify-center items-center gap-6 card-with-border"
+          class="min-h-20 h-full flex justify-center items-center gap-1 card-with-border"
         >
           <div class="left-border"></div>
           <div class="left-border-overlay"></div>
@@ -179,7 +179,7 @@
             </defs>
           </svg>
 
-          <span> تضمین کیفیت و اصالت </span>
+          <span class="f-text-9-12"> تضمین کیفیت و اصالت </span>
         </QCard>
       </div>
     </div>

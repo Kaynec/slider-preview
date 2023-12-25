@@ -32,13 +32,8 @@ onMounted(() => state.setScrollRef(scrollRef.value))
   >
     <PageLoadingSPinner />
 
-    <ClientOnly>
-      <DesktopHeader
-        v-if="$q.screen.width > 900"
-        :scrollAmount="scrollAmount"
-      />
-      <MobileHeader v-else :scrollAmount="scrollAmount" />
-    </ClientOnly>
+    <DesktopHeader :scrollAmount="scrollAmount" />
+    <MobileHeader :scrollAmount="scrollAmount" />
     <QScrollArea
       ref="scrollRef"
       class="!h-screen !h-100svh"
@@ -80,12 +75,8 @@ onMounted(() => state.setScrollRef(scrollRef.value))
           </router-view>
         </QPage>
         <div>
-          <ClientOnly v-if="$q.screen.width > 900">
-            <DesktopFooter />
-          </ClientOnly>
-          <ClientOnly v-else>
-            <MobileFooter />
-          </ClientOnly>
+          <LazyDesktopFooter />
+          <LazyMobileFooter />
         </div>
       </q-page-container>
     </QScrollArea>

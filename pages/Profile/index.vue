@@ -46,28 +46,28 @@
         transition-next="jump-up"
       >
         <q-tab-panel name="UserInformation" key="userInformation">
-          <UserInformation />
+          <LazyUserInformation />
         </q-tab-panel>
         <q-tab-panel name="Location" key="Location">
-          <UserLocation />
+          <LazyUserLocation />
         </q-tab-panel>
         <q-tab-panel name="Discount" key="Discount">
-          <UserDiscount />
+          <LazyUserDiscount />
         </q-tab-panel>
         <q-tab-panel name="Notification" key="Notification">
-          <UserNotification />
+          <LazyUserNotification />
         </q-tab-panel>
         <q-tab-panel name="Favourite" key="Favourite">
-          <UserFavourite />
+          <LazyUserFavourite />
         </q-tab-panel>
         <q-tab-panel name="PurchaseHistory" key="PurchaseHistory">
-          <UserPurchaseHistory />
+          <LazyUserPurchaseHistory />
         </q-tab-panel>
         <q-tab-panel name="RepairHistory" key="RepairHistory">
-          <UserRepairHistory />
+          <LazyUserRepairHistory />
         </q-tab-panel>
         <q-tab-panel name="GameServiceHistory" key="GameServiceHistory">
-          <UserGameHistory />
+          <LazyUserGameHistory />
         </q-tab-panel>
       </q-tab-panels>
     </div>

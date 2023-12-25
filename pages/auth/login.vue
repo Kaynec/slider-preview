@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { QForm, QSpinnerGears, useQuasar } from 'quasar'
-
+import { apiAuthJwtCustomerLoginCreate } from '@/api/index'
 const state = useGlobalStore()
 
 useSeoMeta({
@@ -14,7 +14,7 @@ onMounted(() => {
   console.log(state.getToken())
 })
 
-const emailAuthenticationForm = ref<QForm | null>(null)
+const loginAuthenticationForm = ref<QForm | null>(null)
 const isPwd = ref(true)
 const email = ref('')
 const password = ref('')
@@ -22,49 +22,55 @@ const q = useQuasar()
 const router = useRouter()
 const onSubmit = () => {
   const token = state.getToken()
-  console.log('Login', token)
-  if (token) {
-    console.log(token)
-  } else {
-    state.setToken('my New Token')
-  }
 
-  // emailAuthenticationForm?.validate().then(async success => {
-  //   if (success) {
-  //     q.loading.show({
-  //       message: 'login.userMessage',
-  //       backgroundColor: 'grey',
-  //       spinner: QSpinnerGears,
-  //       customClass: 'loader'
-  //     })
-  //     try {
-  //       // const res = await auth.loginUser(email, password);
-  //       q.loading.hide()
-  //     } catch (err) {
-  //       console.error(err)
-  //       q.loading.hide()
-  //     }
-  //   }
-  // })
+  loginAuthenticationForm.value?.validate().then(async success => {
+    //
+    if (success) {
+      q.loading.show({
+        message: 'درحال ارسال درخواست',
+        backgroundColor: 'grey',
+        // spinner: QSpinnerGears,
+        customClass: 'loader'
+      })
+      try {
+        // const res = await auth.loginUser(email, password);
+        const res = await apiAuthJwtCustomerLoginCreate({
+          phone_number: details.value.phone_number,
+          password: details.value.password
+        })
+        console.log(res)
+        q.loading.hide()
+      } catch (err) {
+        console.error(err)
+        q.loading.hide()
+      }
+    }
+  })
 }
 
 const details = ref({
   phone_number: '',
   password: ''
 })
+
+const passRegex = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/
 </script>
 
 <template>
-  <QPage class="lg:px-6xl column">
-    <QCard
-      class="pa-xs px-xl !m-y-sm flex m-lg flex-col min-h-160 w-full gap-3 items-center mx-auto justify-center !rounded-2rem"
+  <QPage class="lg:px-6xl column mb-lg">
+    <QForm
+      @submit.prevent="onSubmit"
+      class="w-full"
+      ref="loginAuthenticationForm"
     >
-      <h3 class="text-primary text_5xl">ورود به حساب کاربری</h3>
-      <span class="text_sm text-text-secondary">
-        خوش برگشتی! لطفا برای دسترسی به حساب کاربری خود وارد شوید.
-      </span>
-      <QForm @submit.prevent="onSubmit" class="w-full">
-        <div class="flex flex-col w-full max-w-240 gap-3">
+      <QCard
+        class="pa-xs px-xl !m-y-sm flex m-lg flex-col min-h-160 w-full gap-3 items-center mx-auto justify-center !rounded-2rem"
+      >
+        <h3 class="text-primary text_5xl">ورود به حساب کاربری</h3>
+        <span class="text_sm text-text-secondary">
+          خوش برگشتی! لطفا برای دسترسی به حساب کاربری خود وارد شوید.
+        </span>
+        <div class="flex flex-col w-full max-w-240 gap-8">
           <QInput
             standout="!bg-transparent"
             :bg-color="$q.dark.isActive ? 'grey-10' : 'grey-4'"
@@ -74,7 +80,13 @@ const details = ref({
             :input-style="{ fontSize: '12px' }"
             input-class="text-white"
             autocomplete="off"
+            :rules="[
+              val => !!val || 'لطفا شماره همراه خود را وارد کنید',
+              val => val.length === 11 || 'شماره همراه اشتباه است'
+            ]"
+            lazy-rules
           />
+
           <QInput
             standout="!bg-transparent"
             :bg-color="$q.dark.isActive ? 'grey-10' : 'grey-4'"
@@ -84,6 +96,13 @@ const details = ref({
             :input-style="{ fontSize: '12px' }"
             input-class="text-white"
             autocomplete="off"
+            :rules="[
+              val => !!val || 'لطفا  رمز عبور خود را وارد کنید',
+              val =>
+                !!passRegex.test(val) ||
+                'رمز عبور باید دارای یه حرف و یک شماره و یک کارکتر خاص باشد'
+            ]"
+            lazy-rules
           >
             <template v-slot:append>
               <q-icon
@@ -110,8 +129,8 @@ const details = ref({
             ثبت نام
           </QBtn>
         </div>
-      </QForm>
-    </QCard>
+      </QCard>
+    </QForm>
   </QPage>
 </template>
 
@@ -126,7 +145,7 @@ const details = ref({
 }
 
 .pa-xs {
-  background-image: url('@/assets/login-bg.png');
+  background-image: url('@/assets/login-bg.webp');
   background-size: cover;
   background-position: center;
 }

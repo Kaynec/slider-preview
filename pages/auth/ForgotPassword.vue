@@ -85,7 +85,7 @@ const details = ref({
 }
 
 .pa-xs {
-  background-image: url('@/assets/login-bg.png');
+  background-image: url('@/assets/login-bg.webp');
   background-size: cover;
   background-position: center;
 }
