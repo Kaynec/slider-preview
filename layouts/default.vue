@@ -41,53 +41,53 @@ onMounted(() => state.setScrollRef(scrollRef.value))
     </ClientOnly>
     <QScrollArea
       ref="scrollRef"
-      class="!h-screen !h-100svh !flex !flex-col"
+      class="!h-screen !h-100svh"
       @scroll="handleScroll"
     >
-      <q-page-container
-        class="pb-[35rem] md:pb-15rem page-container 2xl:max-w-90rem"
-      >
-        <div
-          class="text-text-secondary flex container max-w-90rem mt-2.25rem mb-1rem mx-auto px-xs md:px-sm lg:px-lg gap-2 items-center"
-        >
+      <q-page-container>
+        <QPage class="page-container 2xl:max-w-90rem pb-4.5rem px-xs">
           <div
-            class="flex gap-3 items-center"
-            v-if="$route.meta.currentPageName"
+            class="text-text-secondary flex container max-w-90rem mt-2.25rem mb-1rem mx-auto px-xs md:px-sm lg:px-lg gap-2 items-center"
           >
-            <div class="i-carbon:home" />
-            <template
-              v-for="(name, index) in $route.meta.currentPageName
-                .toString()
-                .split('-')"
+            <div
+              class="flex gap-3 items-center"
+              v-if="$route.meta.currentPageName"
             >
-              <div class="i-carbon:chevron-left" />
-              <span
-                :class="`${
-                  index ===
-                  $route.meta.currentPageName.toString().split('-').length - 1
-                    ? 'text-text-primary'
-                    : ''
-                }`"
-                >{{ name }}</span
+              <div class="i-carbon:home" />
+              <template
+                v-for="(name, index) in $route.meta.currentPageName
+                  .toString()
+                  .split('-')"
               >
-            </template>
+                <div class="i-carbon:chevron-left" />
+                <span
+                  :class="`${
+                    index ===
+                    $route.meta.currentPageName.toString().split('-').length - 1
+                      ? 'text-text-primary'
+                      : ''
+                  }`"
+                  >{{ name }}</span
+                >
+              </template>
+            </div>
           </div>
-        </div>
 
-        <router-view class="mx-auto px-xs" v-slot="{ Component, route }">
-          <transition name="slide-fade" mode="out-in">
-            <component :is="Component" :key="route" />
-          </transition>
-        </router-view>
+          <router-view v-slot="{ Component, route }">
+            <transition name="slide-fade" mode="out-in">
+              <component :is="Component" :key="route" />
+            </transition>
+          </router-view>
+        </QPage>
+        <div>
+          <ClientOnly v-if="$q.screen.width > 900">
+            <DesktopFooter />
+          </ClientOnly>
+          <ClientOnly v-else>
+            <MobileFooter />
+          </ClientOnly>
+        </div>
       </q-page-container>
-      <div class="absolute bottom-0 w-full">
-        <ClientOnly v-if="$q.screen.width > 1024">
-          <DesktopFooter class="mt-auto w-full relative bottom-0" />
-        </ClientOnly>
-        <ClientOnly v-else>
-          <MobileFooter />
-        </ClientOnly>
-      </div>
     </QScrollArea>
   </q-layout>
 </template>

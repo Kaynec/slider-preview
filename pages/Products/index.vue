@@ -49,7 +49,7 @@ const model = ref({
         </QDialog>
         <FilterComponent
           :filterConditions="filterConditions"
-          :-current-filter-condition="CurrentFilterCondition"
+          :current-filter-condition="((CurrentFilterCondition as string))"
           @update="newCondition => (CurrentFilterCondition = newCondition)"
           @show-dialog="showDialog = true"
         />

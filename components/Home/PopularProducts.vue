@@ -7,7 +7,7 @@ import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
 </script>
 <template>
   <div class="flex flex-col gap-4 my-6xl cursor-pointer">
-    <span class="text_5xl heading">محصولات پر فروش</span>
+    <span class="text_6xl heading">محصولات پر فروش</span>
     <p class="text-text-secondary">
       لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
       طراحان گرافیک است،
@@ -20,16 +20,16 @@ import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
       }"
       slider-class=""
       class="mx-auto mb-lg"
-      :slides-per-view="1.1"
+      :slides-per-view="2"
       :breakpoints="{
         768: {
-          slidesPerView: 2
-        },
-        1024: {
           slidesPerView: 3
         },
-        1700: {
+        1024: {
           slidesPerView: 4
+        },
+        1700: {
+          slidesPerView: 5
         }
       }"
     >

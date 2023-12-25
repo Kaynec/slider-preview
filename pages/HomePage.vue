@@ -19,7 +19,7 @@ const slide = ref(1)
 </script>
 
 <template>
-  <QPage class="px-sm row col">
+  <QPage class="row col">
     <Slider
       class="mb-lg"
       :slides-per-view="3.5"

@@ -29,6 +29,7 @@
     "@formkit/auto-animate": "^0.8.1",
     "@iconify-json/carbon": "^1.1.26",
     "@quasar/vite-plugin": "^1.2.3",
+    "@sidebase/nuxt-auth": "^0.6.3",
     "@unocss/nuxt": "^0.58.0",
     "nuxt": "^3.8.2",
     "nuxt-purgecss": "^2.0.0",

@@ -22,7 +22,7 @@ const phone_number = ref('')
             <span class="span-border">مشتریان</span>
           </div>
           <div class="flex gap-3">
-            <div class="text-2xl i-carbon:logo-instagram" />
+            <InstagramIconLink />
             <div class="text-2xl i-carbon:logo-linkedin" />
             <div class="text-2xl i-carbon:logo-twitter" />
           </div>

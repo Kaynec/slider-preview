@@ -1,52 +1,76 @@
-<script setup>
+<script setup lang="ts">
 import ControllerBig from '@/assets/home_imgs/cards/controller-big.png'
 import Ps5Big from '@/assets/home_imgs/cards/ps5-big.svg?inline'
 
 import HeadsetBig from '@/assets/home_imgs/cards/headset-big.png'
 import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
+
+const cardRef = ref()
+
+const height = ref(250)
+
+const calculateHeight = () => {
+  const rectHeight = cardRef.value?.$el?.getBoundingClientRect().height
+  if (!rectHeight) return
+
+  height.value = rectHeight
+}
+
+onMounted(() => {
+  calculateHeight()
+  window.addEventListener('resize', calculateHeight)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', calculateHeight)
+})
 </script>
 <template>
   <Slider
+    ref="sliderRef"
     :loop="false"
-    slider-class="px-sm"
+    slider-class="px-xs"
     class="custom-spiderman-bg mx-auto !rounded-xl mb-lg w-full h-max cursor-pointer pb-xl"
-    :slides-per-view="1.2"
+    :slides-per-view="1.7"
     :pagination="{
       clickable: true
     }"
     :breakpoints="{
-      768: {
+      600: {
         slidesPerView: 2
       },
-      1024: {
+      768: {
         slidesPerView: 3
       },
-      1700: {
+      1024: {
         slidesPerView: 4
+      },
+      1700: {
+        slidesPerView: 5
       }
     }"
   >
-    <SwiperSlide class="max-w-70">
+    <SwiperSlide class="flex flex-col items-center relative">
       <div
-        class="flex flex-col items-start ms-lg w-max ps-lg pt-8 relative justify-between gap-30 max-h-full min-h-115 sm:min-h-123 lg:min-h-130 xl:min-h-140"
+        class="ms-lg w-max ps-lg relative bottom-0 max-h-full"
+        :style="`min-height:${height}px`"
       >
         <img
           src="@/assets/offer-text.svg?inline"
-          class="f-w-120-144"
+          class="f-w-90-110 max-h-45 pt-4"
           alt="this is the special offer text"
         />
 
         <NuxtImg
           src="/images/home_imgs/cards/tall-ps5.png"
           alt="tall ps5"
-          width="120"
-          height="260"
-          class="max-w-30 object-contain mb-lg lg:mb-0 !mt-auto absolute bottom-0 start-50% translate-x-50%"
+          style="width: min(25vw, 75px); height: min(210px, 18rem)"
+          class="absolute bottom-3 start-50% translate-x-50%"
         />
       </div>
     </SwiperSlide>
 
-    <SwiperSlide>
+    <SwiperSlide class="pb-lg" ref="cardRef">
       <SpecialOfferItem
         :img="ControllerBig"
         title="دسته PS5 - سفید"
@@ -55,7 +79,7 @@ import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
         price="3,450,000 تومان"
         :time="['22', '14', '35']"
         final-price="2.750.000 تومان"
-        class="my-lg"
+        class="mt-lg"
       />
     </SwiperSlide>
     <SwiperSlide>
@@ -67,7 +91,7 @@ import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
         price="3,450,000 تومان"
         :time="['22', '14', '35']"
         final-price="2.750.000 تومان"
-        class="my-lg"
+        class="mt-lg"
       />
     </SwiperSlide>
     <SwiperSlide>
@@ -79,7 +103,7 @@ import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
         price="3,450,000 تومان"
         :time="['22', '14', '35']"
         final-price="2.750.000 تومان"
-        class="my-lg"
+        class="mt-lg"
       />
     </SwiperSlide>
     <SwiperSlide>
@@ -91,7 +115,7 @@ import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
         price="3,450,000 تومان"
         :time="['22', '14', '35']"
         final-price="2.750.000 تومان"
-        class="my-lg"
+        class="mt-lg"
       />
     </SwiperSlide>
     <SwiperSlide>
@@ -103,7 +127,7 @@ import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
         price="3,450,000 تومان"
         :time="['22', '14', '35']"
         final-price="2.750.000 تومان"
-        class="my-lg"
+        class="mt-lg"
       />
     </SwiperSlide>
     <SwiperSlide>
@@ -115,7 +139,7 @@ import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
         price="3,450,000 تومان"
         :time="['22', '14', '35']"
         final-price="2.750.000 تومان"
-        class="my-lg"
+        class="mt-lg"
       />
     </SwiperSlide>
     <SwiperSlide>
@@ -127,7 +151,7 @@ import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
         price="3,450,000 تومان"
         :time="['22', '14', '35']"
         final-price="2.750.000 تومان"
-        class="my-lg"
+        class="mt-lg"
       />
     </SwiperSlide>
   </Slider>
@@ -135,16 +159,19 @@ import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
 <style lang="scss">
 .custom-spiderman-bg {
   background: $background-primary;
+  // background: red;
   background-image: url('@/assets/login-bg.png');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0 -10.5rem;
+  background-position: 0;
+  border-radius: 1rem !important;
 }
 
 @media screen and (max-width: 768px) {
   .custom-spiderman-bg {
     // background-position: -1rem -14.5rem;
     background-position: -1rem;
+    // border-radius: 1.5rem !important;
   }
 }
 </style>

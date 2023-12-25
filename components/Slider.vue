@@ -11,15 +11,21 @@ defineProps<{
   breakpoints?: Record<
     number,
     {
-      spaceBetween: number
-      slidesPerView: number
+      spaceBetween?: number
+      slidesPerView?: number
     }
   >
 }>()
+
+const sliderRef = ref()
+
+defineExpose({
+  ref: sliderRef
+})
 </script>
 
 <template>
-  <div class="w-full max-w-92vw md:max-w-full">
+  <div class="w-full max-w-92vw md:max-w-full" ref="sliderRef">
     <Swiper
       :class="`${sliderClass} `"
       :modules="[SwiperAutoplay, SwiperScrollbar, SwiperPagination]"

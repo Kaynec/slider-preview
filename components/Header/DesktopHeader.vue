@@ -27,6 +27,7 @@ const toggleDarkMode = (val: boolean) => {
         'w-full max-w-90rem': scrollAmount > 0,
         'mx-auto max-w-full ': scrollAmount <= 0
       }"
+      key="header"
       class="bg-transparent mx-auto transition-600 absolute top-0"
     >
       <Transition
@@ -53,7 +54,7 @@ const toggleDarkMode = (val: boolean) => {
         />
 
         <div
-          class="flex flex-1 relative justify-between md:pl-4 md:pl-24 xl:pl-36 pr-6 pt-4"
+          class="flex flex-1 relative justify-between md:pl-4 md:pl-24 xl:pl-36 pr-6 xl:pt-4"
         >
           <NuxtLink
             class="f-text-8-12 pt-3"

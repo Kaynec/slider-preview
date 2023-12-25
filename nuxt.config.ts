@@ -75,17 +75,17 @@ export default defineNuxtConfig({
     {
       path: 'components',
       pathPrefix: false
+    },
+    {
+      path: 'node_modules/quasar/src/components/',
+      pathPrefix: false
     }
   ],
 
   build: {
     transpile: ['quasar', '@happy-dom/global-registrator']
   },
-  css: [
-    '@/assets/scss/main.scss',
-    '@/assets/scss/generated.css',
-    '@unocss/reset/tailwind.css'
-  ],
+  css: ['@/assets/scss/main.scss', '@unocss/reset/tailwind.css'],
   vite: {
     vue: {
       script: {

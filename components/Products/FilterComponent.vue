@@ -32,7 +32,7 @@
         :key="item"
         class="cursor-pointer pb-2"
         :class="{
-              'text-primary b-b-2  b-b-solid': CurrentFilterCondition === (filterConditions as any)[item]
+              'text-primary b-b-2  b-b-solid': currentFilterCondition === (filterConditions as any)[item]
             }"
         style="border-color: var(--primary)"
         @click="$emit('update', (filterConditions as any)[item])"
@@ -48,7 +48,7 @@ import type { FilterConditions } from '@/types'
 
 const props = defineProps<{
   filterConditions: FilterConditions
-  CurrentFilterCondition: string
+  currentFilterCondition: string
 }>()
 
 const emit = defineEmits(['update', 'showDialog'])

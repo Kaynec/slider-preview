@@ -5,6 +5,10 @@ export const useGlobalStore = defineStore('global', () => {
 
   const dark = ref(false)
 
+  const token = useCookie('token', {
+    maxAge: 10000 * 60
+  })
+
   const toggleDark = () => {
     dark.value = !dark.value
   }
@@ -13,7 +17,9 @@ export const useGlobalStore = defineStore('global', () => {
     dark,
     toggleDark,
     scrollRef,
-    setScrollRef: (el: Ref<any>) => (scrollRef.value = el)
+    setScrollRef: (el: Ref<any>) => (scrollRef.value = el),
+    setToken: newToken => (token.value = newToken),
+    getToken: () => token.value
   }
 })
 

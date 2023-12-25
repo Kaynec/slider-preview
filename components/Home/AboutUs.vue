@@ -4,7 +4,7 @@
 
     <div class="flex flex-col md:flex-row gap-3">
       <div class="flex-1 space-y-xl">
-        <h4 class="text-h4 heading text-center !md-text-start w-full">
+        <h4 class="text_6xl heading text-center !md-text-start w-full">
           درباره ما
         </h4>
         <p class="text-text-secondary max-w-65ch">
@@ -28,13 +28,13 @@
       </div>
     </div>
     <!--  -->
-    <div class="row q-col-gutter-lg q-py-lg">
+    <div class="row q-col-gutter-md q-py-lg">
       <NuxtImg
         src="images/home_imgs/Abstract_Design.png"
         class="absolute end-0"
         alt="left side img"
       />
-      <div class="col-12 col-md-6 col-lg-3">
+      <div class="col-12 col-sm-6 col-md-3">
         <QCard
           class="min-h-32 h-full flex justify-center items-center gap-6 card-with-border"
         >
@@ -71,7 +71,7 @@
           <span>ارسال سریع</span>
         </QCard>
       </div>
-      <div class="col-12 col-md-6 col-lg-3">
+      <div class="col-12 col-sm-6 col-md-3">
         <QCard
           class="min-h-32 h-full flex justify-center items-center gap-6 card-with-border"
         >
@@ -108,7 +108,7 @@
           <span> پرداخت امن و مطمئن </span>
         </QCard>
       </div>
-      <div class="col-12 col-md-6 col-lg-3">
+      <div class="col-12 col-sm-6 col-md-3">
         <QCard
           class="min-h-32 h-full flex justify-center items-center gap-6 card-with-border"
         >
@@ -146,7 +146,7 @@
           <span>ضمانت بازگشت 100% پول</span>
         </QCard>
       </div>
-      <div class="col-12 col-md-6 col-lg-3">
+      <div class="col-12 col-sm-6 col-md-3">
         <QCard
           class="min-h-32 h-full flex justify-center items-center gap-6 card-with-border"
         >
