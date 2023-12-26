@@ -57,7 +57,7 @@ onBeforeUnmount(() => {
       </div>
     </SwiperSlide>
 
-    <SwiperSlide class="pb-lg max-w-50" ref="cardRef">
+    <SwiperSlide class="pb-lg max-w-50 lg:max-w-60" ref="cardRef">
       <SpecialOfferItem
         :img="ControllerBig"
         title="دسته PS5 - سفید"
@@ -69,7 +69,7 @@ onBeforeUnmount(() => {
         class="mt-lg"
       />
     </SwiperSlide>
-    <SwiperSlide class="pb-lg max-w-50">
+    <SwiperSlide class="pb-lg max-w-50 lg:max-w-60">
       <SpecialOfferItem
         :img="Ps5Big"
         title="دسته PS5 - سفید"
@@ -81,7 +81,7 @@ onBeforeUnmount(() => {
         class="mt-lg"
       />
     </SwiperSlide>
-    <SwiperSlide class="pb-lg max-w-50">
+    <SwiperSlide class="pb-lg max-w-50 lg:max-w-60">
       <SpecialOfferItem
         :img="HeadsetBig"
         title="دسته PS5 - سفید"
@@ -93,7 +93,7 @@ onBeforeUnmount(() => {
         class="mt-lg"
       />
     </SwiperSlide>
-    <SwiperSlide class="pb-lg max-w-50">
+    <SwiperSlide class="pb-lg max-w-50 lg:max-w-60">
       <SpecialOfferItem
         :img="VrBig"
         title="دسته PS5 - سفید"
@@ -105,7 +105,7 @@ onBeforeUnmount(() => {
         class="mt-lg"
       />
     </SwiperSlide>
-    <SwiperSlide class="pb-lg max-w-50">
+    <SwiperSlide class="pb-lg max-w-50 lg:max-w-60">
       <SpecialOfferItem
         :img="VrBig"
         title="دسته PS5 - سفید"
@@ -117,7 +117,7 @@ onBeforeUnmount(() => {
         class="mt-lg"
       />
     </SwiperSlide>
-    <SwiperSlide class="pb-lg max-w-50">
+    <SwiperSlide class="pb-lg max-w-50 lg:max-w-60">
       <SpecialOfferItem
         :img="VrBig"
         title="دسته PS5 - سفید"
@@ -129,7 +129,7 @@ onBeforeUnmount(() => {
         class="mt-lg"
       />
     </SwiperSlide>
-    <SwiperSlide class="pb-lg max-w-50">
+    <SwiperSlide class="pb-lg max-w-50 lg:max-w-60">
       <SpecialOfferItem
         :img="VrBig"
         title="دسته PS5 - سفید"
@@ -141,7 +141,7 @@ onBeforeUnmount(() => {
         class="mt-lg"
       />
     </SwiperSlide>
-    <SwiperSlide class="pb-lg max-w-50">
+    <SwiperSlide class="pb-lg max-w-50 lg:max-w-60">
       <SpecialOfferItem
         :img="VrBig"
         title="دسته PS5 - سفید"

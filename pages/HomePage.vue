@@ -20,46 +20,43 @@ const slide = ref(1)
 
 <template>
   <QPage class="row col">
-    <div class="h-40 w-full">
+    <section class="w-full min-h-40">
       <ClientOnly>
-        <div class="animation">
-          <Slider
-            class="mb-lg"
-            :slides-per-view="3.5"
-            :pagination="{
-              clickable: true
-            }"
-            :breakpoints="{
-              640: {
-                slidesPerView: 4.5,
-                spaceBetween: 20
-              },
-              860: {
-                slidesPerView: 6.5,
-                spaceBetween: 20
-              },
-              1240: {
-                slidesPerView: 7,
-                spaceBetween: 20
-              }
-            }"
-          >
-            <!-- Padding Bottom For Pagination to Show -->
-            <template v-for="i in 3">
-              <SwiperSlide class="pb-2xl">
-                <Story title="پلی استیشن ۵" :img="ps5Image" />
-              </SwiperSlide>
-              <SwiperSlide class="pb-2xl">
-                <Story title="هدفون گیمینگ" />
-              </SwiperSlide>
-              <SwiperSlide class="pb-2xl">
-                <Story title="دسته PS4" :img="ps4Image" />
-              </SwiperSlide>
-            </template>
-          </Slider>
-        </div>
+        <Slider
+          class="mb-lg animation"
+          :slides-per-view="3.5"
+          :pagination="{
+            clickable: true
+          }"
+          :breakpoints="{
+            640: {
+              slidesPerView: 4.5,
+              spaceBetween: 20
+            },
+            860: {
+              slidesPerView: 6.5,
+              spaceBetween: 20
+            },
+            1240: {
+              slidesPerView: 7,
+              spaceBetween: 20
+            }
+          }"
+        >
+          <template v-for="i in 3">
+            <SwiperSlide class="pb-2xl">
+              <Story title="پلی استیشن ۵" :img="ps5Image" />
+            </SwiperSlide>
+            <SwiperSlide class="pb-2xl">
+              <Story title="هدفون گیمینگ" />
+            </SwiperSlide>
+            <SwiperSlide class="pb-2xl">
+              <Story title="دسته PS4" :img="ps4Image" />
+            </SwiperSlide>
+          </template>
+        </Slider>
       </ClientOnly>
-    </div>
+    </section>
 
     <Transition
       enter-active-class="duration-500 ease-out"
@@ -214,7 +211,7 @@ const slide = ref(1)
 
 @keyframes scale-down {
   from {
-    transform: translateY(-300px);
+    transform: translateY(-600px);
   }
   to {
     transform: translateY(0);

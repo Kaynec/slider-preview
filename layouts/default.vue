@@ -32,8 +32,7 @@ onMounted(() => state.setScrollRef(scrollRef.value))
   >
     <PageLoadingSPinner />
 
-    <DesktopHeader :scrollAmount="scrollAmount" />
-    <MobileHeader :scrollAmount="scrollAmount" />
+    <Header :scrollAmount="scrollAmount" />
     <QScrollArea
       ref="scrollRef"
       class="!h-screen !h-100svh"
@@ -42,32 +41,27 @@ onMounted(() => state.setScrollRef(scrollRef.value))
       <q-page-container>
         <QPage class="page-container 2xl:max-w-90rem pb-4.5rem px-xs">
           <div
-            class="text-text-secondary flex container max-w-90rem mt-2.25rem mb-1rem mx-auto px-xs md:px-sm lg:px-lg gap-2 items-center"
+            class="flex gap-3 items-center mt-2.3rem mb-.75rem"
+            v-if="$route.meta.currentPageName"
           >
-            <div
-              class="flex gap-3 items-center"
-              v-if="$route.meta.currentPageName"
+            <div class="i-carbon:home" />
+            <template
+              v-for="(name, index) in $route.meta.currentPageName
+                .toString()
+                .split('-')"
             >
-              <div class="i-carbon:home" />
-              <template
-                v-for="(name, index) in $route.meta.currentPageName
-                  .toString()
-                  .split('-')"
+              <div class="i-carbon:chevron-left" />
+              <span
+                :class="`${
+                  index ===
+                  $route.meta.currentPageName.toString().split('-').length - 1
+                    ? 'text-text-primary'
+                    : ''
+                }`"
+                >{{ name }}</span
               >
-                <div class="i-carbon:chevron-left" />
-                <span
-                  :class="`${
-                    index ===
-                    $route.meta.currentPageName.toString().split('-').length - 1
-                      ? 'text-text-primary'
-                      : ''
-                  }`"
-                  >{{ name }}</span
-                >
-              </template>
-            </div>
+            </template>
           </div>
-
           <router-view v-slot="{ Component, route }">
             <transition name="slide-fade" mode="out-in">
               <component :is="Component" :key="route" />
