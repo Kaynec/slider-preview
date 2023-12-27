@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col my-6xl">
-    <span class="text_6xl heading">خدمات ما</span>
+    <span class="text_header heading">خدمات ما</span>
     <p class="text-text-secondary text_sm">
       لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
       طراحان گرافیک است،

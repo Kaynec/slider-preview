@@ -36,24 +36,33 @@ onBeforeUnmount(() => {
       clickable: true
     }"
   >
-    <SwiperSlide class="flex flex-col items-center relative max-w-30">
+    <SwiperSlide class="flex flex-col items-center relative max-w-40">
       <div
         class="ms-lg w-max relative bottom-0 max-h-full"
         :style="`min-height:${height}px`"
       >
         <img
           src="@/assets/offer-text.svg?inline"
-          class="f-w-90-110 max-h-45 pt-4"
+          class="f-w-80-100 max-h-45 pt-4"
           alt="this is the special offer text"
           loading="lazy"
         />
 
-        <NuxtImg
-          src="/images/home_imgs/cards/tall-ps5.png"
-          alt="tall ps5"
-          style="width: min(4rem, 65px); height: min(200px, 11rem)"
-          class="absolute bottom-3 start-50% translate-x-50%"
-        />
+        <div
+          class="absolute bottom-3 start-50% translate-x-50% flex items-center justify-center"
+        >
+          <NuxtImg
+            src="/images/home_imgs/cards/tall-ps5.png"
+            alt="tall ps5"
+            style="width: min(3.75rem, 62px); height: min(185px, 9.5rem)"
+          />
+          <button
+            class="inline-flex text-lg items-center flex-nowrap gap-1 whitespace-nowrap text-primary"
+          >
+            <span>مشاهده همه</span>
+            <CurvedLeftArrow class="stroke-primary" />
+          </button>
+        </div>
       </div>
     </SwiperSlide>
 

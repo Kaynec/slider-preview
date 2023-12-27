@@ -7,7 +7,7 @@ import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
 </script>
 <template>
   <div class="flex flex-col gap-4 my-6xl cursor-pointer">
-    <span class="text_6xl heading">محصولات پر فروش</span>
+    <span class="text_header heading">محصولات پر فروش</span>
     <p class="text-text-secondary">
       لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
       طراحان گرافیک است،

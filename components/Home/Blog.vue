@@ -2,7 +2,7 @@
   <div class="mt-5rem relative space-y-xl">
     <div class="flex">
       <div class="flex-1 space-y-xl">
-        <h4 class="text_6xl heading">وبلاگ</h4>
+        <h4 class="text_header heading">وبلاگ</h4>
         <p class="text-text-secondary max-w-65ch">
           لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
           استفاده از طراحان گرافیک است،

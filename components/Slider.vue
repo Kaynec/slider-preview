@@ -35,8 +35,6 @@ defineExpose({
       :options="options"
       :pagination="pagination ?? false"
       :breakpoints="breakpoints ?? {}"
-      :resistance-ratio="0"
-      :resistance="true"
       :loop="loop ?? true"
     >
       <slot />

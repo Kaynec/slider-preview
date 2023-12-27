@@ -12,7 +12,8 @@ useSeoMeta({
 })
 
 definePageMeta({
-  currentPageName: 'صفحه اصلی'
+  currentPageName: 'صفحه اصلی',
+  key: route => route.fullPath
 })
 
 const slide = ref(1)

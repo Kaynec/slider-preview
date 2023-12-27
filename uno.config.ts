@@ -28,6 +28,7 @@ export default defineConfig({
     ['text_8xl', 'f-text-30-34'],
     ['text_9xl', 'f-text-32-36'],
     ['text_10xl', 'f-text-34-38'],
+    ['text_header', 'f-text-22-40'],
     [
       'center-absolute',
       'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'

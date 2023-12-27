@@ -41,7 +41,7 @@ const toggleDarkMode = (val: boolean) => {
     <div class="flex items-start justify-between pt-2 relative">
       <img
         src="@/assets/logo.png"
-        class="relative max-w-25 2xl:max-w-35 -translate-y-5"
+        class="relative max-w-25 2xl:max-w-35 -translate-y-2"
         alt="website logo"
       />
 
@@ -57,7 +57,7 @@ const toggleDarkMode = (val: boolean) => {
         >
         <!-- Toggle And content Below Toggle -->
         <div class="flex flex-col gap-2">
-          <div class="flex items-center gap-4">
+          <div class="flex items-center gap-4 mb-2">
             <button @click="navigateTo('/basket')">
               <HeaderShopIcon class="!cursor-pointer" />
             </button>

@@ -32,7 +32,7 @@
     </span>
 
     <div class="flex justify-between full-width items-center">
-      <span class="f-text-11-14">{{ price }}</span>
+      <span class="f-text-11-14 line-through">{{ price }}</span>
       <div class="flex gap-1">
         <div v-for="t in time" :key="t" class="flex gap-1 justify-center">
           <div

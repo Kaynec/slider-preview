@@ -23,6 +23,10 @@ const scrollRef = ref()
 
 // Setting The Ref of Scroll Area to store in Global State
 onMounted(() => state.setScrollRef(scrollRef.value))
+
+const route = useRoute()
+
+const currentPageMetaName = computed(() => route.meta.currentPageName)
 </script>
 <template>
   <q-layout
@@ -42,19 +46,16 @@ onMounted(() => state.setScrollRef(scrollRef.value))
         <QPage class="page-container 2xl:max-w-90rem pb-4.5rem px-xs">
           <div
             class="flex gap-3 items-center mt-2.3rem mb-.75rem"
-            v-if="$route.meta.currentPageName"
+            v-if="currentPageMetaName"
           >
             <div class="i-carbon:home" />
             <template
-              v-for="(name, index) in $route.meta.currentPageName
-                .toString()
-                .split('-')"
+              v-for="(name, index) in currentPageMetaName.toString().split('-')"
             >
               <div class="i-carbon:chevron-left" />
               <span
                 :class="`${
-                  index ===
-                  $route.meta.currentPageName.toString().split('-').length - 1
+                  index === currentPageMetaName.toString().split('-').length - 1
                     ? 'text-text-primary'
                     : ''
                 }`"
@@ -63,7 +64,7 @@ onMounted(() => state.setScrollRef(scrollRef.value))
             </template>
           </div>
           <router-view v-slot="{ Component, route }">
-            <transition name="slide-fade" mode="out-in">
+            <transition name="slide-fade" mode="out-in" :key="$route.fullPath">
               <component :is="Component" :key="route" />
             </transition>
           </router-view>

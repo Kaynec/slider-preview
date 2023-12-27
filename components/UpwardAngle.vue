@@ -3,12 +3,10 @@
 
 const state = useGlobalStore()
 
-const scrollRef = ref(state.scrollRef)
-
 // We Set The top Position To Top Of Viewport = 0
 const scrollToTop = () => {
   const DURATION = 650
-  scrollRef.value.setScrollPosition('vertical', 0, DURATION)
+  state.scrollRef?.setScrollPosition('vertical', 0, DURATION)
 }
 </script>
 <template>

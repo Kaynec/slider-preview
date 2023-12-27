@@ -1,3 +1,4 @@
+import type { UserOutPut } from '@/api'
 import { acceptHMRUpdate, defineStore } from 'pinia'
 
 export const useGlobalStore = defineStore('global', () => {
@@ -5,13 +6,15 @@ export const useGlobalStore = defineStore('global', () => {
     maxAge: 10000 * 60
   })
 
-  const user = useCookie('token', {
+  const user = useCookie<UserOutPut>('user', {
     maxAge: 10000 * 60
   })
 
   return {
     setToken: (newToken: string) => (token.value = newToken),
-    getToken: () => token.value
+    getToken: () => token.value,
+    getUser: () => user.value,
+    setUser: (newUser: UserOutPut) => (user.value = newUser)
   }
 })
 

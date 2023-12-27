@@ -56,7 +56,7 @@ const model = ref({
 
         <div class="q-col-gutter-lg row">
           <template v-for="i in 9">
-            <div class="col-12 col-sm-6 col-lg-4">
+            <div class="col-6 col-sm-4 col-lg-3">
               <PopularProductItem
                 :img="ControllerBig"
                 title="دسته PS5 - سفید"
@@ -67,7 +67,7 @@ const model = ref({
                 final-price="2.750.000 تومان"
               />
             </div>
-            <div class="col-12 col-sm-6 col-lg-4">
+            <div class="col-6 col-sm-4 col-lg-3">
               <PopularProductItem
                 :img="Ps5Big"
                 title="دسته PS5 - سفید"
@@ -78,7 +78,7 @@ const model = ref({
                 final-price="2.750.000 تومان"
               />
             </div>
-            <div class="col-12 col-sm-6 col-lg-4">
+            <div class="col-6 col-sm-4 col-lg-3">
               <PopularProductItem
                 :img="HeadsetBig"
                 title="دسته PS5 - سفید"

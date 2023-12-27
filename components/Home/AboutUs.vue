@@ -4,7 +4,7 @@
 
     <div class="flex flex-col md:flex-row gap-3">
       <div class="flex-1 space-y-xl">
-        <h4 class="text_6xl heading text-center !md-text-start w-full">
+        <h4 class="text_header heading text-center !md-text-start w-full">
           درباره ما
         </h4>
         <p class="text-text-secondary max-w-65ch">

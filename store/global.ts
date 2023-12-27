@@ -1,13 +1,9 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
 
 export const useGlobalStore = defineStore('global', () => {
-  const scrollRef = ref()
+  const scrollRef = useState()
 
   const dark = ref(false)
-
-  const token = useCookie('token', {
-    maxAge: 10000 * 60
-  })
 
   const toggleDark = () => {
     dark.value = !dark.value
@@ -17,9 +13,7 @@ export const useGlobalStore = defineStore('global', () => {
     dark,
     toggleDark,
     scrollRef,
-    setScrollRef: (el: Ref<any>) => (scrollRef.value = el),
-    setToken: newToken => (token.value = newToken),
-    getToken: () => token.value
+    setScrollRef: (el: Ref<any>) => (scrollRef.value = el)
   }
 })
 
