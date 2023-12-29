@@ -6,9 +6,8 @@ useSeoMeta({
   ogDescription: 'خدمات تعمیر - تست دسته'
 })
 
-definePageMeta({
-  currentPageName: 'خدمات تعمیر - تست دسته'
-})
+const globalStore = useGlobalStore()
+globalStore.setCurrentTextName('خدمات تعمیر - تست دسته')
 </script>
 <template>
   <main>

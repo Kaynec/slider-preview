@@ -6,9 +6,8 @@ useSeoMeta({
   ogDescription: 'درخواست تعمیر موفقیت آمیز'
 })
 
-definePageMeta({
-  currentPageName: 'درخواست تعمیر موفقیت آمیز'
-})
+const globalStore = useGlobalStore()
+globalStore.setCurrentTextName('درخواست تعمیر موفقیت آمیز')
 
 const details = ref([
   {

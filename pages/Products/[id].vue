@@ -6,9 +6,8 @@ useSeoMeta({
   ogDescription: 'صفحه محصول'
 })
 
-definePageMeta({
-  currentPageName: 'محصولات - پلی استیشن'
-})
+const globalStore = useGlobalStore()
+globalStore.setCurrentTextName('محصولات - پلی استیشن')
 </script>
 
 <template>

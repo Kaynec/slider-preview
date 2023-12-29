@@ -11,9 +11,8 @@ useSeoMeta({
   ogDescription: 'خرید موفقیت آمیز'
 })
 
-definePageMeta({
-  currentPageName: 'خرید موفقیت آمیز'
-})
+const globalStore = useGlobalStore()
+globalStore.setCurrentTextName('خرید موفقیت آمیز')
 
 const details = ref([
   {

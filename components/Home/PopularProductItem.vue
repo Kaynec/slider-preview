@@ -4,12 +4,12 @@
   >
     <div class="px-xs">
       <section
-        class="h-7rem basis-full mx-auto !rounded-2xl flex items-center bg-background-secondary border-1px border-solid border-#303030 f-text-11-14"
+        class="h-8rem basis-full mx-auto !rounded-2xl flex items-center bg-background-secondary border-1px border-solid border-#303030 f-text-11-14"
       >
         <img
           :src="img"
-          width="55"
-          height="65"
+          width="65"
+          height="85"
           class="m-auto object-contain"
           alt="product card image"
           loading="lazy"

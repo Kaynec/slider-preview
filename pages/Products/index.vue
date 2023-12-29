@@ -6,9 +6,8 @@ useSeoMeta({
   ogDescription: 'محصولات'
 })
 
-definePageMeta({
-  currentPageName: 'محصولات'
-})
+const globalStore = useGlobalStore()
+globalStore.setCurrentTextName('محصولات')
 
 import ControllerBig from '@/assets/home_imgs/cards/controller-big.png'
 import Ps5Big from '@/assets/home_imgs/cards/ps5-big.png'

@@ -6,9 +6,8 @@ useSeoMeta({
   ogDescription: 'خدمات تعمیر - کنسول'
 })
 
-definePageMeta({
-  currentPageName: 'خدمات تعمیر - تست کنسول'
-})
+const globalStore = useGlobalStore()
+globalStore.setCurrentTextName('خدمات تعمیر - تست کنسول')
 
 const tabConditions = {
   DifferentErrorTypes: 'انواع ارور ها',

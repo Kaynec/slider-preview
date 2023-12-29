@@ -117,7 +117,6 @@ useSeoMeta({
   ogDescription: 'پروفایل کاربری'
 })
 
-definePageMeta({
-  currentPageName: 'پروفایل کاربری'
-})
+const globalStore = useGlobalStore()
+globalStore.setCurrentTextName('پروفایل کاربری')
 </script>

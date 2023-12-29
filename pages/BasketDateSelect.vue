@@ -9,9 +9,8 @@ useSeoMeta({
   ogDescription: 'سبد خرید - انتخاب تاریخ'
 })
 
-definePageMeta({
-  currentPageName: 'سبد خرید - انتخاب تاریخ'
-})
+const globalStore = useGlobalStore()
+globalStore.setCurrentTextName('سبد خرید - انتخاب تاریخ')
 
 const cardItems = ref([
   {

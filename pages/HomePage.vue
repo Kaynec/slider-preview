@@ -8,13 +8,12 @@ useSeoMeta({
   title: 'Cheats  - Home page',
   ogTitle: 'Cheats  - Home page',
   description: 'صفحه اصلی',
-  ogDescription: 'صفحه اصلی'
+  ogDescription: 'صفحه اصلی',
+  titleTemplate: 'صفحه اصلی'
 })
 
-definePageMeta({
-  currentPageName: 'صفحه اصلی',
-  key: route => route.fullPath
-})
+const globalStore = useGlobalStore()
+globalStore.setCurrentTextName('صفحه اصلی')
 
 const slide = ref(1)
 </script>

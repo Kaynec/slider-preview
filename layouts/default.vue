@@ -24,9 +24,9 @@ const scrollRef = ref()
 // Setting The Ref of Scroll Area to store in Global State
 onMounted(() => state.setScrollRef(scrollRef.value))
 
-const route = useRoute()
+const globalState = useGlobalStore()
 
-const currentPageMetaName = computed(() => route.meta.currentPageName)
+const currentPageMetaName = computed(() => globalState.currentTextname)
 </script>
 <template>
   <q-layout
