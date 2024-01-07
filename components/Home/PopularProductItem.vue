@@ -1,38 +1,56 @@
 <template>
   <div
-    class="grid gap-3 bg-background-primary custom-opacity pt-xs !overflow-visible !rounded-1.75rem -hover:translate-y-3 transition-ease transition-250"
+    class="flex sm-flex-col bg-background-primary custom-opacity gap-y-3 pt-xs !overflow-visible !rounded-1.75rem -hover:translate-y-3 transition-ease transition-250"
   >
-    <div class="px-xs">
+    <div class="px-2 md:px-3">
       <section
-        class="h-8rem basis-full mx-auto !rounded-2xl flex items-center bg-background-secondary border-1px border-solid border-#303030 f-text-11-14"
+        class="min-w-5rem w-auto min-h-7rem px-sm p-sm mx-auto !rounded-2xl flex items-center bg-background-secondary border-1px border-solid border-#303030 f-text-11-14"
       >
         <img
           :src="img"
-          width="65"
-          height="85"
-          class="m-auto object-contain"
+          width="90"
+          height="90"
+          class="m-auto object-contain aspect-1 w-auto max-w-20 md:max-w-30 lg:max-w-35"
           alt="product card image"
           loading="lazy"
         />
       </section>
     </div>
 
-    <div class="flex justify-between px-xs basis-full gap-1 items-center">
-      <span class="f-text-11-14">{{ title }}</span>
-      <span class="text-primary f-text-9-11 font-bold">{{ price }}</span>
+    <div class="flex flex-1 gap-1">
+      <div
+        class="flex justify-between px-xs basis-full gap-1 items-center basis-full"
+      >
+        <span class="f-text-18-20">{{ title }}</span>
+        <ClientOnly>
+          <span
+            v-if="$q.screen.width > 640"
+            class="text-primary f-text-13-16 font-bold ps-xs"
+            >{{ price }}</span
+          >
+        </ClientOnly>
+      </div>
+
+      <span
+        class="text-text-secondary !f-text-14-14 pt-2 text-start ps-xs basis-full"
+        >مدل : <span class="text-primary-alternate">{{ desc }}</span>
+      </span>
+      <ClientOnly>
+        <span
+          v-if="$q.screen.width < 640"
+          class="text-primary f-text-16-20 font-bold ps-xs"
+          >{{ price }}</span
+        >
+      </ClientOnly>
     </div>
 
-    <span class="text-text-secondary !f-text-11-14 text-start ps-xs full-width"
-      >{{ desc }}
-    </span>
-
     <!-- TODO Maki This Dynamic TOO -->
-    <div class="flex !overflow-visible">
+    <div class="flex !overflow-visible basis-full">
       <QBtn
         @click="$router.push('/Products')"
-        class="!rounded-b-1.75rem !overflow-visible text-primary !bg-#007AFF0D full-width flex justify-center !p-0 !pb-1 !f-text-11-14 gap-2 items-center border-t-1 border-t-#007AFF border-t-solid"
+        class="!rounded-b-1.75rem !overflow-visible text-primary !bg-#007AFF0D full-width flex justify-center !p-0 !py-2 !f-text-18-22 gap-2 items-center !border-t-2 !border-t-#007AFF !border-t-solid"
       >
-        <Bag class="fill-primary w-6.5 h-6.5" />
+        <Bag class="fill-primary w-8 h-8" />
         افزودن به سبد خرید
       </QBtn>
     </div>

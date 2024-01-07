@@ -55,37 +55,37 @@ const model = ref({
 
         <div class="q-col-gutter-lg row">
           <template v-for="i in 9">
-            <div class="col-6 col-sm-4 col-lg-3">
+            <div class="col-12 col-sm-6 col-md-4">
               <PopularProductItem
                 :img="ControllerBig"
                 title="دسته PS5 - سفید"
                 percent="5%"
-                desc="مدل: دوال سنس سفید"
-                price="3,450,000 تومان"
+                desc=" دوال سنس سفید"
+                price="۳,۴۰۰,۰۰۰"
                 :time="['22', '14', '35']"
-                final-price="2.750.000 تومان"
+                final-price="2.750.000"
               />
             </div>
-            <div class="col-6 col-sm-4 col-lg-3">
+            <div class="col-12 col-sm-6 col-md-4">
               <PopularProductItem
                 :img="Ps5Big"
                 title="دسته PS5 - سفید"
                 percent="5%"
-                desc="مدل: دوال سنس سفید"
-                price="3,450,000 تومان"
+                desc=" دوال سنس سفید"
+                price="۳,۴۰۰,۰۰۰"
                 :time="['22', '14', '35']"
-                final-price="2.750.000 تومان"
+                final-price="2.750.000"
               />
             </div>
-            <div class="col-6 col-sm-4 col-lg-3">
+            <div class="col-12 col-sm-6 col-md-4">
               <PopularProductItem
                 :img="HeadsetBig"
                 title="دسته PS5 - سفید"
                 percent="5%"
-                desc="مدل: دوال سنس سفید"
-                price="3,450,000 تومان"
+                desc=" دوال سنس سفید"
+                price="۳,۴۰۰,۰۰۰"
                 :time="['22', '14', '35']"
-                final-price="2.750.000 تومان"
+                final-price="2.750.000"
               />
             </div>
           </template>

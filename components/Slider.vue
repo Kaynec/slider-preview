@@ -36,9 +36,7 @@ defineExpose({
       :pagination="pagination ?? false"
       :breakpoints="breakpoints ?? {}"
       :loop="loop ?? true"
-      :free-mode="{
-        enabled: true
-      }"
+      :resistance="true"
     >
       <slot />
       <template v-slot:container-start>

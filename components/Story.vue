@@ -1,6 +1,6 @@
 <template>
   <div
-    class="col flex cursor-pointer snap-start flex-col items-center gap-2 justify-center hover:animate-pulse"
+    class="col flex cursor-pointer flex-col items-center gap-2 justify-center hover:animate-pulse !min-w-30 !md:min-w-50"
   >
     <img
       :src="img ?? defaultImage"

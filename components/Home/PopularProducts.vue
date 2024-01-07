@@ -20,19 +20,19 @@ import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
       }"
       slider-class=""
       class="mx-auto mb-lg"
-      :slides-per-view="2"
+      :slides-per-view="1"
       :breakpoints="{
         768: {
-          slidesPerView: 3
+          slidesPerView: 2
         },
         1024: {
-          slidesPerView: 4
+          slidesPerView: 3
         },
         1440: {
-          slidesPerView: 5
+          slidesPerView: 4
         },
-        1700: {
-          slidesPerView: 6
+        1950: {
+          slidesPerView: 5
         }
       }"
     >

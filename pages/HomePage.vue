@@ -20,8 +20,19 @@ const slide = ref(1)
 
 <template>
   <QPage class="row col">
-    <section class="w-full min-h-40">
-      <ClientOnly>
+    <q-scroll-area
+      style="width: 100%; height: auto; padding-bottom: 1rem"
+      class="min-h-12rem md:min-h-14.5rem"
+    >
+      <div class="flex !flex-nowrap !overflow-hidden gap-4">
+        <template v-for="i in 6">
+          <Story title="پلی استیشن ۵" :img="ps5Image" />
+          <Story title="هدفون گیمینگ" />
+          <Story title="دسته PS4" :img="ps4Image" />
+        </template>
+      </div>
+    </q-scroll-area>
+    <!-- <ClientOnly>
         <Slider
           class="mb-lg animation"
           :slides-per-view="3.5"
@@ -55,8 +66,7 @@ const slide = ref(1)
             </SwiperSlide>
           </template>
         </Slider>
-      </ClientOnly>
-    </section>
+      </ClientOnly> -->
 
     <Transition
       enter-active-class="duration-500 ease-out"
