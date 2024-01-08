@@ -4,13 +4,13 @@
   >
     <div class="px-2 md:px-3">
       <section
-        class="min-w-5rem w-auto min-h-7rem px-sm p-sm mx-auto !rounded-2xl flex items-center bg-background-secondary border-1px border-solid border-#303030 f-text-11-14"
+        class="min-w-5rem aspect-1 sm:aspect-auto w-auto min-h-7rem px-sm p-sm mx-auto !rounded-2xl flex items-center bg-background-secondary border-1px border-solid border-#303030 f-text-11-14"
       >
         <img
           :src="img"
           width="90"
           height="90"
-          class="m-auto object-contain aspect-1 w-auto max-w-20 md:max-w-30 lg:max-w-35"
+          class="m-auto object-contain aspect-1 w-auto max-w-30 md:max-w-30 lg:max-w-35"
           alt="product card image"
           loading="lazy"
         />

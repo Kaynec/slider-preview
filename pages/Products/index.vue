@@ -56,36 +56,42 @@ const model = ref({
         <div class="q-col-gutter-lg row">
           <template v-for="i in 9">
             <div class="col-12 col-sm-6 col-md-4">
-              <PopularProductItem
+              <ProductItem
                 :img="ControllerBig"
                 title="دسته PS5 - سفید"
                 percent="5%"
                 desc=" دوال سنس سفید"
                 price="۳,۴۰۰,۰۰۰"
                 :time="['22', '14', '35']"
-                final-price="2.750.000"
+                final-price="۳,۰۰,۰۰۰"
+                :discount-percent="15"
+                region="آسیا"
               />
             </div>
             <div class="col-12 col-sm-6 col-md-4">
-              <PopularProductItem
+              <ProductItem
                 :img="Ps5Big"
                 title="دسته PS5 - سفید"
                 percent="5%"
                 desc=" دوال سنس سفید"
                 price="۳,۴۰۰,۰۰۰"
                 :time="['22', '14', '35']"
-                final-price="2.750.000"
+                final-price="۳,۰۰,۰۰۰"
+                :discount-percent="15"
+                region="آسیا"
               />
             </div>
             <div class="col-12 col-sm-6 col-md-4">
-              <PopularProductItem
+              <ProductItem
                 :img="HeadsetBig"
                 title="دسته PS5 - سفید"
                 percent="5%"
                 desc=" دوال سنس سفید"
                 price="۳,۴۰۰,۰۰۰"
                 :time="['22', '14', '35']"
-                final-price="2.750.000"
+                final-price="۳,۰۰,۰۰۰"
+                :discount-percent="15"
+                region="آسیا"
               />
             </div>
           </template>

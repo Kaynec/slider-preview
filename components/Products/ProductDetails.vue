@@ -22,12 +22,7 @@ const time = ['22', '14', '35']
             <div v-if="t !== time[time.length - 1]">:</div>
           </div>
         </div>
-        <div
-          class="border-1 text-primary border-primary h-8 px-1 text-xs px-3 items-center gap-1 rounded-lg flex"
-        >
-          <Star class="stroke-primary !w-4 !h-4 mb-1" />
-          4.6
-        </div>
+        <StarComponent :starNumber="4.6" />
       </div>
     </div>
     <div class="items-center justify-center flex gap-10">

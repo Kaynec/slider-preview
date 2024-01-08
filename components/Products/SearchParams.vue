@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col w-full gap-3 col-span-4 lg:col-span-1">
+  <div class="flex flex-col !flex-nowrap w-full gap-3 col-span-4 lg:col-span-1">
     <QInput
       standout="bg-transparent"
       v-model="model.search"
@@ -48,6 +48,21 @@
         </q-card>
       </q-expansion-item>
 
+      <q-expansion-item expand-separator label="بر اساس قیمت">
+        <q-card class="bg-dark">
+          <q-card-section class="flex flex-col">
+            <QRadio
+              :label="filter.name"
+              v-for="filter in priceFilterArray"
+              :key="filter.name"
+              :val="filter.name"
+              v-model="currentPriceFilter"
+              as
+            />
+          </q-card-section>
+        </q-card>
+      </q-expansion-item>
+
       <!-- <q-separator class="my-sm" /> -->
 
       <div class="flex flex-col !my-lg">
@@ -85,6 +100,27 @@ const filterboxArray = ref([
   },
   {
     name: 'Nintendo',
+    value: false
+  }
+])
+
+const currentPriceFilter = ref('ارزان ترین')
+
+const priceFilterArray = ref([
+  {
+    name: 'ارزان ترین',
+    value: false
+  },
+  {
+    name: 'گرانترین',
+    value: false
+  },
+  {
+    name: 'جدید ترین',
+    value: false
+  },
+  {
+    name: 'پرفروش ترین',
     value: false
   }
 ])

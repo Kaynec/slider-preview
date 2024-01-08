@@ -30,7 +30,7 @@ onBeforeUnmount(() => {
     ref="sliderRef"
     :loop="false"
     slider-class="pe-sm"
-    class="custom-spiderman-bg mx-auto !rounded-xl mb-lg w-full h-max cursor-pointer pb-xl"
+    class="custom-spiderman-bg mx-auto !rounded-xl mb-lg w-full h-max cursor-pointer py-2xl"
     :slides-per-view="'auto'"
     :pagination="{
       clickable: true
@@ -43,7 +43,7 @@ onBeforeUnmount(() => {
       >
         <img
           src="@/assets/offer-text.svg?inline"
-          class="f-w-80-100 max-h-45 pt-4"
+          class="f-w-80-100 max-h-45 pb-4"
           alt="this is the special offer text"
           loading="lazy"
         />

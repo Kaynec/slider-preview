@@ -37,6 +37,8 @@ defineExpose({
       :breakpoints="breakpoints ?? {}"
       :loop="loop ?? true"
       :resistance="true"
+      :resistance-ratio="1"
+      :free-mode="true"
     >
       <slot />
       <template v-slot:container-start>
