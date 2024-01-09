@@ -3,7 +3,8 @@ import emblaCarouselVue from 'embla-carousel-vue'
 import { getCssVar } from 'quasar'
 const [emblaNode, emblaApi] = emblaCarouselVue({
   direction: 'rtl',
-  dragFree: true
+  dragFree: true,
+  containScroll: 'trimSnaps'
 })
 
 const {
@@ -27,7 +28,7 @@ const dots_node = ref()
 const addDotBtnsAndClickHandlers = (
   emblApi: typeof emblaApi,
   dotsNode: HTMLElement
-): (() => void) => {
+) => {
   let dotNodes: HTMLElement[] = []
 
   const addDotBtnsWithClickHandlers = (): void => {
@@ -62,15 +63,11 @@ const addDotBtnsAndClickHandlers = (
     .on('init', toggleDotBtnsActive)
     .on('reInit', toggleDotBtnsActive)
     .on('select', toggleDotBtnsActive)
-
-  return (): void => {
-    dotsNode.innerHTML = ''
-  }
 }
 
-// onMounted(() => {
-//   if (pagination) addDotBtnsAndClickHandlers(emblaApi, dots_node.value)
-// })
+onMounted(() => {
+  if (pagination) addDotBtnsAndClickHandlers(emblaApi, dots_node.value)
+})
 </script>
 
 <template>
