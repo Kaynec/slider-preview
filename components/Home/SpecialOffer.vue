@@ -62,10 +62,7 @@ onBeforeUnmount(() => {
       </div>
     </div>
 
-    <div
-      class="pb-lg max-w-50 lg:max-w-60 embla__slide min-w-50 sm:min-w-55 lg:min-w-65"
-      ref="cardRef"
-    >
+    <div class="pb-lg max-w-50 lg:max-w-60 min-w-65 embla__slide" ref="cardRef">
       <SpecialOfferItem
         :img="ControllerBig"
         title="دسته PS5 - سفید"
@@ -77,7 +74,7 @@ onBeforeUnmount(() => {
         class="mt-lg"
       />
     </div>
-    <div class="pb-lg max-w-50 lg:max-w-60 embla__slide min-w-65">
+    <div class="pb-lg max-w-50 lg:max-w-60 min-w-65 embla__slide">
       <SpecialOfferItem
         :img="Ps5Big"
         title="دسته PS5 - سفید"
@@ -89,7 +86,7 @@ onBeforeUnmount(() => {
         class="mt-lg"
       />
     </div>
-    <div class="pb-lg max-w-50 lg:max-w-60 embla__slide min-w-65">
+    <div class="pb-lg max-w-50 lg:max-w-60 min-w-65 embla__slide">
       <SpecialOfferItem
         :img="HeadsetBig"
         title="دسته PS5 - سفید"
@@ -101,7 +98,7 @@ onBeforeUnmount(() => {
         class="mt-lg"
       />
     </div>
-    <div class="pb-lg max-w-50 lg:max-w-60 embla__slide min-w-65">
+    <div class="pb-lg max-w-50 lg:max-w-60 min-w-65 embla__slide">
       <SpecialOfferItem
         :img="VrBig"
         title="دسته PS5 - سفید"
@@ -113,7 +110,7 @@ onBeforeUnmount(() => {
         class="mt-lg"
       />
     </div>
-    <div class="pb-lg max-w-50 lg:max-w-60 embla__slide min-w-65">
+    <div class="pb-lg max-w-50 lg:max-w-60 min-w-65 embla__slide">
       <SpecialOfferItem
         :img="VrBig"
         title="دسته PS5 - سفید"
@@ -125,7 +122,7 @@ onBeforeUnmount(() => {
         class="mt-lg"
       />
     </div>
-    <div class="pb-lg max-w-50 lg:max-w-60 embla__slide min-w-65">
+    <div class="pb-lg max-w-50 lg:max-w-60 min-w-65 embla__slide">
       <SpecialOfferItem
         :img="VrBig"
         title="دسته PS5 - سفید"
@@ -137,7 +134,7 @@ onBeforeUnmount(() => {
         class="mt-lg"
       />
     </div>
-    <div class="pb-lg max-w-50 lg:max-w-60 embla__slide min-w-65">
+    <div class="pb-lg max-w-50 lg:max-w-60 min-w-65 embla__slide">
       <SpecialOfferItem
         :img="VrBig"
         title="دسته PS5 - سفید"
@@ -149,7 +146,7 @@ onBeforeUnmount(() => {
         class="mt-lg"
       />
     </div>
-    <div class="pb-lg max-w-50 lg:max-w-60 embla__slide min-w-65">
+    <div class="pb-lg max-w-50 lg:max-w-60 min-w-65 embla__slide">
       <SpecialOfferItem
         :img="VrBig"
         title="دسته PS5 - سفید"

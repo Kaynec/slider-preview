@@ -47,7 +47,7 @@ const currentPageMetaName = computed(() => globalState.currentTextname)
           class="page-container max-w-screen 2xl:max-w-90rem pb-4.5rem px-xs"
         >
           <div
-            class="flex gap-3 items-center mt-2.3rem mb-.75rem"
+            class="flex gap-3 items-center md:mt-2.3rem mb-.75rem"
             v-if="currentPageMetaName"
           >
             <div class="i-carbon:home" />

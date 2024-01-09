@@ -43,7 +43,6 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     'nuxt-svgo',
     'nuxt-typed-router',
-    'nuxt-swiper',
     '@nuxtjs/critters',
     '@nuxtjs/web-vitals',
     // '@pinia-plugin-persistedstate/nuxt',
@@ -53,14 +52,6 @@ export default defineNuxtConfig({
   ],
   image: {
     quality: 80
-  },
-  swiper: {
-    // Swiper options
-    //----------------------
-    // prefix: 'Swiper',
-    // styleLang: 'css',
-    // modules: ['navigation', 'pagination'], // all modules are imported by default
-    // styleLang: 'scss'
   },
   pinia: {
     storesDirs: ['store/**']

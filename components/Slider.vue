@@ -68,9 +68,9 @@ const addDotBtnsAndClickHandlers = (
   }
 }
 
-onMounted(() => {
-  if (pagination) addDotBtnsAndClickHandlers(emblaApi, dots_node.value)
-})
+// onMounted(() => {
+//   if (pagination) addDotBtnsAndClickHandlers(emblaApi, dots_node.value)
+// })
 </script>
 
 <template>
@@ -96,7 +96,7 @@ onMounted(() => {
   min-width: 0;
 }
 .embla__dots {
-  z-index: 1000000;
+  z-index: 99;
   position: absolute;
   bottom: 1rem;
   width: 100%;
