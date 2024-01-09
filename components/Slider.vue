@@ -38,7 +38,10 @@ defineExpose({
       :loop="loop ?? true"
       :resistance="true"
       :resistance-ratio="1"
-      :free-mode="true"
+      :free-mode="{
+        enabled: true,
+        sticky: true
+      }"
     >
       <slot />
       <template v-slot:container-start>
