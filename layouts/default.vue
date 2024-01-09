@@ -43,7 +43,9 @@ const currentPageMetaName = computed(() => globalState.currentTextname)
       @scroll="handleScroll"
     >
       <q-page-container>
-        <QPage class="page-container 2xl:max-w-90rem pb-4.5rem px-xs">
+        <QPage
+          class="page-container max-w-screen 2xl:max-w-90rem pb-4.5rem px-xs"
+        >
           <div
             class="flex gap-3 items-center mt-2.3rem mb-.75rem"
             v-if="currentPageMetaName"

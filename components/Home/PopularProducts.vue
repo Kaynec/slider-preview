@@ -6,37 +6,15 @@ import HeadsetBig from '@/assets/home_imgs/cards/headset-big.png'
 import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
 </script>
 <template>
-  <div class="flex flex-col gap-4 my-6xl cursor-pointer">
+  <div class="gap-4 my-6xl cursor-pointer">
     <span class="text_header heading">محصولات پر فروش</span>
     <p class="text-text-secondary">
       لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
       طراحان گرافیک است،
     </p>
 
-    <Slider
-      :loop="false"
-      :pagination="{
-        clickable: true
-      }"
-      slider-class=""
-      class="mx-auto mb-lg"
-      :slides-per-view="1"
-      :breakpoints="{
-        768: {
-          slidesPerView: 2
-        },
-        1024: {
-          slidesPerView: 3
-        },
-        1440: {
-          slidesPerView: 4
-        },
-        1950: {
-          slidesPerView: 5
-        }
-      }"
-    >
-      <SwiperSlide class="pb-xl">
+    <Slider class="!pb-4rem">
+      <div class="embla__slide">
         <PopularProductItem
           :img="Ps5Big"
           title="دسته PS5 - سفید"
@@ -46,8 +24,8 @@ import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
           :time="['22', '14', '35']"
           final-price="2.750.000 تومان"
         />
-      </SwiperSlide>
-      <SwiperSlide class="pb-xl">
+      </div>
+      <div class="embla__slide">
         <PopularProductItem
           :img="Ps5Big"
           title="دسته PS5 - سفید"
@@ -57,8 +35,8 @@ import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
           :time="['22', '14', '35']"
           final-price="2.750.000 تومان"
         />
-      </SwiperSlide>
-      <SwiperSlide class="pb-xl">
+      </div>
+      <div class="embla__slide">
         <PopularProductItem
           :img="HeadsetBig"
           title="دسته PS5 - سفید"
@@ -68,8 +46,8 @@ import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
           :time="['22', '14', '35']"
           final-price="2.750.000 تومان"
         />
-      </SwiperSlide>
-      <SwiperSlide class="pb-xl">
+      </div>
+      <div class="embla__slide">
         <PopularProductItem
           :img="VrBig"
           title="دسته PS5 - سفید"
@@ -79,8 +57,8 @@ import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
           :time="['22', '14', '35']"
           final-price="2.750.000 تومان"
         />
-      </SwiperSlide>
-      <SwiperSlide class="pb-xl">
+      </div>
+      <div class="embla__slide">
         <PopularProductItem
           :img="Ps5Big"
           title="دسته PS5 - سفید"
@@ -90,8 +68,8 @@ import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
           :time="['22', '14', '35']"
           final-price="2.750.000 تومان"
         />
-      </SwiperSlide>
-      <SwiperSlide class="pb-xl">
+      </div>
+      <div class="embla__slide">
         <PopularProductItem
           :img="Ps5Big"
           title="دسته PS5 - سفید"
@@ -101,8 +79,8 @@ import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
           :time="['22', '14', '35']"
           final-price="2.750.000 تومان"
         />
-      </SwiperSlide>
-      <SwiperSlide class="pb-xl">
+      </div>
+      <div class="embla__slide">
         <PopularProductItem
           :img="HeadsetBig"
           title="دسته PS5 - سفید"
@@ -112,8 +90,8 @@ import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
           :time="['22', '14', '35']"
           final-price="2.750.000 تومان"
         />
-      </SwiperSlide>
-      <SwiperSlide class="pb-xl">
+      </div>
+      <div class="embla__slide">
         <PopularProductItem
           :img="VrBig"
           title="دسته PS5 - سفید"
@@ -123,7 +101,7 @@ import VrBig from '@/assets/home_imgs/cards/Vr-Big.png'
           :time="['22', '14', '35']"
           final-price="2.750.000 تومان"
         />
-      </SwiperSlide>
+      </div>
     </Slider>
   </div>
 </template>

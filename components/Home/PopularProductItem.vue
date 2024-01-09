@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex sm-flex-col bg-background-primary custom-opacity gap-y-3 pt-xs !overflow-visible !rounded-1.75rem -hover:translate-y-3 transition-ease transition-250"
+    class="min-w-90 flex sm-flex-col bg-background-primary custom-opacity gap-y-3 pt-xs !overflow-visible !rounded-1.75rem -hover:translate-y-3 transition-ease transition-250"
   >
     <div class="px-2 md:px-3">
       <section

@@ -1,55 +1,109 @@
 <script setup lang="ts">
-import type { SwiperOptions } from 'swiper/types'
+import emblaCarouselVue from 'embla-carousel-vue'
+import { getCssVar } from 'quasar'
+const [emblaNode, emblaApi] = emblaCarouselVue({
+  direction: 'rtl',
+  dragFree: true
+})
 
-defineProps<{
-  options?: SwiperOptions
-  sliderClass?: string
-  slidesPerView?: number | 'auto'
-  spaceBetween?: number
-  loop?: boolean
-  pagination?: boolean | Record<string, unknown>
-  breakpoints?: Record<
-    number,
-    {
-      spaceBetween?: number
-      slidesPerView?: number
-    }
-  >
+const {
+  pagination = true,
+  dotsActiveColor = getCssVar('primary') || 'blue',
+  dotsBackgroundColor = '#fff'
+} = defineProps<{
+  pagination: boolean
+  dotsBackgroundColor: string
+  dotsActiveColor: string
 }>()
 
-const sliderRef = ref()
+const containerRef = ref()
 
 defineExpose({
-  ref: sliderRef
+  ref: containerRef
+})
+
+const dots_node = ref()
+
+const addDotBtnsAndClickHandlers = (
+  emblApi: typeof emblaApi,
+  dotsNode: HTMLElement
+): (() => void) => {
+  let dotNodes: HTMLElement[] = []
+
+  const addDotBtnsWithClickHandlers = (): void => {
+    dotsNode.innerHTML = emblApi
+      .value!.scrollSnapList()
+      .map(
+        () =>
+          `<button class="embla__dot rounded-full w-2.5 h-2.5" style="background:${dotsBackgroundColor}" type="button"></button>`
+      )
+      .join('')
+
+    dotNodes = Array.from(dotsNode.querySelectorAll('.embla__dot'))
+    dotNodes.forEach((dotNode, index) => {
+      dotNode.addEventListener(
+        'click',
+        () => emblApi.value?.scrollTo(index),
+        false
+      )
+    })
+  }
+
+  const toggleDotBtnsActive = (): void => {
+    const previous = emblApi.value!.previousScrollSnap()
+    const selected = emblApi.value!.selectedScrollSnap()
+    dotNodes[previous].style.backgroundColor = dotsBackgroundColor
+    dotNodes[selected].style.backgroundColor = dotsActiveColor
+  }
+
+  emblApi.value
+    ?.on('init', addDotBtnsWithClickHandlers)
+    .on('reInit', addDotBtnsWithClickHandlers)
+    .on('init', toggleDotBtnsActive)
+    .on('reInit', toggleDotBtnsActive)
+    .on('select', toggleDotBtnsActive)
+
+  return (): void => {
+    dotsNode.innerHTML = ''
+  }
+}
+
+onMounted(() => {
+  if (pagination) addDotBtnsAndClickHandlers(emblaApi, dots_node.value)
 })
 </script>
 
 <template>
-  <div class="w-full max-w-92vw md:max-w-full" ref="sliderRef">
-    <Swiper
-      :class="`${sliderClass} `"
-      :modules="[SwiperAutoplay, SwiperScrollbar, SwiperPagination]"
-      :slides-per-view="slidesPerView ?? 'auto'"
-      :space-between="spaceBetween ?? 15"
-      :effect="'creative'"
-      :options="options"
-      :pagination="pagination ?? false"
-      :breakpoints="breakpoints ?? {}"
-      :loop="loop ?? true"
-      :resistance="true"
-      :resistance-ratio="1"
-      :free-mode="{
-        enabled: true,
-        sticky: true
-      }"
-    >
-      <slot />
-      <template v-slot:container-start>
-        <slot name="container-start"
-      /></template>
-      <template v-slot:container-end><slot name="container-end" /></template>
-      <template v-slot:wrapper-start><slot name="wrapper-start" /></template>
-      <template v-slot:wrapper-end><slot name="wrapper-end" /></template>
-    </Swiper>
+  <div class="relative pb-2rem">
+    <div class="embla__dots" ref="dots_node"></div>
+    <div class="embla" ref="emblaNode">
+      <div class="embla__container" ref="containerRef">
+        <slot />
+      </div>
+    </div>
   </div>
 </template>
+<style scoped>
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+  gap: 1rem;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+.embla__dots {
+  z-index: 1000000;
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+</style>

@@ -10,7 +10,7 @@ const cardRef = ref()
 const height = ref(250)
 
 const calculateHeight = () => {
-  const rectHeight = cardRef.value?.$el?.getBoundingClientRect().height
+  const rectHeight = cardRef.value?.getBoundingClientRect().height
   if (!rectHeight) return
 
   height.value = rectHeight
@@ -28,15 +28,11 @@ onBeforeUnmount(() => {
 <template>
   <Slider
     ref="sliderRef"
-    :loop="false"
-    slider-class="pe-sm"
     class="custom-spiderman-bg mx-auto !rounded-xl mb-lg w-full h-max cursor-pointer py-2xl"
-    :slides-per-view="'auto'"
-    :pagination="{
-      clickable: true
-    }"
   >
-    <SwiperSlide class="flex flex-col items-center relative max-w-40">
+    <div
+      class="flex flex-col items-center relative max-w-40 embla__slide min-w-45"
+    >
       <div
         class="ms-lg w-max relative bottom-0 max-h-full"
         :style="`min-height:${height}px`"
@@ -64,9 +60,12 @@ onBeforeUnmount(() => {
           </button>
         </div>
       </div>
-    </SwiperSlide>
+    </div>
 
-    <SwiperSlide class="pb-lg max-w-50 lg:max-w-60" ref="cardRef">
+    <div
+      class="pb-lg max-w-50 lg:max-w-60 embla__slide min-w-50 sm:min-w-55 lg:min-w-65"
+      ref="cardRef"
+    >
       <SpecialOfferItem
         :img="ControllerBig"
         title="دسته PS5 - سفید"
@@ -77,8 +76,8 @@ onBeforeUnmount(() => {
         final-price="2.750.000 تومان"
         class="mt-lg"
       />
-    </SwiperSlide>
-    <SwiperSlide class="pb-lg max-w-50 lg:max-w-60">
+    </div>
+    <div class="pb-lg max-w-50 lg:max-w-60 embla__slide min-w-65">
       <SpecialOfferItem
         :img="Ps5Big"
         title="دسته PS5 - سفید"
@@ -89,8 +88,8 @@ onBeforeUnmount(() => {
         final-price="2.750.000 تومان"
         class="mt-lg"
       />
-    </SwiperSlide>
-    <SwiperSlide class="pb-lg max-w-50 lg:max-w-60">
+    </div>
+    <div class="pb-lg max-w-50 lg:max-w-60 embla__slide min-w-65">
       <SpecialOfferItem
         :img="HeadsetBig"
         title="دسته PS5 - سفید"
@@ -101,8 +100,8 @@ onBeforeUnmount(() => {
         final-price="2.750.000 تومان"
         class="mt-lg"
       />
-    </SwiperSlide>
-    <SwiperSlide class="pb-lg max-w-50 lg:max-w-60">
+    </div>
+    <div class="pb-lg max-w-50 lg:max-w-60 embla__slide min-w-65">
       <SpecialOfferItem
         :img="VrBig"
         title="دسته PS5 - سفید"
@@ -113,8 +112,8 @@ onBeforeUnmount(() => {
         final-price="2.750.000 تومان"
         class="mt-lg"
       />
-    </SwiperSlide>
-    <SwiperSlide class="pb-lg max-w-50 lg:max-w-60">
+    </div>
+    <div class="pb-lg max-w-50 lg:max-w-60 embla__slide min-w-65">
       <SpecialOfferItem
         :img="VrBig"
         title="دسته PS5 - سفید"
@@ -125,8 +124,8 @@ onBeforeUnmount(() => {
         final-price="2.750.000 تومان"
         class="mt-lg"
       />
-    </SwiperSlide>
-    <SwiperSlide class="pb-lg max-w-50 lg:max-w-60">
+    </div>
+    <div class="pb-lg max-w-50 lg:max-w-60 embla__slide min-w-65">
       <SpecialOfferItem
         :img="VrBig"
         title="دسته PS5 - سفید"
@@ -137,8 +136,8 @@ onBeforeUnmount(() => {
         final-price="2.750.000 تومان"
         class="mt-lg"
       />
-    </SwiperSlide>
-    <SwiperSlide class="pb-lg max-w-50 lg:max-w-60">
+    </div>
+    <div class="pb-lg max-w-50 lg:max-w-60 embla__slide min-w-65">
       <SpecialOfferItem
         :img="VrBig"
         title="دسته PS5 - سفید"
@@ -149,8 +148,8 @@ onBeforeUnmount(() => {
         final-price="2.750.000 تومان"
         class="mt-lg"
       />
-    </SwiperSlide>
-    <SwiperSlide class="pb-lg max-w-50 lg:max-w-60">
+    </div>
+    <div class="pb-lg max-w-50 lg:max-w-60 embla__slide min-w-65">
       <SpecialOfferItem
         :img="VrBig"
         title="دسته PS5 - سفید"
@@ -161,7 +160,7 @@ onBeforeUnmount(() => {
         final-price="2.750.000 تومان"
         class="mt-lg"
       />
-    </SwiperSlide>
+    </div>
   </Slider>
 </template>
 <style lang="scss">

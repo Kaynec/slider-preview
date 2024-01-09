@@ -10,7 +10,6 @@
     "test": "echo 'test'",
     "lint": "echo 'lint'",
     "codegen": "orval --config ./orval.config.ts"
-
   },
   "dependencies": {
     "@happy-dom/global-registrator": "^9.20.3",
@@ -23,6 +22,7 @@
     "@quasar/extras": "^1.16.9",
     "@vueuse/core": "^9.5.0",
     "@vueuse/router": "^10.7.0",
+    "embla-carousel-vue": "^8.0.0-rc19",
     "nuxt-swiper": "^1.2.2",
     "pinia": "^2.1.7",
     "quasar": "^2.7.1",
