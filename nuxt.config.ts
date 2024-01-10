@@ -1,18 +1,12 @@
 import { quasar } from '@quasar/vite-plugin'
 
-// @ts-ignore
-import viteImagemin from 'vite-plugin-imagemin'
-
 export default defineNuxtConfig({
+  ssr: false,
   nitro: {
     compressPublicAssets: {
       brotli: true,
       gzip: true
     },
-
-    // prerender: {
-    //   routes: ['/homepage', '/auth/login']
-    // },
     minify: true
   },
   postcss: {
@@ -21,18 +15,6 @@ export default defineNuxtConfig({
     }
   },
 
-  // devtools: {
-  //   // Enable devtools (default: true)
-  //   enabled: true,
-  //   // VS Code Server options
-  //   vscode: {}
-  //   // ...other options
-  // },
-  webVitals: {
-    provider: 'log',
-    debug: true, // debug enable metrics reporting on dev environments
-    disabled: false
-  },
   alias: {
     '@': '',
     '~': ''
@@ -43,16 +25,8 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     'nuxt-svgo',
     'nuxt-typed-router',
-    '@nuxtjs/critters',
-    '@nuxtjs/web-vitals',
-    // '@pinia-plugin-persistedstate/nuxt',
-    // '@nuxtjs/fontaine',
-    // 'nuxt-purgecss',
-    ['@nuxtjs/robots', {}]
+    '@nuxtjs/critters'
   ],
-  image: {
-    quality: 80
-  },
   pinia: {
     storesDirs: ['store/**']
   },
@@ -82,7 +56,7 @@ export default defineNuxtConfig({
   ],
 
   build: {
-    transpile: ['quasar', '@happy-dom/global-registrator']
+    transpile: ['quasar']
   },
   css: ['@/assets/scss/main.scss', '@unocss/reset/tailwind.css'],
   vite: {
@@ -104,34 +78,6 @@ export default defineNuxtConfig({
     plugins: [
       quasar({
         sassVariables: '@/assets/scss/quasar-variables.scss'
-      }),
-      // vsharp(),
-      viteImagemin({
-        gifsicle: {
-          optimizationLevel: 10,
-          interlaced: false
-        },
-        optipng: {
-          optimizationLevel: 10
-        },
-        mozjpeg: {
-          quality: 20
-        },
-        pngquant: {
-          quality: [0.65, 0.65],
-          speed: 3
-        },
-        svgo: {
-          plugins: [
-            {
-              name: 'removeViewBox'
-            },
-            {
-              name: 'removeEmptyAttrs',
-              active: false
-            }
-          ]
-        }
       })
     ]
   }

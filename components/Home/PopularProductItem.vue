@@ -12,7 +12,6 @@
           height="90"
           class="m-auto object-contain aspect-1 w-auto max-w-30 md:max-w-30 lg:max-w-35"
           alt="product card image"
-          loading="lazy"
         />
       </section>
     </div>
